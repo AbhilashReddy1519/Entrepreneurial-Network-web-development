@@ -3,24 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMW</title>
+    <!-- Set the favicon (the small icon in the browser tab) -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <title>FounderForge</title>
     <link rel="stylesheet" href="./output.css">
+    <style>
+        /* Add custom styles here */
+        .custom-select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: url('path/to/your/custom-arrow.png') no-repeat right center;
+            background-size: 1em;
+            padding-right: 2em; /* Adjust based on the size of your custom arrow */
+            border: none;
+            outline: none;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure the header is on top */
+        }
+        main {
+            padding-top: 100px; /* Adjust based on the height of your header */
+        }
+    </style>
 </head>
 <body class="bg-white h-screen">
     <header>
-        <nav class="flex justify-between items-center py-4 px-10 bg-amber-600 text-blue-500">
+        <nav class="flex justify-between items-center py-4 px-10 bg-gray-100 text-blue-500">
             <div class="flex justify-between items-center">
-                <h1>
-                    <span>E</span>
-                    <span>N</span>
-                    <span>W</span>
-                </h1>
+                <a href="./index.html"><img src="/images/logo.png" alt="Logo of FounderForge" class="h-16"></a>
+                <a href="./index.html"><h1 class="text-3xl">Founder<span>Forge</span></h1></a>
             </div>
-            <div>
-            <a href="#" class="bg-white text-blue-500 px-4 py-2 rounded-full">Login</a>
-            <a href="#" class="bg-white text-blue-500 px-4 py-2 rounded-full">Sign Up</a>
+            <div class="flex justify-around items-center">
+                <img src="/images/lang.png" alt="Globle icon" class="h-12 px-4 py-2">
+                <select title="Select language" class="bg-gray-100 text-blue-500 px-4 py-2 rounded-full custom-select mr-4">
+                    <option value="en" selected>English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                </select>
+                <a href="./login_signup.html" class="bg-white text-blue-500 px-4 py-2 rounded-full mr-4">Login</a>
+                <a href="./login_signup.html" class="bg-white text-blue-500 px-4 py-2 rounded-full">Sign Up</a>
             </div>
         </nav>
     </header>
+
+    <main>
+        <h1>FounderForge</h1>
+    </main>
+
+    <footer class="flex justify-center items-center py-4 bg-gray-100 text-blue-500">
+        <p>&copy; 2025 FounderForge. All rights reserved.</p>
+    </footer>
 </body>
 </html>
