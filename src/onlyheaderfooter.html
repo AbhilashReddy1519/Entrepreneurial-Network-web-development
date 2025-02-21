@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the favicon (the small icon in the browser tab) -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <title>FounderForge</title>
+    <link rel="stylesheet" href="./output.css">
+    <style>
+        /* Add custom styles here */
+        .custom-select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: url('path/to/your/custom-arrow.png') no-repeat right center;
+            background-size: 1em;
+            padding-right: 0.5rem; /* Adjust based on the size of your custom arrow */
+            border: none;
+            outline: none;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure the header is on top */
+        }
+        main {
+            padding-top: 70px; /* Adjust based on the height of your header */
+        }
+        .logo {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-white h-screen">
+    <header>
+        <nav class="flex justify-between items-center py-2 px-10 bg-white text-black">
+            <div class="flex justify-between items-center">
+                <a href="./index.html"><img src="/images/logo.png" alt="Logo of FounderForge" class="h-14"></a>
+                <a href="./index.html"><h1 class="text-3xl text-red-600 logo">Founder<span class="text-pink-800">Forge</span></h1></a>
+            </div>
+            <div class="flex justify-evenly items-center">
+                <img src="/images/lang.png" alt="Globle icon" class="h-10 px-4 py-2">
+                <select title="Select language" class="bg-gray-100 text-black px-1 py-1 rounded-full custom-select text-sm">
+                    <option value="en" selected>English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                </select>
+                <a href="./login_signup.html" class="bg-white text-black px-2 rounded-full mr-2 text-sm hover:text-blue-500">Login</a>
+                <a href="./login_signup.html" class="bg-[#00616e] text-white px-2.5 mt-0.5 rounded-lg text-sm w-18 h-6 text-center hover:bg-[#00434c]">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>FounderForge</h1>
+    </main>
+
+    <footer class="z-0 bg-[#212121] pt-4 mt-0 text-gray-100" data-event-label="Footer" role="contentinfo">
+        <div class="px-6 sm:px-4 xl:px-0 md:max-w-screen mx-auto my-0 flex flex-col space-y-6 pb-4">
+            <div class="mt-2 flex  flex-row items-center justify-center border-b border-solid border-gray6 pb-6 sm:justify-start">
+                <div class="hidden font-semibold sm:block">
+                    Create your own Meetup group.
+                    <a href="https://www.meetup.com/how-to-group-start/" data-event-label="Create your own group variant2" class="i17sl16g ml-4 inline-flex rounded-md border-2 px-4 py-2 hover:bg-white hover:text-gray7 focus:bg-white focus:text-gray7">Get Started</a>
+                </div>
+                <a data-element-name="footer-groupStartCTA" data-event-label="Start new group" href="https://www.meetup.com/how-to-group-start/" class="i17sl16g block sm:hidden">Start a new group</a>
+            </div>
+        </div>
+        <p class="">&copy; 2025 FounderForge. All rights reserved.</p>
+    </footer>
+</body>
+</html>
