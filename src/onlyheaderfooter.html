@@ -11,13 +11,13 @@
     <title>FounderForge</title>
     <script src="https://kit.fontawesome.com/49b62f9a06.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./output.css"> 
+    <link rel="stylesheet" href="./onlyheaderfooter.css">
     <style>
         /* Add custom styles here */
         .custom-select {
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
-            background: url('path/to/your/custom-arrow.png') no-repeat right center;
             background-size: 1em;
             padding-right: 0.5rem; /* Adjust based on the size of your custom arrow */
             border: none;
@@ -63,66 +63,66 @@
         <h1>FounderForge</h1>
     </main>
 
-    <footer class="z-0 bg-[#212121] pt-4 mt-0 text-gray-300 px-16" data-event-label="Footer" role="contentinfo">
+    <footer class="z-0 bg-[#212121] pt-4 mt-0 text-gray-300/95 px-16" data-event-label="Footer" role="contentinfo">
         <div class="px-6 sm:px-4 xl:px-0 md:max-w-screen mx-auto my-0 flex flex-col space-y-6 pb-4">
             <div class="mt-2 flex  flex-row items-center justify-center border-b border-gray-400 pb-6 sm:justify-start">
-                <div class="hidden font-semibold sm:block">
+                <div class="hidden font-semibold sm:block text-white">
                     Create your own FounderForge group. 
                     <a href="" data-event-label="Create your own group variant2" class="ml-4 inline-flex rounded-md border-2 px-4 py-2 hover:bg-white hover:text-gray-700 focus:bg-white focus:text-gray7">Get Started</a>
                 </div>
-                <a data-element-name="footer-groupStartCTA" data-event-label="Start new group" href="" class="block sm:hidden">Start a new group</a>
+                <a data-event-label="Start new group" href="" class="block sm:hidden">Start a new group</a>
             </div>
             <div class="flex flex-col sm:flex-row justify-between">
                 <nav class="w-1/3 mb-3">
-                    <span class="text-white">Your Account<span>
+                    <h1 class="text-lg text-white">Account</h1>
                     <ul>
-                        <li><a href="#" aria-label="signup" >Sign up</a></li>
-                        <li>Log in</li>
-                        <li>Help</li>
-                        <li>Become an Affiliate</li>
+                        <li><a href="#" aria-label="signup" class="hover:text-white">Sign up</a></li>
+                        <li><a href="#" aria-label="login" class="hover:text-white">Log in</a></li>
+                        <li><a href="#" aria-label="help" class="hover:text-white">Help</a></li>
+                        <li><a href="#" aria-label="affiliate" class="hover:text-white">Become an Affiliate</a></li>
                     </ul>
                 </nav>
                 <nav class="w-1/3 mb-3">
-                    Discover
+                    <h1 class="text-lg text-white">Discover</h1>
                     <ul>
-                        <li>Groups</li>
-                        <li>Calender</li>
-                        <li>Topics</li>
-                        <li>Cities</li>
-                        <li>Online Events</li>
-                        <li>Local Guides</li>
-                        <li>Make Friend</li>
+                        <li><a href="#" aria-label="groups" class="hover:text-white">Groups</a></li>
+                        <li><a href="#" aria-label="calendar" class="hover:text-white">Calendar</a></li>
+                        <li><a href="#" aria-label="topics" class="hover:text-white">Topics</a></li>
+                        <li><a href="#" aria-label="cities" class="hover:text-white">Cities</a></li>
+                        <li><a href="#" aria-label="online-events" class="hover:text-white">Online Events</a></li>
+                        <li><a href="#" aria-label="local-guides" class="hover:text-white">Local Guides</a></li>
+                        <li><a href="#" aria-label="make-friend" class="hover:text-white">Make Friend</a></li>
                     </ul>
                 </nav>
                 <nav class="w-1/3 mb-3">
-                    FounderForge
+                    <h1 class="text-lg text-white">FounderForge</h1>
                     <ul>
-                        <li>About</li>
-                        <li>Blog</li>
-                        <li>FounderForge Pro</li>
-                        <li>Careers</li>
-                        <li>Apps</li>
-                        <li>Podcast</li>
+                        <li><a href="#" aria-label="about" class="hover:text-white">About</a></li>
+                        <li><a href="#" aria-label="blog" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" aria-label="pro" class="hover:text-white">FounderForge Pro</a></li>
+                        <li><a href="#" aria-label="careers" class="hover:text-white">Careers</a></li>
+                        <li><a href="#" aria-label="apps" class="hover:text-white">Apps</a></li>
+                        <li><a href="#" aria-label="podcast" class="hover:text-white">Podcast</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="flex flex-col items-start justify-between sm:flex-row sm:items-center">
                 <div>
-                    <div class="mb-3">Follow Us</div>
-                    <nav class="mb-6 flex space-x-8">
-                        <a href="#" aria-label="For facebook"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" aria-label="For twitter"><i class="fa-brands fa-square-x-twitter"></i></a>
-                        <a href="#" aria-label="For instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" aria-label="For youtube"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#" aria-label="For Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                    <div class="mb-3 text-white text-lg">Follow Us</div>
+                    <nav class="mb-6 flex space-x-8 text-2xl gap-3 social-icons">
+                        <a href="#" aria-label="For facebook" class="transition delay-100 duration-500 ease-in-out hover:scale-200"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="For twitter" class="transition delay-100 duration-500 ease-in-out hover:scale-200"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a href="#" aria-label="For instagram" class="transition delay-100 duration-500 ease-in-out hover:scale-200"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="For youtube" class="transition delay-100 duration-500 ease-in-out hover:scale-200"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="For Linkedin" class="transition delay-100 duration-500 ease-in-out hover:scale-200"><i class="fa-brands fa-linkedin"></i></a>
                     </nav>
                 </div>                    
                 <div class="flex items-start space-x-3 sm:items-end">
-                    <a href="#" aria-label="for playstore"><img src="/images/playstore.png" alt="" class="h-[40px] w-[140px]"></a>
-                    <a href="#" aria-label="for appstroe"><img src="/images//appstore.png" alt=""></a>
+                    <a href="#" aria-label="for playstore" class="transform delay-100 duration-500 hover:scale-110"><img src="/images/playstore.png" alt="" class="h-[40px] w-[140px]"></a>
+                    <a href="#" aria-label="for appstroe" class="transform delay-100 duration-500 hover:scale-110"><img src="/images//appstore.png" alt=""></a>
                 </div>
             </div>
-            <div class="ds-font-small flex flex-col space-y-4 pt-2 text-gray-300 sm:flex-row sm:space-x-6 sm:space-y-0">
+            <div class="ds-font-small flex flex-col space-y-4 pb-4 pt-2 text-gray-300 sm:flex-row sm:space-x-6 sm:space-y-0">
                 <p class="text-white">&copy; 2025 FounderForge.</p>
                 <a href="#" aria-label="Terms" class="ds-font-small cursor-pointer text-gray4 hover:text-white hover:no-underline">Terms of Service</a>
                 <a href="#" aria-label="privacy" class="ds-font-small cursor-pointer text-gray4 hover:text-white hover:no-underline">Privacy Policy</a>

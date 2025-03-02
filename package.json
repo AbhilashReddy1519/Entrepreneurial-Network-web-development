@@ -2,5 +2,24 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.0.6",
     "tailwindcss": "^4.0.6"
-  }
+  },
+  "name": "entrepreneurial-network-web-development",
+  "version": "1.0.0",
+  "description": "A platform that connects entrepreneurs to exchange ideas, collaborate on projects, and foster innovation.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhilashReddy1519/Entrepreneurial-Network-web-development.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbhilashReddy1519/Entrepreneurial-Network-web-development/issues"
+  },
+  "homepage": "https://github.com/AbhilashReddy1519/Entrepreneurial-Network-web-development#readme"
 }

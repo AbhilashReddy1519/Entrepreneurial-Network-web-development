@@ -1,0 +1,22 @@
+.social-icons a {
+    color: #ffffff; /* Default color for icons */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+.social-icons a:hover {
+    color: #1da1f2; /* Change color on hover */
+}
+.social-icons a[aria-label="For facebook"]:hover {
+    color: #3b5998; /* Facebook color */
+}
+.social-icons a[aria-label="For twitter"]:hover {
+    color: #1da1f2; /* Twitter color */
+}
+.social-icons a[aria-label="For instagram"]:hover {
+    color: #e1306c; /* Instagram color */
+}
+.social-icons a[aria-label="For youtube"]:hover {
+    color: #ff0000; /* YouTube color */
+}
+.social-icons a[aria-label="For Linkedin"]:hover {
+    color: #0077b5; /* LinkedIn color */
+}
