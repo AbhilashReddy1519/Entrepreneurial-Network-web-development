@@ -1,0 +1,15 @@
+* [33m1894be0[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m commit
+* [33m559987f[m Update footer in onlyheaderfooter.html; enhance account navigation, add new links for terms, privacy, and cookie policies, and correct image sources for app store icons.
+* [33m6357e85[m Enhance footer structure in onlyheaderfooter.html; add navigation and social media links, and include Font Awesome for icons. Refactor output.css to remove unused styles and add new spacing utilities.
+* [33m83f4618[m Add header and footer structure to onlyheaderfooter.html; enhance styles for logo and navigation
+* [33m9f2436d[m No code changes detected; skipping commit.
+* [33m3e94478[m Refactor HTML structure and styles for login/signup page; add custom styles and new spacing utilities in output.css
+* [33mf1f7ee2[m Update index.html title and structure; add login/signup page with Tailwind styles
+* [33me974b40[m Remove unused images and update HTML structure and CSS styles for improved layout and design
+* [33m1735969[m Add custom property for Tailwind duration in output.css
+* [33m2393563[m Add initial HTML structure for the Arise project
+* [33me7462be[m commit
+* [33m8f5396e[m Move input.css to src directory
+* [33mf49db86[m Add enhanced-resolve alias plugins and lockfile updates
+* [33m783461b[m Add IntelliJ project configuration and new image assets
+* [33mf58bf04[m Initial commit
