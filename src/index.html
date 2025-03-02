@@ -13,6 +13,18 @@
     <link rel="stylesheet" href="./output.css"> 
     <link rel="stylesheet" href="./onlyheaderfooter.css">
     <style>
+        body {
+        font-family: 'Inter', sans-serif; /* Best for body text */
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;
+        }
+
+        /* Headings */
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif; /* Stylish headings */
+            font-weight: 500;
+        }
         /* Add custom styles here */
         .custom-select {
             -webkit-appearance: none;
@@ -35,7 +47,8 @@
         }
         .logo {
             font-family: 'Brush Script MT', cursive;
-            font-size: 2rem;
+            font-size: 2.4rem;
+            font-weight: lighter;
         }
     </style>
 </head>
@@ -59,8 +72,8 @@
         </nav>
     </header>
 
-    <main>
-        <section class="bg-gradient-to-r from-white via-white to-pink-300 h-screen transform transition-colors">
+    <main class="text-black">
+        <section class="bg-gradient-to-r from-white via-white to-pink-300 h-screen transform transition-colors overflow-hidden">
             <div class="flex justify-center">
                 <div class="flex justify-between font-bold font-serif">
                     <div class="flex flex-col my-10 mx-16 gap-12">
@@ -69,36 +82,127 @@
                             <p class="mt-4 text-2xl">join <span class="font-light text-red-600">Founder<span class="text-pink-800">Forge</span></span> today for free!</p>
                         </div>
                         <div class="w-[80%]">
-                            <button class="flex items-center justify-center bg-[#4285f4] text-lg rounded-lg text-center text-white w-full py-2 mb-2 cursor-pointer">
+                            <button class="flex items-center justify-center bg-[#4285f4] text-lg rounded-lg text-center text-white w-full py-2 mb-2 cursor-pointer transform delay-100 duration-500 hover:scale-110">
                                 <img src="/images/google.png" alt="" class="rounded-full w-8 h-8 ml-2">
                                 <span class="flex-1 text-center">Sign up with Google</span>
                             </button>
-                            <button class="flex items-center justify-center bg-[#121213] text-lg rounded-lg text-center text-white w-full py-1 mb-2 cursor-pointer">
+                            <button class="flex items-center justify-center bg-[#121213] text-lg rounded-lg text-center text-white w-full py-1 mb-2 cursor-pointer transform delay-100 duration-500 hover:scale-110">
                                 <img src="/images/apple.png" alt="Apple logo" class="rounded-full w-10 h-10 ml-1.5">
                                 <span class="flex-1 text-center">Sign up with Apple</span>
                             </button>
-                            <button class="flex items-center justify-center bg-white text-lg rounded-lg text-center text-black w-full py-1 mb-5 cursor-pointer border-1 border-gray-300">
+                            <button class="flex items-center justify-center bg-white text-lg rounded-lg text-center text-black w-full py-1 mb-5 cursor-pointer border-1 border-gray-300 transform delay-100 duration-500 hover:scale-110">
                                 <img src="/images/facebook.png" alt="Facebook logo" class="rounded-full w-10 h-10 ml-1.5">
                                 <span class="flex-1 text-center">Sign up with Facebook</span>
                             </button>
-                            <p class="hover:underline"><a href="./login_signup.html" class="text-[#006177] text-lg">Continue with gmail <i class="fa-solid fa-arrow-right"></i></a></p>                      
+                            <p class="hover:underline"><a href="./login_signup.html" class="text-[#006177] text-lg">Continue with gmail <i class="fa-solid fa-arrow-right"></i></a></p>
                         </div>
                         <div>
-                            <p class="text-lg">Build your <span class="text-[#ff1154]">connections</span> with professionals 🫂</p>
+                            <p class="text-2xl">Build your <span class="text-[#ff1154]">connections</span> with professionals 🫂</p>
                         </div>
                     </div>
-                    <div class="w-[90%] overflow-hidden h-screen mr-12  ">
+                    <div class="w-[90%] overflow-hidden h-screen mr-12">
                         <img src="/images/people.png" alt="" class="h-full w-full ">
                         <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
-                            <div class="absolute top-0 left-0 w-full h-1/4 bg-gradient-to-b from-white via-transparent to-transparent"></div>
-                            <div class="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+                            <div class="absolute top-0 left-0 w-full h-2/12 bg-gradient-to-b from-white via-transparent to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 w-full h-2/12 bg-gradient-to-t from-white via-transparent to-transparent"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="bg-white mt-16 text-center">
+            <h1 class="text-4xl font-bold py-3 pb-4">Find the <span class="text-[#ff1154]">interests</span> you love</h1>
+            <p class="text-xl text-neutral-700/85 pb-5">Explore new passions, connect with people, and turn your interests into real-life experiences.</p>
+            <div class="flex flex-row flex-wrap justify-center gap-3 pb-6 px-12">
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110"><i class="fa-solid fa-pizza-slice text-xl mx-1 mr-2 text-black"></i> Social activities</button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110"><i class="fa-solid fa-route text-xl mx-1 mr-2 text-black"></i>Travel</button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110"><i class="fa-solid fa-panorama text-xl mx-1 mr-2 text-black"></i>Hobbies</button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
+                        <i class="fa-solid fa-panorama text-xl mx-1 mr-2 text-black"></i> Hobbies
+                    </button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
+                        <i class="fa-solid fa-briefcase text-xl mx-1 mr-2 text-black"></i> Business
+                    </button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
+                        <i class="fa-solid fa-hands-helping text-xl mx-1 mr-2 text-black"></i> Support
+                    </button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
+                        <i class="fa-solid fa-football-ball text-xl mx-1 mr-2 text-black"></i> Sports
+                    </button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
+                        <i class="fa-solid fa-praying-hands text-xl mx-1 mr-2 text-black"></i> Religion
+                    </button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
+                        <i class="fa-solid fa-gamepad text-xl mx-1 mr-2 text-black"></i> Games
+                    </button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
+                        <i class="fa-solid fa-graduation-cap text-xl mx-1 mr-2 text-black"></i> Education
+                    </button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
+                        <i class="fa-solid fa-language text-xl mx-1 mr-2 text-black"></i> Language
+                    </button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
+                        <i class="fa-solid fa-laptop-code text-xl mx-1 mr-2 text-black"></i> Tech
+                    </button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
+                        <i class="fa-solid fa-music text-xl mx-1 mr-2 text-black"></i> Music
+                    </button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
+                        <i class="fa-solid fa-dance text-xl mx-1 mr-2 text-black"></i> Dancing
+                    </button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
+                        <i class="fa-solid fa-users text-xl mx-1 mr-2 text-black"></i> Community
+                    </button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
+                        <i class="fa-solid fa-pen text-xl mx-1 mr-2 text-black"></i> Writing
+                    </button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
+                        <i class="fa-solid fa-home text-xl mx-1 mr-2 text-black"></i> Family
+                    </button>
+                </a>
+                <a href="./login_signup.html">
+                    <button class="text-neutral-600 bg-white px-3 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
+                        <i class="fa-solid fa-paw text-xl mx-1 mr-2 text-black"></i> Animals
+                    </button>
+                </a>
+            </div>
+            <a href="./login_signup.html"><p class="text-[#006177] text-xl hover:underline pb-8">Discover all interests</p></a>
+        </section>
         <section>
-
+            
         </section>
     </main>
 
