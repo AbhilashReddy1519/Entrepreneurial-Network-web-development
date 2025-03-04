@@ -14,10 +14,9 @@
     <link rel="stylesheet" href="./onlyheaderfooter.css">
     <style>
         body {
-        font-family: 'Inter', sans-serif; /* Best for body text */
-        font-size: 16px;
-        line-height: 1.6;
-        color: #333;
+            font-family: 'Inter', sans-serif; /* Best for body text */
+            font-size: 16px;
+            line-height: 1.6;
         }
 
         /* Headings */
@@ -54,7 +53,7 @@
         }
     </style>
 </head>
-<body class="bg-white h-screen">
+<body class="bg-white h-screen relative">
     <header>
         <nav class="flex justify-between items-center py-2 px-10 bg-white text-black">
             <div class="flex justify-between items-center">
@@ -68,8 +67,8 @@
                     <option value="es">Español</option>
                     <option value="fr">Français</option>
                 </select>
-                <a href="./login_signup.html" class="bg-white text-black px-2 rounded-full mr-2 text-sm hover:text-blue-500">Login</a>
-                <a href="./login_signup.html" class="bg-[#00616e] text-white px-2 pb-2 py-1  mt-0.5 rounded-lg text-sm w-18 h-7 text-center hover:bg-[#00434c]">Sign Up</a>
+                <a href="./login.html" class="bg-white text-black px-2 rounded-full mr-2 text-sm hover:text-blue-500">Login</a>
+                <a href="./login.html" class="bg-[#00616e] text-white px-2 pb-2 py-1  mt-0.5 rounded-lg text-sm w-18 h-7 text-center hover:bg-[#00434c]">Sign Up</a>
             </div>
         </nav>
     </header>
@@ -84,19 +83,19 @@
                             <p class="mt-4 text-2xl">join <span class="font-light text-red-600">Founder<span class="text-pink-800">Forge</span></span> today for free!</p>
                         </div>
                         <div class="w-[80%]">
-                            <button class="flex items-center justify-center bg-[#4285f4] text-lg rounded-lg text-center text-white w-full py-2 mb-2 cursor-pointer transform delay-100 duration-500 hover:scale-110">
+                            <button class="signBtn flex items-center justify-center bg-[#4285f4] text-lg rounded-lg text-center text-white w-full py-2 mb-2 cursor-pointer transform delay-100 duration-500 hover:scale-110">
                                 <img src="/images/google.png" alt="" class="rounded-full w-8 h-8 ml-2">
                                 <span class="flex-1 text-center">Sign up with Google</span>
                             </button>
-                            <button class="flex items-center justify-center bg-[#121213] text-lg rounded-lg text-center text-white w-full py-1 mb-2 cursor-pointer transform delay-100 duration-500 hover:scale-110">
+                            <button class="signBtn flex items-center justify-center bg-[#121213] text-lg rounded-lg text-center text-white w-full py-1 mb-2 cursor-pointer transform delay-100 duration-500 hover:scale-110">
                                 <img src="/images/apple.png" alt="Apple logo" class="rounded-full w-10 h-10 ml-1.5">
                                 <span class="flex-1 text-center">Sign up with Apple</span>
                             </button>
-                            <button class="flex items-center justify-center bg-white text-lg rounded-lg text-center text-black w-full py-1 mb-5 cursor-pointer border-1 border-gray-300 transform delay-100 duration-500 hover:scale-110">
+                            <button class="signBtn flex items-center justify-center bg-white text-lg rounded-lg text-center text-black w-full py-1 mb-5 cursor-pointer border-1 border-gray-300 transform delay-100 duration-500 hover:scale-110">
                                 <img src="/images/facebook.png" alt="Facebook logo" class="rounded-full w-10 h-10 ml-1.5">
                                 <span class="flex-1 text-center">Sign up with Facebook</span>
                             </button>
-                            <p class="hover:underline"><a href="./login_signup.html" class="text-[#006177] text-lg">Continue with gmail <i class="fa-solid fa-arrow-right"></i></a></p>
+                            <p class="hover:underline"><a href="./login.html" class="text-[#006177] text-lg">Continue with gmail <i class="fa-solid fa-arrow-right"></i></a></p>
                         </div>
                         <div>
                             <p class="text-2xl">Build your <span class="text-[#ff1154]">connections</span> with professionals 🫂</p>
@@ -117,87 +116,87 @@
             <h1 class="text-4xl py-3 pb-4">Find the <span class="text-[#ff1154]">interests</span> you love</h1>
             <p class="text-xl text-neutral-700/85 pb-5">Explore new passions, connect with people, and turn your interests into real-life experiences.</p>
             <div class="flex flex-row flex-wrap justify-center gap-3 pb-6 px-12 text-sm text-center">
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <i class="fa-solid fa-pizza-slice text-xl mx-1 mr-2 text-black"></i> Social activities
                     </button>
                 </a>
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <i class="fa-solid fa-route text-xl mx-1 mr-2 text-black"></i>Travel
                     </button>
                 </a>
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <i class="fa-solid fa-panorama text-xl mx-1 mr-2 text-black"></i>Hobbies
                     </button>
                 </a>
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <i class="fa-solid fa-panorama text-xl mx-1 mr-2 text-black"></i> Hobbies
                     </button>
                 </a>
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <i class="fa-solid fa-briefcase text-xl mx-1 mr-2 text-black"></i> Business
                     </button>
                 </a>
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <i class="fa-solid fa-hands-helping text-xl mx-1 mr-2 text-black"></i> Support
                     </button>
                 </a>
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <i class="fa-solid fa-football-ball text-xl mx-1 mr-2 text-black"></i> Sports
                     </button>
                 </a>
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <i class="fa-solid fa-praying-hands text-xl mx-1 mr-2 text-black"></i> Religion
                     </button>
                 </a>
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <i class="fa-solid fa-gamepad text-xl mx-1 mr-2 text-black"></i> Games
                     </button>
                 </a>
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <i class="fa-solid fa-graduation-cap text-xl mx-1 mr-2 text-black"></i> Education
                     </button>
                 </a>
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <i class="fa-solid fa-language text-xl mx-1 mr-2 text-black"></i> Language
                     </button>
                 </a>
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <i class="fa-solid fa-laptop-code text-xl mx-1 mr-2 text-black"></i> Tech
                     </button>
                 </a>
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <i class="fa-solid fa-music text-xl mx-1 mr-2 text-black"></i> Music
                     </button>
                 </a>
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <img src="/images/dance.png" alt="" class="h-5 w-5 inline mb-0.5"> Dancing
                     </button>
                 </a>
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <i class="fa-solid fa-users text-xl mx-1 mr-2 text-black"></i> Community
                     </button>
                 </a>
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <i class="fa-solid fa-pen text-xl mx-1 mr-2 text-black"></i> Writing
                     </button>
                 </a>
-                <a href="./login_signup.html">
+                <a href="./login.html">
                     <button class="text-neutral-600 bg-white px-2 py-1 border border-neutral-400 rounded-3xl cursor-pointer transform delay-100 duration-500 hover:bg-neutral-200 hover:scale-110">
                         <i class="fa-solid fa-home text-xl mx-1 mr-2 text-black"></i> Family
                     </button>
@@ -279,7 +278,7 @@
                         <p class="text-[16px] italic">This platform helped me collaborate with other startups on innovative projects. The funding and investor connections are also valuable. A little improvement in UI/UX would make it even better!</p>
                     </div>
                     <div class="flex flex-row items-center gap-3">
-                        <div class="bg-amber-200 w-10 h-10 rounded-full border flex justify-center items-center">
+                        <div class="bg-green-200 w-10 h-10 rounded-full border flex justify-center items-center">
                             <h6>SK</h6>
                         </div>
                         <p>— Sneha Kapoor, CEO of GreenInnovate</p>
@@ -291,11 +290,11 @@
                         <h1 class="text-[18px] font-[550] sm:text-[16px] lg:text-[18px]">Perfect for Building a Strong Network</h1>
                         <p class="text-[16px] italic">FounderForge provided me with the perfect opportunity to pitch my startup and gain insights from industry leaders. I was able to get funding leads and build a strong professional network.</p>
                     </div>
-                    <div class="flex flex-row items-center gap-3">
-                        <div class="bg-amber-200 w-10 h-10 rounded-full border flex justify-center items-center">
+                    <div class="flex flex-row items-center justify-between gap-3">
+                        <div class="bg-blue-200 w-10 h-10 rounded-full border flex justify-center items-center">
                             <h6>AV</h6>
                         </div>
-                        <p>— Arjun Verma, Co-Founder of AI Solutions Hub</p>
+                        <p>— Arjun Verma, Co-Founder of AI Solutions</p>
                     </div>
                 </div>
             
@@ -305,7 +304,7 @@
                         <p class="text-[16px] italic">Great initiative! The idea of connecting entrepreneurs is well-executed. However, I’d love to see more advanced tools for startup analysis and funding opportunities.</p>
                     </div>
                     <div class="flex flex-row items-center gap-3">
-                        <div class="bg-amber-200 w-10 h-10 rounded-full border flex justify-center items-center">
+                        <div class="bg-cyan-200 w-10 h-10 rounded-full border flex justify-center items-center">
                             <h6>PD</h6>
                         </div>
                         <p>— Priya Deshmukh, Founder of EduNext</p>
@@ -318,7 +317,7 @@
                         <p class="text-[16px] italic">As a college student passionate about entrepreneurship, this platform has been my learning ground. The blogs, discussion forums, and networking events are super helpful!</p>
                     </div>
                     <div class="flex flex-row items-center gap-3">
-                        <div class="bg-amber-200 w-10 h-10 rounded-full border flex justify-center items-center">
+                        <div class="bg-emerald-200 w-10 h-10 rounded-full border flex justify-center items-center">
                             <h6>KS</h6>
                         </div>
                         <p>— Karan Shah, Business Enthusiast</p>
@@ -331,7 +330,7 @@
                         <p class="text-[16px] italic">I joined FounderForge to seek mentorship, and I was not disappointed! The platform connected me with experienced founders who guided me on my business idea. Just a few bugs to fix in the chat feature.</p>
                     </div>
                     <div class="flex flex-row items-center gap-3">
-                        <div class="bg-amber-200 w-10 h-10 rounded-full border flex justify-center items-center">
+                        <div class="bg-fuchsia-200 w-10 h-10 rounded-full border flex justify-center items-center">
                             <h6>AR</h6>
                         </div>
                         <p>— Anjali Reddy, Aspiring Entrepreneur</p>
@@ -344,7 +343,7 @@
                         <p class="text-[16px] italic">I’ve been on multiple networking platforms, but this one stands out. The community is very active, and the features are well thought out. It truly helps in idea sharing and collaboration.</p>
                     </div>
                     <div class="flex flex-row items-center gap-3">
-                        <div class="bg-amber-200 w-10 h-10 rounded-full border flex justify-center items-center">
+                        <div class="bg-indigo-200 w-10 h-10 rounded-full border flex justify-center items-center">
                             <h6>VN</h6>
                         </div>
                         <p>— Vikas Nair, Startup Enthusiast</p>
@@ -357,7 +356,7 @@
                         <p class="text-[16px] italic">The concept is great, and I’ve met some amazing people here. However, I feel there should be more interactive webinars and workshops to keep engagement high.</p>
                     </div>
                     <div class="flex flex-row items-center gap-3">
-                        <div class="bg-amber-200 w-10 h-10 rounded-full border flex justify-center items-center">
+                        <div class="bg-lime-200 w-10 h-10 rounded-full border flex justify-center items-center">
                             <h6>MJ</h6>
                         </div>
                         <p>— Meera Joshi, Small Business Owner</p>
@@ -365,11 +364,54 @@
                 </div>
             </div>
         </section>
-        <section>
-            
+        <section class="bg-white mt-14">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold py-2">Getting started is <span class="text-[#ff1154]">easy</span></h1>
+                <p class="text-xl py-2 text-neutral-600">Join Meetup in just a few steps and start discovering events, meeting new people, and exploring your interests!</p>
+            </div>
+            <div class="flex flex-row justify-evenly items-center py-2 gap-8">
+                <div class="flex flex-1 flex-col gap-6 rounded-lg text-neutral-100 p-6 bg-neutral-200/85 h-[280px] justify-evenly ml-6">
+                    <div class="font-bold text-[#ff1154] md:text-[56px] md:leading-[64px]">
+                    1</div>
+                    <div class="flex flex-col gap-2">
+                        <h1 class="text-[28px] font-bold text-black">Join for free</h1>
+                        <p class="text-[16px] text-neutral-600">Create your account in seconds—it's fast and free</p>
+                    </div>
+                </div>
+                <div class="flex flex-1 flex-col gap-6 rounded-lg text-neutral-100 p-6 bg-neutral-200/85 h-[280px] justify-evenly">
+                    <div class="font-bold text-[#ff1154] md:text-[56px] md:leading-[64px]">
+                    2</div>
+                    <div class="flex flex-col gap-2">
+                        <h1 class="text-[28px] font-bold text-black">Discover what excites you</h1>
+                        <p class="text-[16px] text-neutral-600">Explore events, connect with communities, and dive into your interests.</p>
+                    </div>
+                </div>
+                <div class="flex flex-1 flex-col gap-6 rounded-lg text-neutral-100 p-6 bg-neutral-200/85 h-[280px] justify-evenly mr-6">
+                    <div class="font-bold text-[#ff1154] md:text-[56px] md:leading-[64px]">
+                    3</div>
+                    <div class="flex flex-col gap-2">
+                        <h1 class="text-[28px] font-bold text-black">Jump in and have fun</h1>
+                        <p class="text-[16px] text-neutral-600">Meet great people, try something new, and make real connections.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <button class="signBtn bg-[#ff1154] text-white text-2xl px-6 py-2 rounded-lg  hover:bg-[#b91c48] cursor-pointer">Sign up for free <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
         </section>
-        <section>
-            
+        <section class="bg-white mt-14">
+            <div class="p-4 px-8 mb-8">
+                <div class="flex w-full flex-col gap-6 rounded-xl justify-between bg-[#FFECEC] p-6 md:flex-row-reverse md:gap-8 md:p-0">
+                    <img src="/images/toonemp.png" alt="" width="180" height="96" class="mr-16 py-2">
+                    <div class="flex flex-col gap-6 py-0 md:ml-14 md:py-14">
+                        <div class="flex flex-col gap-2">
+                            <h1 class="text-[28px] font-bold text-black">Turn your passion into a community</h1>
+                            <p class="text-[16px] text-neutral-600">Start your own Meetup group and create events that inspire, connect, and grow your community. Whether it’s a hobby, a cause, or a professional network, you have the power to make it happen.</p>
+                        </div>
+                        <button class="bg-[#ff1154] w-[300px] mt-10 text-white text-2xl px-6 py-2 rounded-lg  hover:bg-[#b91c48] cursor-pointer signBtn">Create your group <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -442,5 +484,6 @@
             </div>
         </div>
     </footer>
+    <script src="/javaScript/index.js"></script>
 </body>
 </html>
