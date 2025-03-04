@@ -22,8 +22,7 @@
 
         /* Headings */
         h1, h2, h3 {
-            font-family: 'Poppins', sans-serif; /* Stylish headings */
-            font-weight: 500;
+            font-family: 'Poppins', sans-serif;
         }
         /* Add custom styles here */
         .custom-select {
@@ -49,6 +48,9 @@
             font-family: 'Brush Script MT', cursive;
             font-size: 2.4rem;
             font-weight: lighter;
+        }
+        .scrollbar-none {
+            scrollbar-width: none;
         }
     </style>
 </head>
@@ -110,6 +112,7 @@
                 </div>
             </div>
         </section>
+        <!-- functions -->
         <section class="bg-white mt-16 text-center">
             <h1 class="text-4xl py-3 pb-4">Find the <span class="text-[#ff1154]">interests</span> you love</h1>
             <p class="text-xl text-neutral-700/85 pb-5">Explore new passions, connect with people, and turn your interests into real-life experiences.</p>
@@ -207,6 +210,7 @@
             </div>
             <a href="./login_signup.html"><p class="text-[#006177] text-xl hover:underline inline-block mb-8">Discover all interests</p></a>
         </section>
+        <!-- Services -->
         <section class="bg-white mt-16">
             <div class="text-center">
                 <h1 class="text-4xl font-bold py-2">More from the <span class="font-light text-red-600">Founder<span class="text-pink-800">Forge</span></span></h1>
@@ -214,32 +218,32 @@
             </div>            
             <div class="overflow-x-hidden">
                 <div class="py-4 flex flex-nowrap lg:px-10 sm:grid sm:grid-cols-2 sm:gap-6 md:px-0 lg:grid-cols-3">
-                    <div class="flex min-w-[300px] flex-shrink-0 flex-col">
+                    <div class="flex min-w-[300px] flex-shrink-0 flex-col hover:shadow-gray-300 hover:shadow-lg px-2">
                         <img src="/images/friendship.png" height="96" width="96" alt="" class="bg-gradient-to-b from-transparent via-transparent to-pink-400 rounded-b-lg">
                         <h1 class="text-3xl font-bold py-1">Friendship</h1>
                         <p class="text-md text-gray-700 py-1">Meet new people, make real connections</p>
                     </div>
-                    <div class="flex min-w-[300px] flex-shrink-0 flex-col">
+                    <div class="flex min-w-[300px] flex-shrink-0 flex-col hover:shadow-gray-300 hover:shadow-lg px-2">
                         <img src="/images/community.png" height="96" width="96" alt="" class="bg-gradient-to-b from-transparent via-transparent to-pink-400 rounded-b-lg">
                         <h1 class="text-3xl font-bold py-1">Community</h1>
                         <p class="text-md text-gray-700 py-1">Join a welcoming community that shares your values</p>
                     </div>
-                    <div class="flex min-w-[300px] flex-shrink-0 flex-col">
+                    <div class="flex min-w-[300px] flex-shrink-0 flex-col hover:shadow-gray-300 hover:shadow-lg px-2">
                         <img src="/images/discover.png" height="96" width="96" alt="" class="bg-gradient-to-b from-transparent via-transparent to-pink-400 rounded-b-lg">
                         <h1 class="text-3xl font-bold py-1">Discovery</h1>
                         <p class="text-md text-gray-700 py-1">Step outside your comfort zone and explore something new</p>
                     </div>
-                    <div class="flex min-w-[300px] flex-shrink-0 flex-col">
+                    <div class="flex min-w-[300px] flex-shrink-0 flex-col hover:shadow-gray-300 hover:shadow-lg px-2">
                         <img src="/images/passion.png" height="96" width="96" alt="" class="bg-gradient-to-b from-transparent via-transparent to-pink-400 rounded-b-lg">
                         <h1 class="text-3xl font-bold py-1">Passions</h1>
                         <p class="text-md text-gray-700 py-1">Step out of your routine and try something new</p>
                     </div>
-                    <div class="flex min-w-[300px] flex-shrink-0 flex-col">
+                    <div class="flex min-w-[300px] flex-shrink-0 flex-col hover:shadow-gray-300 hover:shadow-lg px-2">
                         <img src="/images/leader.png" height="96" width="96" alt="" class="bg-gradient-to-b from-transparent via-transparent to-pink-400 rounded-b-lg">
                         <h1 class="text-3xl font-bold py-1">Leadership</h1>
                         <p class="text-md text-gray-700 py-1">Start a group and bring people together</p>
                     </div>
-                    <div class="flex min-w-[300px] flex-shrink-0 flex-col">
+                    <div class="flex min-w-[300px] flex-shrink-0 flex-col hover:shadow-gray-300 hover:shadow-lg px-2">
                         <img src="/images/connection.png" height="96" width="96" alt="" class="bg-gradient-to-b from-transparent via-transparent to-pink-400 rounded-b-lg">
                         <h1 class="text-3xl font-bold py-1">Connections</h1>
                         <p class="text-md text-gray-700 py-1">Expand your network and unlock new opportunities</p>
@@ -247,11 +251,122 @@
                 </div>
             </div>
         </section>
-        <section>
+        <!-- Reviews -->
+        <section class="bg-white mt-14">
+            <div class="text-center">
+                <h1 class="text-4xl py-2 px-2 font-bold"><span class="font-light text-red-600">Founder<span class="text-pink-800">Forge</span></span> where founders Forge</h1>
+                <p class="text-lg text-gray-700 py-2">Expand your network and unlock new opportunities, join millions who connect, learn, and grow together.</p>
+            </div>
+            <div class="scrollbar-none relative flex w-screen items-stretch overflow-x-auto px-6 py-8 gap-4">
+                <div class="flex max-h-[400px] flex-row gap-4">
+                    <div class="flex h-auto max-h-full w-[300px] flex-none flex-col gap-3 rounded-lg bg-[#fff5e9] p-6 sm:w-[350px] lg:w-[400px]">
+                        <div class="flex flex-col gap-1.5 md:gap-3">
+                            <h1 class="text-[18px] font-[550] sm:text-[16px] lg:text-[18px]">A Game Changer for Startups!</h1>
+                            <p class="text-[16px] italic">FounderForge has been a game-changer for my startup. I connected with like-minded entrepreneurs, found a co-founder, and even got mentorship from experienced professionals. The platform’s discussion forums and networking features are top-notch!</p>
+                        </div>
+                        <div class="flex flex-row items-center gap-3">
+                            <div class="bg-amber-200 w-10 h-10 rounded-full border flex justify-center items-center">
+                                <h6>AR</h6>
+                            </div>
+                            <p>— Abhilash Reddy, Founder of TechSprint</p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="flex h-auto max-h-full w-[300px] flex-none flex-col gap-3 rounded-lg bg-[#fff5e9] p-6 sm:w-[350px] lg:w-[400px] justify-between">
+                    <div class="flex flex-col gap-1.5 md:gap-3">
+                        <h1 class="text-[18px] font-[550] sm:text-[16px] lg:text-[18px]">Great for Collaboration & Growth</h1>
+                        <p class="text-[16px] italic">This platform helped me collaborate with other startups on innovative projects. The funding and investor connections are also valuable. A little improvement in UI/UX would make it even better!</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-3">
+                        <div class="bg-amber-200 w-10 h-10 rounded-full border flex justify-center items-center">
+                            <h6>SK</h6>
+                        </div>
+                        <p>— Sneha Kapoor, CEO of GreenInnovate</p>
+                    </div>
+                </div>
+            
+                <div class="flex h-auto max-h-full w-[300px] flex-none flex-col gap-3 rounded-lg bg-[#fff5e9] p-6 sm:w-[350px] lg:w-[400px] justify-between">
+                    <div class="flex flex-col gap-1.5 md:gap-3">
+                        <h1 class="text-[18px] font-[550] sm:text-[16px] lg:text-[18px]">Perfect for Building a Strong Network</h1>
+                        <p class="text-[16px] italic">FounderForge provided me with the perfect opportunity to pitch my startup and gain insights from industry leaders. I was able to get funding leads and build a strong professional network.</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-3">
+                        <div class="bg-amber-200 w-10 h-10 rounded-full border flex justify-center items-center">
+                            <h6>AV</h6>
+                        </div>
+                        <p>— Arjun Verma, Co-Founder of AI Solutions Hub</p>
+                    </div>
+                </div>
+            
+                <div class="flex h-auto max-h-full w-[300px] flex-none flex-col gap-3 rounded-lg bg-[#fff5e9] p-6 sm:w-[350px] lg:w-[400px] justify-between">
+                    <div class="flex flex-col gap-1.5 md:gap-3">
+                        <h1 class="text-[18px] font-[550] sm:text-[16px] lg:text-[18px]">Solid Platform, Needs More Features</h1>
+                        <p class="text-[16px] italic">Great initiative! The idea of connecting entrepreneurs is well-executed. However, I’d love to see more advanced tools for startup analysis and funding opportunities.</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-3">
+                        <div class="bg-amber-200 w-10 h-10 rounded-full border flex justify-center items-center">
+                            <h6>PD</h6>
+                        </div>
+                        <p>— Priya Deshmukh, Founder of EduNext</p>
+                    </div>
+                </div>
+            
+                <div class="flex h-auto max-h-full w-[300px] flex-none flex-col gap-3 rounded-lg bg-[#fff5e9] p-6 sm:w-[350px] lg:w-[400px] justify-between">
+                    <div class="flex flex-col gap-1.5 md:gap-3">
+                        <h1 class="text-[18px] font-[550] sm:text-[16px] lg:text-[18px]">Best Platform for Aspiring Entrepreneurs</h1>
+                        <p class="text-[16px] italic">As a college student passionate about entrepreneurship, this platform has been my learning ground. The blogs, discussion forums, and networking events are super helpful!</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-3">
+                        <div class="bg-amber-200 w-10 h-10 rounded-full border flex justify-center items-center">
+                            <h6>KS</h6>
+                        </div>
+                        <p>— Karan Shah, Business Enthusiast</p>
+                    </div>
+                </div>
+            
+                <div class="flex h-auto max-h-full w-[300px] flex-none flex-col gap-3 rounded-lg bg-[#fff5e9] p-6 sm:w-[350px] lg:w-[400px] justify-between">
+                    <div class="flex flex-col gap-1.5 md:gap-3">
+                        <h1 class="text-[18px] font-[550] sm:text-[16px] lg:text-[18px]">Good for Finding Mentors</h1>
+                        <p class="text-[16px] italic">I joined FounderForge to seek mentorship, and I was not disappointed! The platform connected me with experienced founders who guided me on my business idea. Just a few bugs to fix in the chat feature.</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-3">
+                        <div class="bg-amber-200 w-10 h-10 rounded-full border flex justify-center items-center">
+                            <h6>AR</h6>
+                        </div>
+                        <p>— Anjali Reddy, Aspiring Entrepreneur</p>
+                    </div>
+                </div>
+            
+                <div class="flex h-auto max-h-full w-[300px] flex-none flex-col gap-3 rounded-lg bg-[#fff5e9] p-6 sm:w-[350px] lg:w-[400px] justify-between">
+                    <div class="flex flex-col gap-1.5 md:gap-3">
+                        <h1 class="text-[18px] font-[550] sm:text-[16px] lg:text-[18px]">Must-Join for Startups!</h1>
+                        <p class="text-[16px] italic">I’ve been on multiple networking platforms, but this one stands out. The community is very active, and the features are well thought out. It truly helps in idea sharing and collaboration.</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-3">
+                        <div class="bg-amber-200 w-10 h-10 rounded-full border flex justify-center items-center">
+                            <h6>VN</h6>
+                        </div>
+                        <p>— Vikas Nair, Startup Enthusiast</p>
+                    </div>
+                </div>
+            
+                <div class="flex h-auto max-h-full w-[300px] flex-none flex-col gap-3 rounded-lg bg-[#fff5e9] p-6 sm:w-[350px] lg:w-[400px] justify-between">
+                    <div class="flex flex-col gap-1.5 md:gap-3">
+                        <h1 class="text-[18px] font-[550] sm:text-[16px] lg:text-[18px]">Good Platform, Needs More Engagement</h1>
+                        <p class="text-[16px] italic">The concept is great, and I’ve met some amazing people here. However, I feel there should be more interactive webinars and workshops to keep engagement high.</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-3">
+                        <div class="bg-amber-200 w-10 h-10 rounded-full border flex justify-center items-center">
+                            <h6>MJ</h6>
+                        </div>
+                        <p>— Meera Joshi, Small Business Owner</p>
+                    </div>
+                </div>
+            </div>
         </section>
         <section>
-
+            
         </section>
         <section>
             
