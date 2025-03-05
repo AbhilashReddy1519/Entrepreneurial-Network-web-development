@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Entrepreneurial Network - A platform to connect entrepreneurs and startups">
     <meta name="keywords" content="entrepreneurship, networking, startups, collaboration, business">
@@ -17,6 +18,11 @@
             font-family: 'Inter', sans-serif; /* Best for body text */
             font-size: 16px;
             line-height: 1.6;
+            /* white-space: nowrap; */
+        }
+
+        ::-webkit-scrollbar {
+            display: none; /* Hide scrollbar in Chrome, Safari */
         }
 
         /* Headings */
@@ -48,12 +54,9 @@
             font-size: 2.4rem;
             font-weight: lighter;
         }
-        .scrollbar-none {
-            scrollbar-width: none;
-        }
     </style>
 </head>
-<body class="bg-white h-screen relative">
+<body class="bg-white h-screen">
     <header>
         <nav class="flex justify-between items-center py-2 px-10 bg-white text-black">
             <div class="flex justify-between items-center">
@@ -68,12 +71,12 @@
                     <option value="fr">Français</option>
                 </select>
                 <a href="./login.html" class="bg-white text-black px-2 rounded-full mr-2 text-sm hover:text-blue-500">Login</a>
-                <a href="./login.html" class="bg-[#00616e] text-white px-2 pb-2 py-1  mt-0.5 rounded-lg text-sm w-18 h-7 text-center hover:bg-[#00434c]">Sign Up</a>
+                <a href="./signup.html" class="bg-[#00616e] text-white px-2 pb-2 py-1  mt-0.5 rounded-lg text-sm w-18 h-7 text-center hover:bg-[#00434c]">Sign Up</a>
             </div>
         </nav>
     </header>
 
-    <main class="text-black">
+    <main class="text-black scrollbar-none">
         <section class="bg-gradient-to-r from-white via-white to-pink-300 h-screen transform transition-colors overflow-hidden">
             <div class="flex justify-center">
                 <div class="flex justify-between font-bold">
