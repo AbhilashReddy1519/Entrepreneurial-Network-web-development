@@ -1,9 +1,10 @@
 .social-icons a {
     color: #ffffff; /* Default color for icons */
-    transition: color 0.3s ease; /* Smooth transition for color change */
+    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
 }
 .social-icons a:hover {
     color: #1da1f2; /* Change color on hover */
+    transform: scale(1.1);
 }
 .social-icons a[aria-label="For facebook"]:hover {
     color: #3b5998; /* Facebook color */

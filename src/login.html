@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Entrepreneurial Network - A platform to connect entrepreneurs and startups">
     <meta name="keywords" content="entrepreneurship, networking, startups, collaboration, business">
-    <meta name="author" content="Abhilash Reddy">
+    <meta name="author" content="Abhilash Reddy ">
     <!-- Set the favicon (the small icon in the browser tab) -->
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <title>FounderForge</title>
@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="./all.css">
 </head>
 <body class="bg-white h-screen">
+    <div class="relative mt-[100px] popup flex justify-center w-full">
+        <div id="topAlert" class="hidden w-md fixed top-20 right-1 bg-white text-black px-6 py-3 rounded-lg shadow-lg items-center justify-between">
+            <span>🚀 <span class="text-red-600">Founder<span class="text-pink-800">Forge</span></span> : Feature Coming Soon!😊</span>
+            <button onclick="closeAlert()" class="ml-4 text-black font-bold text-lg">&times;</button>
+        </div>     
+    </div>
     <header>
         <nav class="flex justify-between items-center py-2 px-10 bg-white text-black">
             <div class="flex justify-between items-center">
@@ -44,19 +50,19 @@
                 <form action="" method="post">
                     <div class="mb-6">
                         <label for="email" class="block text-md font-bold pb-2">Email</label>
-                        <input type="email" name="email" id="" placeholder=" " class="w-full py-1.5 rounded-md border-1 border-neutral-300 px-1.5 hover:border-1 hover:border-neutral-400 focus:outline-none focus:border-[#00798a]">
+                        <input type="email" title="email" name="email" id="" placeholder=" " class="w-full py-1.5 rounded-md border-1 border-neutral-300 px-1.5 hover:border-1 hover:border-neutral-400 focus:outline-none focus:border-[#00798a]">
                     </div>
                     <div class="mb-6">
                         <div class="flex justify-between">
                             <label for="password" class="block text-md font-bold pb-2">Password</label>
                             <a href="#" class="text-[#04a7bc] text-sm font-medium mt-1 mr-2 hover:text-[#00798a]">Forgot password</a>
                         </div>
-                        <input type="password" name="password" id="" placeholder=" " class="w-full py-1.5 rounded-md border-1 border-neutral-300 px-1.5 hover:border-1 hover:border-neutral-400 focus:outline-none focus:border-[#00798a]">
+                        <input type="password" title="password" name="password" id="" placeholder=" " class="w-full py-1.5 rounded-md border-1 border-neutral-300 px-1.5 hover:border-1 hover:border-neutral-400 focus:outline-none focus:border-[#00798a]">
                     </div>
                     <div>
                         <!-- for Google captcha -->
                         <div class="flex flex-row">
-                            <input type="checkbox" name="logged in" id="" class="h-5 w-5 cursor-pointer">
+                            <input type="checkbox" title="logged in" name="logged in" id="" class="h-5 w-5 cursor-pointer">
                             <label for="logged in" class="ml-2 text-sm font-extralight">Keep me logged in.</label>
                         </div>
                         <button type="submit" class="cursor-pointer text-center w-full bg-[#ff2663] hover:bg-[#b91c48] text-white font-bold rounded-sm py-1.5 my-2 text-2xl">Log in</button>
@@ -71,10 +77,6 @@
                     <button class="signBtn flex items-center justify-center text-lg rounded-lg text-center w-full py-2 mb-2 cursor-pointer border-1 border-gray-300">
                         <img src="/images/google.png" alt="" class="rounded-full w-8 h-8 ml-2">
                         <span class="flex-1 text-center">Sign up with Google</span>
-                        <!-- Tooltip -->
-                        <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-black text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
-                        Feature Coming Soon!
-                        </span>
                     </button>
                     <button class="signBtn flex items-center justify-center text-lg rounded-lg text-center w-full py-1 mb-2 cursor-pointer border-1 border-gray-300">
                         <img src="/images/apple.png" alt="Apple logo" class="rounded-full w-10 h-10 ml-1.5">
@@ -141,7 +143,7 @@
                         <a href="#" aria-label="For twitter" class="transition delay-100 duration-500 ease-in-out hover:scale-200"><i class="fa-brands fa-square-x-twitter"></i></a>
                         <a href="#" aria-label="For instagram" class="transition delay-100 duration-500 ease-in-out hover:scale-200"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#" aria-label="For youtube" class="transition delay-100 duration-500 ease-in-out hover:scale-200"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#" aria-label="For Linkedin" class="transition delay-100 duration-500 ease-in-out hover:scale-200"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/-abhilash-reddy/" aria-label="For Linkedin" class="transition delay-100 duration-500 ease-in-out hover:scale-200"><i class="fa-brands fa-linkedin"></i></a>
                     </nav>
                 </div>                    
                 <div class="flex items-start space-x-3 sm:items-end">
@@ -159,5 +161,6 @@
             </div>
         </div>
     </footer>
+    <script src="/javaScript/index.js"></script>
 </body>
 </html>

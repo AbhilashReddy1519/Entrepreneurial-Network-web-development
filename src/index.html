@@ -19,8 +19,15 @@
             display: none; /* Hide scrollbar in Chrome, Safari */
         }
     </style>
+
 </head>
 <body class="bg-white h-screen">
+    <div class="relative mt-[100px] popup flex justify-center">
+        <div id="topAlert" class="hidden w-lg fixed top-20 bg-white text-black px-6 py-3 rounded-lg shadow-lg items-center justify-between">
+            <span>🚀 <span class="text-red-600">Founder<span class="text-pink-800">Forge</span></span> : Feature Coming Soon!😊</span>
+            <button onclick="closeAlert()" class="ml-4 text-black font-bold text-lg">&times;</button>
+        </div>     
+    </div>
     <header>
         <nav class="flex justify-between items-center py-2 px-10 bg-white text-black">
             <div class="flex justify-between items-center">
@@ -39,7 +46,7 @@
             </div>
         </nav>
     </header>
-
+    
     <main class="text-black scrollbar-none">
         <section class="bg-gradient-to-r from-white via-white to-pink-300 h-screen transform transition-colors overflow-hidden">
             <div class="flex justify-center">
@@ -433,7 +440,7 @@
                         <a href="#" aria-label="For twitter" class="transition delay-100 duration-500 ease-in-out hover:scale-200"><i class="fa-brands fa-square-x-twitter"></i></a>
                         <a href="#" aria-label="For instagram" class="transition delay-100 duration-500 ease-in-out hover:scale-200"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#" aria-label="For youtube" class="transition delay-100 duration-500 ease-in-out hover:scale-200"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#" aria-label="For Linkedin" class="transition delay-100 duration-500 ease-in-out hover:scale-200"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/-abhilash-reddy/" aria-label="For Linkedin" class="transition delay-100 duration-500 ease-in-out hover:scale-200"><i class="fa-brands fa-linkedin"></i></a>
                     </nav>
                 </div>                    
                 <div class="flex items-start space-x-3 sm:items-end">
