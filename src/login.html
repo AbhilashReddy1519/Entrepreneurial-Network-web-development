@@ -12,44 +12,7 @@
     <script src="https://kit.fontawesome.com/49b62f9a06.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./output.css"> 
     <link rel="stylesheet" href="./onlyheaderfooter.css">
-    <style>
-       body {
-        font-family: 'Inter', sans-serif; /* Best for body text */
-        font-size: 16px;
-        line-height: 1.6;
-        overflow: visible;
-        }
-
-        /* Headings */
-        h1, h2, h3 {
-            font-family: 'Poppins', sans-serif; /* Stylish headings */
-            font-weight: 300;
-        }
-        /* Add custom styles here */
-        .custom-select {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            background-size: 1em;
-            padding-right: 0.5rem; /* Adjust based on the size of your custom arrow */
-            border: none;
-            outline: none;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000; /* Ensure the header is on top */
-        }
-        main {
-            padding-top: 70px; /* Adjust based on the height of your header */
-        }
-        .logo {
-            font-family: 'Brush Script MT', cursive;
-            font-size: 2rem;
-        }
-    </style>
+    <link rel="stylesheet" href="./all.css">
 </head>
 <body class="bg-white h-screen">
     <header>
@@ -65,14 +28,62 @@
                     <option value="es">Español</option>
                     <option value="fr">Français</option>
                 </select>
-                <a href="./login.html" class="bg-white text-black px-2 rounded-full mr-2 text-sm hover:text-blue-500">Login</a>
+                <!-- <a href="./login.html" class="bg-white text-black px-2 rounded-full mr-2 text-sm hover:text-blue-500">Login</a> -->
                 <a href="./signup.html" class="bg-[#00616e] text-white px-2 pb-2 py-1 mt-0.5 rounded-lg text-sm w-18 h-7 text-center hover:bg-[#00434c]">Sign Up</a>
             </div>
         </nav>
     </header>
 
-    <main>
-        <h1>FounderForge</h1>
+    <main class="m-2 mb-16 flex justify-center">
+        <div class="bg-white border border-neutral-300 rounded-lg min-w-max px-10 h-full">
+            <div class="text-center">
+                <h1 class="text-2xl pb-1 font-bold pt-6">Log in</h1>
+                <p class="text-md font-extralight py-2">Not a member yet? <a href="./signup.html" class="text-[#2dacbd] hover:text-[#00798a]">Sign up</a></p>
+            </div>
+            <div class="mt-6 w-sm">
+                <form action="" method="post">
+                    <div class="mb-6">
+                        <label for="email" class="block text-md font-bold pb-2">Email</label>
+                        <input type="email" name="email" id="" placeholder=" " class="w-full py-1.5 rounded-md border-1 border-neutral-300 px-1.5 hover:border-1 hover:border-neutral-400 focus:outline-none focus:border-[#00798a]">
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex justify-between">
+                            <label for="password" class="block text-md font-bold pb-2">Password</label>
+                            <a href="#" class="text-[#04a7bc] text-sm font-medium mt-1 mr-2 hover:text-[#00798a]">Forgot password</a>
+                        </div>
+                        <input type="password" name="password" id="" placeholder=" " class="w-full py-1.5 rounded-md border-1 border-neutral-300 px-1.5 hover:border-1 hover:border-neutral-400 focus:outline-none focus:border-[#00798a]">
+                    </div>
+                    <div>
+                        <!-- for Google captcha -->
+                        <div class="flex flex-row">
+                            <input type="checkbox" name="logged in" id="" class="">
+                            <label for="logged in" class="ml-2 text-sm font-extralight">Keep me logged in.</label>
+                        </div>
+                        <button type="submit" class="cursor-pointer text-center w-full bg-[#ff2663] hover:bg-[#b91c48] text-white font-bold rounded-sm py-1.5 my-2 text-2xl">Log in</button>
+                    </div>
+                    <div class="flex w-full flex-row items-center justify-between py-8">
+                        <div class="w-full border-b border-gray-300"></div>
+                        <span class="px-3 text-gray-600">or</span>
+                        <div class="w-full border-b border-gray-300"></div>
+                    </div>
+                </form>
+                <div class="mb-10">
+                    <button class="signBtn flex items-center justify-center text-lg rounded-lg text-center w-full py-2 mb-2 cursor-pointer border-1 border-gray-300">
+                        <img src="/images/google.png" alt="" class="rounded-full w-8 h-8 ml-2">
+                        <span class="flex-1 text-center">Sign up with Google</span>
+                    </button>
+                    <button class="signBtn flex items-center justify-center text-lg rounded-lg text-center w-full py-1 mb-2 cursor-pointer border-1 border-gray-300">
+                        <img src="/images/apple.png" alt="Apple logo" class="rounded-full w-10 h-10 ml-1.5">
+                        <span class="flex-1 text-center">Sign up with Apple</span>
+                    </button>
+                    <button class="signBtn flex items-center justify-center text-lg rounded-lg text-center w-full py-1 mb-5 cursor-pointer border-1 border-gray-300">
+                        <img src="/images/facebook.png" alt="Facebook logo" class="rounded-full w-10 h-10 ml-1.5">
+                        <span class="flex-1 text-center">Sign up with Facebook</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer class="z-0 bg-[#212121] pt-4 mt-0 text-gray-300/95 px-16" data-event-label="Footer" role="contentinfo">
