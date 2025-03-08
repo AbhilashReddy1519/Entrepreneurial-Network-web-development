@@ -126,9 +126,38 @@ let passwordBar = document.getElementById('passwordStrengthBar');
 let passwordText = document.getElementById('passwordStrengthText');
 
 passwordType.addEventListener('input', () => {
-    let password = passwordType.value;
-    let strength = checkPasswordStrength(password);
-    
+  let password = passwordType.value;
+  let strength = checkPasswordStrength(password);
 
+  passwordBar.style.width = strength.percent+'%';
+  passwordBar.style.backgroundColor = strength.color;
 
+  passwordText.textContent = strength.text;
+  passwordText.style.color = strength.color;
 })
+
+function checkPasswordStrength(password) {
+  const minLength = 10;
+  const uppercaseRegex = /[A-Z]/;
+  const lowercaseRegex = /[a-z]/;
+  const numberRegex = /[0-9]/;
+  const specialCharRegex = /[@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?!]/;
+
+  let score = -1;
+
+  if (password.length >= minLength) score++; 
+  if (uppercaseRegex.test(password)) score++; 
+  if (lowercaseRegex.test(password)) score++; 
+  if (numberRegex.test(password)) score++; 
+  if (specialCharRegex.test(password)) score++; 
+
+  let strengthLevels = [
+      { text: "Very Weak", color: "red", percent: 20 },
+      { text: "Weak", color: "orange", percent: 40 },
+      { text: "Moderate", color: "yellow", percent: 60 },
+      { text: "Strong", color: "lightgreen", percent: 80 },
+      { text: "Very Strong", color: "green", percent: 100 }
+  ];
+
+  return strengthLevels[score]; 
+}
