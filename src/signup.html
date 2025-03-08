@@ -41,25 +41,34 @@
                 <!-- <p class="text-md font-extralight py-2">Not a member yet? <a href="./signup.html" class="text-[#2dacbd] hover:text-[#00798a]">Sign up</a></p> -->
             </div>
             <div class="mt-6 w-sm">
-                <form action="" method="post">
+                <form id="signupForm" action="" method="post">
                     <div class="mb-6">
                         <label for="name" class="block text-md font-bold pb-2">Name</label>
-                        <input type="text" name="name" id="" title="name" placeholder=" " class="w-full py-1.5 rounded-md border-1 border-neutral-300 px-1.5 hover:border-1 hover:border-neutral-400 focus:outline-none focus:border-[#00798a]">
+                        <input type="text" name="name" id="" title="Enter your name" placeholder=" " class="w-full py-1.5 rounded-md border-1 border-neutral-300 px-1.5 hover:border-1 hover:border-neutral-400 focus:outline-none focus:border-[#00798a]">
+                        <span class="error-message text-red-600 text-sm"></span> <!-- Error Message -->
                     </div>
                     <div class="mb-6">
                         <label for="email" class="block text-md font-bold pb-2">Email</label>
-                        <input type="email" name="email" id="" title="email" placeholder=" " class="w-full py-1.5 rounded-md border-1 border-neutral-300 px-1.5 hover:border-1 hover:border-neutral-400 focus:outline-none focus:border-[#00798a]">
+                        <input type="email" name="email" id="" title="Enter your email" placeholder=" " class="w-full py-1.5 rounded-md border-1 border-neutral-300 px-1.5 hover:border-1 hover:border-neutral-400 focus:outline-none focus:border-[#00798a]">
+                        <span class="error-message text-red-600 text-sm"></span> <!-- Error Message -->
                     </div>
                     <div class="mb-6">
                         <label for="password" class="block text-md font-bold pb-2">Password</label>
-                        <input type="password" name="password" title="password" id="" placeholder=" " class="w-full py-1.5 rounded-md border-1 border-neutral-300 px-1.5 hover:border-1 hover:border-neutral-400 focus:outline-none focus:border-[#00798a]">
+                        <div class="flex items-center relative">
+                            <input type="password" name="password" title="Enter your password" id="password" placeholder=" " class="w-full py-1.5 outline-0 rounded-md border-1 border-neutral-300 px-1.5 hover:border-1 hover:border-neutral-400 focus:outline-none focus:border-[#00798a] web-appear">
+                            <div id="togglePassword" class="absolute right-3 cursor-pointer">
+                                <img src="/images/eyeslash.png" alt="" id="eyeIcon" class="h-5 w-5 rounded-full">
+                            </div>
+                        </div>
+                        <span id="error-pass" class="error-message text-red-600 text-sm"></span> <!-- Error Message -->
                     </div>
                     <div class="">
                         <h1 class="block text-md font-bold pb-2">Age</h1>
                         <div class="flex flex-row">
-                            <input type="checkbox" title="age" name="age" id="" class="h-5 w-5 cursor-pointer">
+                            <input type="checkbox" title="are you 18 or older" name="age" id="ageCheck" class="h-5 w-5 cursor-pointer">
                             <label for="age" class="text-sm ml-2">I am 18 years of age or older.</label>
                         </div>
+                        <span id="ageError" class="text-red-600 text-sm"></span> <!-- Error Message -->
                         <!-- for captcha add here  -->
                         <button type="submit" class="cursor-pointer text-center w-full bg-[#ff2663] hover:bg-[#b91c48] text-white font-bold rounded-sm py-1.5 my-4 text-2xl">Sign Up</button>
                     </div>
@@ -140,5 +149,6 @@
             </div>
         </div>
     </footer>
+    <script src="/javaScript/signupVal.js"></script>
 </body>
 </html>

@@ -47,24 +47,33 @@
                 <p class="text-md font-extralight py-2">Not a member yet? <a href="./signup.html" class="text-[#2dacbd] hover:text-[#00798a]">Sign up</a></p>
             </div>
             <div class="mt-6 w-sm">
-                <form action="" method="post">
+                <form id="loginForm" action="" method="post">
                     <div class="mb-6">
                         <label for="email" class="block text-md font-bold pb-2">Email</label>
-                        <input type="email" title="email" name="email" id="" placeholder=" " class="w-full py-1.5 rounded-md border-1 border-neutral-300 px-1.5 hover:border-1 hover:border-neutral-400 focus:outline-none focus:border-[#00798a]">
+                        <input type="email" title="Enter your email" name="email" id="" placeholder=" " class="w-full py-1.5 rounded-md border-1 border-neutral-300 px-1.5 hover:border-1 hover:border-neutral-400 focus:outline-none focus:border-[#00798a]">
+                        <span class="error-message text-red-600 text-sm"></span> <!-- Error Message -->
                     </div>
                     <div class="mb-6">
                         <div class="flex justify-between">
                             <label for="password" class="block text-md font-bold pb-2">Password</label>
                             <a href="#" class="text-[#04a7bc] text-sm font-medium mt-1 mr-2 hover:text-[#00798a]">Forgot password</a>
                         </div>
-                        <input type="password" title="password" name="password" id="" placeholder=" " class="w-full py-1.5 rounded-md border-1 border-neutral-300 px-1.5 hover:border-1 hover:border-neutral-400 focus:outline-none focus:border-[#00798a]">
+                        <div class="flex items-center relative">
+                            <input type="password" name="password" title="Enter your password" id="password" placeholder=" " class="w-full py-1.5 outline-0 rounded-md border-1 border-neutral-300 px-1.5 hover:border-1 hover:border-neutral-400 focus:outline-none focus:border-[#00798a] web-appear">
+                            <div id="togglePassword" class="absolute right-3 cursor-pointer">
+                                <img src="/images/eyeslash.png" alt="" id="eyeIcon" class="h-5 w-5 rounded-full">
+                            </div>
+                        </div>
+                        <span class="error-message text-red-600 text-sm"></span> <!-- Error Message -->
                     </div>
                     <div>
                         <!-- for Google captcha -->
                         <div class="flex flex-row">
-                            <input type="checkbox" title="logged in" name="logged in" id="" class="h-5 w-5 cursor-pointer">
+                            <input type="checkbox" title="logged in" name="logged in" id="logged_in" class="h-5 w-5 cursor-pointer">
                             <label for="logged in" class="ml-2 text-sm font-extralight">Keep me logged in.</label>
+                            <!-- <span class="error-message text-red-600 text-sm">Hi</span> Error Message -->
                         </div>
+                        <span class="error-message text-red-600 text-sm"></span> <!-- Error Message -->
                         <button type="submit" class="cursor-pointer text-center w-full bg-[#ff2663] hover:bg-[#b91c48] text-white font-bold rounded-sm py-1.5 my-2 text-2xl">Log in</button>
                     </div>
                     <div class="flex w-full flex-row items-center justify-between py-8">
@@ -162,5 +171,6 @@
         </div>
     </footer>
     <script src="/javaScript/index.js"></script>
+    <script src="/javaScript/loginVal.js"></script>
 </body>
 </html>

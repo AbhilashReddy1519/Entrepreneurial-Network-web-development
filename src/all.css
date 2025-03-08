@@ -21,15 +21,8 @@ h1, h2, h3 {
     border: none;
     outline: none;
 }
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure the header is on top */
-}
 
-header {
+header, .popup {
     position: fixed;
     top: 0;
     left: 0;
@@ -43,4 +36,16 @@ main {
 .logo {
     font-family: 'Brush Script MT', cursive;
     font-size: 2rem;
+}
+
+.web-appear {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
 }
