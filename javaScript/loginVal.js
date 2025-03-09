@@ -50,11 +50,11 @@ let eyeIcon = document.getElementById("eyeIcon");
 togglePassword.addEventListener("click", () => {
   if (passwordType.type === "password") {
     passwordType.type = "text";
-    eyeIcon.src = "/images/eyeopen.png";
+    eyeIcon.src = "../images/eyeopen.png";
     eyeIcon.alt = "Hide Password";
   } else {
     passwordType.type = "password";
-    eyeIcon.src = "/images/eyeslash.png";
+    eyeIcon.src = "../images/eyeslash.png";
     eyeIcon.alt = "Show Password";
   }
 });

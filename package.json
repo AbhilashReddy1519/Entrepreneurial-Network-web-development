@@ -1,13 +1,12 @@
 {
   "dependencies": {
-    "@tailwindcss/cli": "^4.0.6",
-    "tailwindcss": "^4.0.6"
+    "@tailwindcss/cli": "^4.0.12",
+    "tailwindcss": "^4.0.12"
   },
   "name": "entrepreneurial-network-web-development",
   "version": "1.0.0",
   "description": "A platform that connects entrepreneurs to exchange ideas, collaborate on projects, and foster innovation.",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "start": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
   },
