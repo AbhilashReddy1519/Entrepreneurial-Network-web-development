@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../output.css"> 
     <link rel="stylesheet" href="../onlyheaderfooter.css">
     <link rel="stylesheet" href="../all.css">
+    <script src="../../javaScript/me_business.js"></script>
 </head>
 <body class="bg-white h-screen">
     <header class="flex flex-row bg-white">
@@ -26,35 +27,35 @@
         </div>
         <nav class="flex justify-between items-center pl-14 bg-white text-black">
             <div class="flex flex-row justify-evenly items-center">
-                <a href="./main.html" title="home" class="home flex flex-col text-gray-700 hover:text-black px-[20px]  items-center">  
+                <a href="./main.html" title="home" class="flex flex-col text-gray-700 hover:text-black px-[20px]  items-center">  
                     <i class="fa-solid fa-house-chimney text-lg"></i>
                     <h4 class="text-[12px]">Home</h4>
                 </a>
-                <a href="./network.html" title="Network" class="home flex flex-col text-black border-b-2 px-[20px] items-center"> 
+                <a href="./network.html" title="Network" class="flex flex-col text-black border-b-2 px-[20px] items-center"> 
                     <i class="fa-solid fa-hexagon-nodes text-lg"></i>
                     <h4 class="text-[12px]">My Network</h4>
                 </a>
-                <a href="./jobs.html" title="Jobs" class="home flex flex-col hover:text-black text-gray-700  px-[20px] items-center"> 
+                <a href="./jobs.html" title="Jobs" class="flex flex-col hover:text-black text-gray-700  px-[20px] items-center"> 
                     <i class="fa-solid fa-briefcase text-lg"></i>
                     <h4 class="text-[12px]">Jobs</h4>
                 </a>
-                <a href="./messiging.html" title="Messaging" class="home flex flex-col hover:text-black px-[20px] text-gray-700 items-center"> 
+                <a href="./messiging.html" title="Messaging" class="flex flex-col hover:text-black px-[20px] text-gray-700 items-center"> 
                     <i class="fa-solid fa-message text-lg"></i>
                     <h4 class="text-[12px]">Messaging</h4>
                 </a>
-                <a href="./notifications.html" title="Notifications" class="home flex flex-col hover:text-black px-[20px] text-gray-700 items-center"> 
+                <a href="./notifications.html" title="Notifications" class="flex flex-col hover:text-black px-[20px] text-gray-700 items-center"> 
                     <i class="fa-solid fa-bell text-lg"></i>
                     <h4 class="text-[12px]">Notifications</h4>
                 </a>
-                <button title="Me" class="home flex flex-col text-gray-700 px-[20px] hover:text-black items-center"> 
+                <button title="Me" id="profile" class="flex flex-col text-gray-700 px-[20px] hover:text-black items-center"> 
                     <i class="fa-solid fa-user text-lg"></i>
                     <h4 class="text-[12px]">Me</h4>
                 </button>
-                <button title="business" class="home flex flex-col border-l-1 border-neutral-300 text-gray-700 px-[20px] hover:text-black items-center"> 
+                <button title="business" id="business" class="flex flex-col border-l-1 border-neutral-300 text-gray-700 px-[20px] hover:text-black items-center"> 
                     <i class="fa-solid fa-building text-lg"></i>
                     <h4 class="text-[12px]">For Business</h4>
                 </button>
-                <a href="./premium.html" title="Premium" class="home flex flex-col text-gray-700 pl-[20px] hover:text-black items-center"> 
+                <a href="./premium.html" title="Premium" class="flex flex-col text-gray-700 pl-[20px] hover:text-black items-center"> 
                     <img src="../../images/premium.png" alt="for Premium" class="h-5 -mt-1">
                     <h4 class="text-[12px]">Try Premium</h4>
                 </a>
@@ -62,8 +63,132 @@
         </nav>
     </header>
 
-    <main class="h-screen">
-        <h1>FounderForge</h1>
+    <main class="h-screen bg-[#f4f2ee]">
+        <div id="profile_preview" class="hidden z-50 fixed top-16 right-[17rem] border border-neutral-300/70 bg-[#f4f4f4ea] w-[290px] rounded-sm rounded-r-none rounded-b-sm">
+            <div class="px-3 bg-white rounded-t-sm">
+                <div class="flex flex-row py-2 px-1 gap-2">
+                    <i class="fa-solid fa-user h-14 text-center w-14 text-4xl bg-gray-400 px-1 py-1 rounded-full"></i>
+                    <div>
+                        <h1 class="font-bold text-xl">User_name</h1>
+                        <p class="text-sm">description of user</p>
+                    </div>
+                </div>
+                <a href="./me.html">
+                    <button class="text-center w-full border mb-4 text-sm border-blue-500 bg-blue-100 hover:bg-blue-200 text-blue-600 cursor-pointer rounded-2xl box-border outline hover:outline-2 hover:outline-blue-800">
+                        View Profile
+                    </button>
+                </a>
+            </div>
+            <hr class="text-neutral-400/70">
+            <div class="px-3">
+                <h1 class="font-bold text-lg">Account</h1>
+                <div class="pt-2 text-sm flex flex-col gap-2">
+                    <a href="./premium.html" class="flex text-gray-700 flex-row items-center gap-1 hover:text-blue-800">
+                        <img src="../../images/premium.png" alt="for premium" class="h-4">
+                        <p class="">Try 1 month of Premium for Reach</p>
+                    </a>
+                    <a href="#" class="text-neutral-600 hover:underline">Settings & Privacy</a>
+                    <a href="#" class="text-neutral-600 hover:underline">Help</a>
+                    <a href="#" class="text-neutral-600 hover:underline">Language</a>
+                </div>
+            </div>
+            <hr class="w-full mt-4 text-neutral-400/70">
+            <div class="px-3">
+                <h1 class="font-bold text-lg">Manage</h1>
+                <div class="pt-2 text-sm flex flex-col gap-2">
+                    <a href="#" class="text-neutral-600 hover:underline">Posts & Activity</a>
+                    <a href="#" class="text-neutral-600 hover:underline">Job Posting Account</a>
+                </div>
+            </div>
+            <hr class="w-full mt-4 text-neutral-400/70">
+            <div class="px-3 text-sm ">
+                <button class="hover:underline text-neutral-600 py-1">Sign out</button>
+            </div>
+        </div>
+
+        <div id="business_preview" class="hidden py-12 px-8 z-50 h-10/12 overflow-y-auto fixed top-16 right-[11rem] w-[700px] bg-white border border-neutral-300/70 rounded-sm rounded-r-none rounded-b-sm">
+            <div class="flex flex-row">
+                <div class="flex flex-col w-[45%] pl-4 border-r border-r-neutral-400">
+                    <h1 class="font-bold text-xl mb-7">My Apps</h1>
+                    <div class="flex flex-col gap-6">
+                        <a href="" class="flex pl-3 items-center gap-3 hover:underline hover:decoration-blue-500">
+                            <img src="../../images/client.png" alt="client" class="h-8 w-8">
+                            <h2 class="text-[14px]">Find new clients</h2>
+                        </a>
+                        <a href="" class="flex pl-3 items-center gap-3 hover:underline hover:decoration-blue-500">
+                            <img src="../../images/group.png" alt="group" class="h-8 w-8">
+                            <h2 class="text-[14px]">Groups</h2>
+                        </a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-sm text-gray-600 my-3">Talent</h3>
+                        <a href="" class="flex items-center pl-3 gap-3 mb-2 hover:underline hover:decoration-blue-500">
+                            <img src="../../images/insights.png" alt="" class="h-8 w-8 rounded-full">
+                            <h2 class="text-[14px]">Talent insights</h2>
+                        </a>
+                        <a href="" class="flex items-center pl-3 gap-3 hover:underline hover:decoration-blue-500">
+                            <img src="../../images/breifcase.png" alt="" class="h-8 w-8 rounded-full">
+                            <h2 class="text-[14px]">Post a job</h2>
+                        </a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-sm text-gray-600 my-3">Sales</h3>
+                        <a href="" class="flex items-center pl-3 gap-3 hover:underline hover:decoration-blue-500">
+                            <img src="../../images/service.png" alt="" class="h-8 w-8 rounded-full">
+                            <h2 class="text-[14px]">Services Marketplace</h2>
+                        </a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-sm text-gray-600 my-3">Marketing</h3>
+                        <a href="" class="flex items-center pl-3 gap-3 hover:underline hover:decoration-blue-500">
+                            <img src="../../images/advertise.png" alt="" class="h-8 w-8 rounded-full">
+                            <h2 class="text-[14px]">Advertise</h2>
+                        </a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-sm text-gray-600 my-3">Learning</h3>
+                        <a href="" class="flex items-center pl-3 gap-3 hover:underline hover:decoration-blue-500">
+                            <img src="../../images/learning.png" alt="" class="h-8 w-8 rounded-full">
+                            <h2 class="text-[14px]">Learning</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col pl-10">
+                    <h1 class="font-bold text-xl mb-7">Explore more for business</h1>
+                    <div class="flex flex-col gap-4 text-[1rem]">
+                        <a href="#" class="hover:underline hover:decoration-blue-500">
+                            <h2 class="">Hire on FounderForge</h2>
+                            <p class="text-sm text-gray-600">Find, attract and recruit talent</p>
+                        </a>
+                        <a href="#" class="hover:underline hover:decoration-blue-500">
+                            <h2>Sell with FounderForge</h2>
+                            <p class="text-sm text-gray-600">Unlock sales opportunities</p>
+                        </a>
+                        <a href="#" class="hover:underline hover:decoration-blue-500">
+                            <h2>Post a job for free</h2>
+                            <p class="text-sm text-gray-600">Get qualified applicants quickly</p>
+                        </a>
+                        <a href="#" class="hover:underline hover:decoration-blue-500">
+                            <h2>Advertise on FounderForge</h2>
+                            <p class="text-sm text-gray-600">Acquire customers and grow your busines</p>
+                        </a>
+                        <a href="#" class="hover:underline hover:decoration-blue-500">
+                            <h2>Elevate your small business</h2>
+                            <p class="text-sm text-gray-600">Find new clients and build credibility</p>
+                        </a>
+                        <a href="#" class="hover:underline hover:decoration-blue-500">
+                            <h2>Learn with FounderForge2</h2>
+                            <p class="text-sm text-gray-600">Courses to develop your employees</p>
+                        </a>
+                        <a href="#" class="hover:underline hover:decoration-blue-500">
+                            <h2>Admin Center</h2>
+                            <p class="text-sm text-gray-600">Manage bilings and account details</p>
+                        </a>
+                    </div>
+                    <a href="#" class="mt-8 text-xl font-[600] hover:underline hover:decoration-blue-500">Create a Company Page <i class="fa-solid fa-plus"></i></a>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="z-0 bg-[#212121] pt-4 mt-0 text-gray-300/95 px-16" data-event-label="Footer" role="contentinfo">
