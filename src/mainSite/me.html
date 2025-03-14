@@ -16,7 +16,7 @@
     <script src="../../javaScript/me_business.js"></script>
 </head>
 <body class="bg-white h-screen">
-    <header class="flex flex-row bg-white">
+    <header class="flex flex-row bg-white px-14">
         <div class="flex justify-start flex-row items-center pl-10">
             <a href="./main.html"><img src="../../images/logo.png" alt="Logo of FounderForge" class="h-12"></a>
             <a href="./main.html"><h1 class="text-3xl text-red-600 logo"><span class="text-pink-800">Forge</span></h1></a>
@@ -63,7 +63,8 @@
         </nav>
     </header>
 
-    <main class="h-screen bg-[#f4f2ee]">
+    <main class="bg-[#f4f2ee]">
+        <!-- profile -->
         <div id="profile_preview" class="hidden z-50 fixed top-16 right-[17rem] border border-neutral-300/70 bg-[#f4f4f4ea] w-[290px] rounded-sm rounded-r-none rounded-b-sm">
             <div class="px-3 bg-white rounded-t-sm">
                 <div class="flex flex-row py-2 px-1 gap-2">
@@ -101,11 +102,11 @@
                 </div>
             </div>
             <hr class="w-full mt-4 text-neutral-400/70">
-            <div class="px-3 text-sm ">
-                <button class="hover:underline text-neutral-600 py-1">Sign out</button>
+            <div class="px-3 text-sm py-2">
+                <a href="../../Backend/logout.php" class="hover:underline text-neutral-600 py-1">Sign out</a>
             </div>
         </div>
-
+        <!-- business -->
         <div id="business_preview" class="hidden py-12 px-8 z-50 h-10/12 overflow-y-auto fixed top-16 right-[11rem] w-[700px] bg-white border border-neutral-300/70 rounded-sm rounded-r-none rounded-b-sm">
             <div class="flex flex-row">
                 <div class="flex flex-col w-[45%] pl-4 border-r border-r-neutral-400">
@@ -189,9 +190,38 @@
                 </div>
             </div>
         </div>
+
+        <section class="grid grid-cols-[72%_auto] gap-4 px-28 pb-14">
+            <section class="rounded-xl overflow-hidden">
+                <div class="w-full relatie flex flex-col bg-white rounded-xl pb-4">
+                    <div class="relative">
+                        <img src="../../images/banner.png" alt="" class="w-full h-52">
+                        <button title="edit" class="absolute px-1 py-1 rounded-full h-8 w-8 text-blue-600 cursor-pointer bg-white top-4 right-3"><i class="fa-solid fa-pencil"></i></button>
+                    </div>
+                    <div class="relative mx-6">
+                        <button title="profile">
+                            <img src="../../images/profile.png" alt="profile" class="absolute -top-28 h-40 w-40 border-[5px] border-white rounded-full left-0 bg-gray-100">
+                        </button>
+                        <button title="edit" class="absolute px-1 py-1 rounded-full h-10 w-10 cursor-pointer bg-white top-5 right-4 text-xl hover:bg-gray-200 text-center"><i class="fa-solid fa-pencil"></i></button>
+                        <div class="flex flex-row justify-between items-center w-full mt-9">
+                            <h1 class="text-[1.8rem] font-bold">User Name</h1>
+                            <a href="#" class="hover:text-blue-600 hover:underline hover:decoration-blue-500"><p>College/University Name</p></a>
+                        </div>
+                        <p class="text-[1.18rem] text-[#191919] my-0.5">Hi guys! New to FounderForge</p>
+                        <p class="text-sm text-[#666666] my-0.5">City, Location</p>
+                        <p class="text-sm py-2 text-blue-600 hover:underline hover:decoration-blue-500 inline">0 Followers</p>
+                        
+
+                    </div>
+                </div>
+            </section>
+            <section class="bg-white rounded-xl">
+
+            </section>
+        </section>
     </main>
 
-    <footer class="z-0 bg-[#212121] pt-4 mt-0 text-gray-300/95 px-16" data-event-label="Footer" role="contentinfo">
+    <footer class=" bg-[#212121] pt-4 mt-0 text-gray-300/95 px-16" data-event-label="Footer" role="contentinfo">
         <div class="px-6 sm:px-4 xl:px-0 md:max-w-screen mx-auto my-0 flex flex-col space-y-6 pb-4">
             <div class="mt-2 flex  flex-row items-center justify-center border-b border-gray-400 pb-6 sm:justify-start">
                 <div class="hidden font-semibold sm:block text-white">
