@@ -50,4 +50,33 @@ document.addEventListener('DOMContentLoaded', () => {
             bus_click = true;
         }
     });
+
+
+    fetch("/Entrepreneurial-Network-web-development/Backend/me_business.php")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.text(); // Get raw response
+    })
+    .then(text => {
+        try {
+            let data = JSON.parse(text);
+            if (data.error) {
+                console.error("Server Error:", data.error);
+            } else {
+                document.getElementById('username').textContent = data.username;
+                document.getElementById('headline').textContent = data.headline && data.headline.trim() !== "" 
+                    ? data.headline 
+                    : "Hi guys! I am new to FounderForge";
+                document.getElementById('profile_picture').src = data.profile_picture && data.profile_picture.trim() !== "" 
+                    ? data.profile_picture 
+                    : "../../images/profile.png"; 
+            }
+        } catch (error) {
+            console.error("JSON Parse Error:", error, "Raw Response:", text);
+        }
+    })
+    .catch(error => console.error("Fetch Error:", error));
+
 });
