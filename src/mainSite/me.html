@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../onlyheaderfooter.css">
     <link rel="stylesheet" href="../all.css">
     <script src="../../javaScript/me_business.js"></script>
+    <script src="../../javaScript/me.js"></script>
 </head>
 <body class="bg-white h-screen">
     <header class="flex flex-row bg-white px-14">
@@ -191,7 +192,7 @@
             </div>
         </div>
 
-        <section class="grid grid-cols-[72%_auto] gap-4 px-28 pb-14">
+        <section class="grid grid-cols-[72%_auto] gap-4 px-28 pb-14 space-y-4">
             <section class="rounded-xl overflow-hidden">
                 <!-- profile -->
                 <div class="w-full relatie flex flex-col bg-white rounded-xl pb-4">
@@ -233,23 +234,85 @@
                     </div>
                 </div>
                 <!-- about -->
-                <div >
-
+                <div class="bg-white rounded-xl p-6 mt-4 relative">
+                    <h1 class="text-[1.4rem] font-bold">About</h1>
+                    <button title="edit" class="absolute px-1 py-1 rounded-full h-8 w-8 cursor-pointer top-4 right-4 text-lg hover:bg-[#81878d5b] text-center"><i class="fa-solid fa-pencil"></i></button>
+                    <p class="py-3 pb-0 text-sm text-neutral-600">
+                        Aspiring to explore opportunities and connecting with like-minded professionals on FounderForge.
+                        Interested in innovation, business development, and building meaningful connections in the entrepreneurial ecosystem.
+                    </p>
                 </div>
                 <!-- Activity -->
-                <div>
-
+                <div class="bg-white rounded-xl p-6 mt-4 relative">
+                    <div class="flex items-center justify-between mb-4">
+                        <h1 class="text-[1.4rem] font-bold">Activity</h1>
+                        <p class="text-base text-blue-600 hover:underline hover:decoration-blue-500 inline cursor-pointer">0 Followers</p>
+                    </div>
+                    
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-4">
+                            <button id="postsBtn" class="text-center px-2 py-1 border text-base text-white bg-green-600 cursor-pointer rounded-2xl transition-colors">
+                                Posts
+                            </button>
+                            <button id="articlesBtn" class="text-center px-2 py-1 border text-base text-gray-600  cursor-pointer rounded-2xl transition-colors">
+                                Articles
+                            </button>
+                        </div>
+                        
+                        <!-- No posts message -->
+                        <div class="text-center py-8 text-gray-500">
+                            <p class="text-base">No posts yet</p>
+                            <p class="text-sm mt-2">Share your thoughts, achievements, or ask for advice</p>
+                            <button class="mt-4 px-4 py-2 text-blue-600 hover:bg-blue-50 hover:underline rounded-full transition-colors">
+                                Create a post
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <!-- education -->
-                <div>
-
+                <!-- Education section -->
+                <div class="bg-white rounded-xl p-6 mt-4 relative">
+                    <div class="flex justify-between items-center mb-4">
+                        <h1 class="text-[1.4rem] font-bold">Education</h1>
+                        <button title="add" class="px-2 py-2 rounded-full h-10 w-10 cursor-pointer hover:bg-[#81878d5b] text-center">
+                            <i class="fa-solid fa-plus text-lg"></i>
+                        </button>
+                    </div>
+                    <!-- Default state for new users -->
+                    <div class="text-center py-6 text-gray-500">
+                        <img src="../../images/education.png" alt="Education" class="h-10 w-10 mx-auto mb-4">
+                        <p class="text-base mb-2">Show your qualifications</p>
+                        <p class="text-sm mb-4">Add your schools, degrees, and field of study</p>
+                        <button class="text-blue-600 hover:text-blue-700 hover:underline text-base">
+                            Add education
+                        </button>
+                    </div>
                 </div>
-                <!-- skills -->
-                <div>
 
+                <!-- Skills section -->
+                <div class="bg-white rounded-xl p-6 mt-4 relative">
+                    <div class="flex justify-between items-center mb-4">
+                        <h1 class="text-[1.4rem] font-bold">Skills</h1>
+                        <div class="flex gap-2">
+                            <button title="take quiz" class="px-2 py-2 rounded-full h-10 w-10 cursor-pointer hover:bg-[#81878d5b] text-center">
+                                <i class="fa-solid fa-pen-to-square text-lg"></i>
+                            </button>
+                            <button title="add" class="px-2 py-2 rounded-full h-10 w-10 cursor-pointer hover:bg-[#81878d5b] text-center">
+                                <i class="fa-solid fa-plus text-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Default state for new users -->
+                    <div class="text-center py-6 text-gray-500">
+                        <img src="../../images/skills.png" alt="Skills" class="h-10 w-10 mx-auto mb-4">
+                        <p class="text-base mb-2">Show what you can do</p>
+                        <p class="text-sm mb-4">Add skills to showcase your strengths</p>
+                        <button class="text-blue-600 hover:text-blue-700 hover:underline text-base">
+                            Add skills
+                        </button>
+                    </div>
                 </div>
             </section>
-            <section class="rounded-xl overflow-hidden">
+            <section class="rounded-xl relative pb-2">
                 <div class="flex flex-col bg-white py-2 rounded-xl">
                     <div class="relative px-3 py-2">
                         <h1 class="text-lg font-bold text-[#484848]">Profile Language</h1>
@@ -263,12 +326,40 @@
                     </div>
                 </div>
                 <!-- note for premium -->
-                <div>
-
+                <div class="bg-white rounded-xl p-6 mt-4">
+                    <div class="flex items-center gap-3">
+                        <img src="../../images/premium.png" alt="Premium" class="h-12 w-12">
+                        <div>
+                            <h2 class="font-bold text-base">Get hired 2x faster with Premium</h2>
+                            <p class="text-sm text-gray-600">Members who use Premium get hired twice as fast</p>
+                        </div>
+                    </div>
+                    <button class="mt-4 w-full text-center py-2 border border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full font-medium transition-colors">
+                        Try Premium for free
+                    </button>
                 </div>
-                <!-- sticky note -->
-                <div>
 
+                <!-- sticky note - keeps scrolling with the page -->
+                <div class="sticky bg-white rounded-xl top-16 p-6 mt-4">
+                    <h2 class="font-bold text-base mb-4">Profile tips</h2>
+                    <div class="flex items-start gap-3 mb-4">
+                        <i class="fa-solid fa-eye text-gray-600 mt-1"></i>
+                        <div>
+                            <p class="text-sm font-medium">Profile visibility</p>
+                            <p class="text-sm text-gray-600">Let entrepreneurs know you're open to opportunities</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-user-group text-gray-600 mt-1"></i>
+                        <div>
+                            <p class="text-sm font-medium">Build your network</p>
+                            <p class="text-sm text-gray-600">Connect with people in your industry</p>
+                        </div>
+                    </div>
+                    <hr class="my-4 border-gray-200">
+                    <a href="#" class="text-sm text-blue-600 hover:underline">
+                        View all tips <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </a>
                 </div>
             </section>
         </section>
