@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("Upload Response:", data); // Debugging
             if (data.success) {
                 mainBannerImg.src = data.filepath; // Update banner image on UI
+                alert("Background Photo updated successfully!");
                 closePopup();
             } else {
                 alert("Upload failed: " + data.error);
@@ -160,6 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("Upload Response:", data); // Debugging
             if (data.success) {
                 mainProfileImg.src = data.filepath; // Update profile image on UI
+                alert("Profile Photo updated successfully!");
                 closePopup();
             } else {
                 alert("Upload failed: " + data.error);
@@ -188,14 +190,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     : "Hi guys! I am new to FounderForge";
                 document.getElementById('location').textContent = (data.location && data.city) && (data.location.trim() !== "" && data.city.trim() !== "")
                     ? data.city + ", " + data.location
-                    : "India";
+                    : "Country";
                 document.getElementById('about').textContent = data.about && data.about.trim() !== ""
                     ? data.about
                     : "Aspiring to explore opportunities and connecting with like-minded professionals on FounderForge.";
                 document.getElementById('banner_img').src = data.back_cover_picture && data.back_cover_picture !== ""
                     ? data.back_cover_picture
                     : "../../images/banner.png";
+                    document.getElementById('bannerPreview').src = data.back_cover_picture && data.back_cover_picture !== ""
+                    ? data.back_cover_picture
+                    : "../../images/banner.png";
                 document.getElementById('profile_img').src = data.profile_picture && data.profile_picture.trim() !== "" 
+                    ? data.profile_picture 
+                    : "../../images/profile.png";
+                document.getElementById('profilePreview').src = data.profile_picture && data.profile_picture.trim() !== "" 
                     ? data.profile_picture 
                     : "../../images/profile.png";
             }

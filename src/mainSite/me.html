@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../all.css">
     <script src="../../javaScript/me_business.js"></script>
     <script src="../../javaScript/me.js"></script>
+    <script src="../../javaScript/profile_update.js"></script>
 </head>
 <body class="bg-white">
 
@@ -46,6 +47,7 @@
                 </div>
             </div>
         </div>
+        
         <!-- Profile picture change popup -->
         <div id="profilePopup" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center">
             <div class="bg-white rounded-lg p-6 w-[500px] relative">
@@ -72,6 +74,77 @@
             </div>
         </div>
         
+        <!-- Edit Profile Information Popup -->
+        <div id="editProfileInfo" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center">
+            <div class="bg-white rounded-lg p-8 w-[600px] max-h-[80vh] overflow-y-auto relative shadow-xl">
+                
+                <!-- Premium Note -->
+                <div class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white rounded-lg p-4 mb-6 shadow-md flex items-center gap-3">
+                    <img src="../../images/premium.png" alt="Premium" class="h-10 w-10">
+                    <p class="text-sm">
+                        <span class="font-bold">Unlock all features with Premium!</span><br>
+                        Get profile insights, custom backgrounds, and stand out to recruiters.
+                    </p>
+                </div>
+
+                <button id="closeEditProfile" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+                
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit Profile Information</h2>
+                
+                <form id="profileInfoForm" class="space-y-6">
+                    <div class="space-y-2">
+                        <label for="editUsername" class="block text-sm font-medium text-gray-700">Name*</label>
+                        <input type="text" id="editUsername" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Your Full Name">
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="editCollege" class="block text-sm font-medium text-gray-700">College/University</label>
+                        <input type="text" id="editCollege"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Add your college/university">
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="editHeadline" class="block text-sm font-medium text-gray-700">Headline*</label>
+                        <input type="text" id="editHeadline" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Hi! I am exploring opportunities.">
+                        <p class="text-xs text-gray-500">Appears below your name and in search results.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-2">
+                            <label for="editCity" class="block text-sm font-medium text-gray-700">City*</label>
+                            <input type="text" id="editCity" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Your city name">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="editLocation" class="block text-sm font-medium text-gray-700">Location*</label>
+                            <input type="text" id="editLocation" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Your country/region">
+                        </div>
+                    </div>
+
+                    <div class="flex justify-end gap-3 mt-6 pt-4 border-t">
+                        <button type="button" id="cancelEditProfile" 
+                            class="px-4 py-2 border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+                            Cancel
+                        </button>
+                        <button type="submit"
+                            class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
+                            Save changes
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </section>
 
     <header class="flex flex-row bg-white px-14">
@@ -261,7 +334,7 @@
                         <button title="profile" class="cursor-pointer">
                             <img src="../../images/profile.png" id="profile_img" alt="profile" class="absolute -top-28 h-40 w-40 border-[5px] border-white rounded-full left-0 bg-gray-100">
                         </button>
-                        <button title="edit" id="edit_profile" class="absolute px-1 py-1 rounded-full h-10 w-10 cursor-pointer bg-white top-5 right-4 text-xl hover:bg-gray-200 text-center">
+                        <button title="edit" id="editProfileBtn" class="absolute px-1 py-1 rounded-full h-10 w-10 cursor-pointer bg-white top-5 right-4 text-xl hover:bg-gray-200 text-center">
                             <i class="fa-solid fa-pencil"></i>
                         </button>
                         <div class="flex flex-row justify-between items-center w-full mt-9">
