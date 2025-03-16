@@ -53,6 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     };
 
+    openToWorkPopup.addEventListener('click', (e) => {
+        if (e.target === openToWorkPopup) {
+            closePopup();
+        }
+    })
+
     closeOpenToWork.addEventListener('click', closePopup);
     cancelOpenToWork.addEventListener('click', closePopup);
 
