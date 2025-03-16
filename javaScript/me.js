@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close on outside click
     profilePopup.addEventListener('click', (e) => {
         if (e.target === profilePopup) {
-            closePopup();
+            closePopupP();
         }
     });
 
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (data.success) {
                 mainProfileImg.src = data.filepath; // Update profile image on UI
                 alert("Profile Photo updated successfully!");
-                closePopup();
+                closePopupP();
             } else {
                 alert("Upload failed: " + data.error);
             }
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     : "Country";
                 document.getElementById('about').textContent = data.about && data.about.trim() !== ""
                     ? data.about
-                    : "Aspiring to explore opportunities and connecting with like-minded professionals on FounderForge.";
+                    : "Aspiring to explore opportunities and connecting with like-minded professionals on FounderForge. Interested in innovation, business development, and building meaningful connections in the entrepreneurial ecosystem.";
                 document.getElementById('banner_img').src = data.back_cover_picture && data.back_cover_picture !== ""
                     ? data.back_cover_picture
                     : "../../images/banner.png";

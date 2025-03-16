@@ -17,6 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     };
 
+    // Close on outside click 
+    editProfilePopup.addEventListener('click', (e) => {
+        if (e.target === editProfilePopup) {
+            closePopup();
+        }
+    });
+
     closeEditProfile.addEventListener('click', closePopup);
     cancelEditProfile.addEventListener('click', closePopup);
 

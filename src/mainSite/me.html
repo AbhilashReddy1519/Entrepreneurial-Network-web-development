@@ -17,6 +17,7 @@
     <script src="../../javaScript/me_business.js"></script>
     <script src="../../javaScript/me.js"></script>
     <script src="../../javaScript/profile_update.js"></script>
+    <script src="../../javaScript/update_about.js"></script>
 </head>
 <body class="bg-white">
 
@@ -145,6 +146,67 @@
             </div>
         </div>
 
+
+        <!-- About Section Editor Popup -->
+        <div id="editAboutPopup" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center">
+            <div class="bg-white rounded-lg p-8 w-[600px] max-h-[80vh] overflow-y-auto relative shadow-xl">
+                
+                <!-- Premium Suggestion Banner -->
+                <div class="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-white rounded-lg p-4 mb-6 shadow-md">
+                    <div class="flex items-center gap-4">
+                        <img src="../../images/premium.png" alt="Premium" class="h-12 w-12 drop-shadow-md">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Stand out with Premium ✨</h3>
+                            <p class="text-sm">Premium members get 3x more profile views and opportunities.</p>
+                        </div>
+                    </div>
+                    <a href="./premium.html" 
+                    class="inline-block mt-3 px-4 py-2 bg-white text-amber-600 rounded-full hover:bg-gray-50 transition-colors font-medium shadow-sm hover:shadow-md">
+                        Try Premium for Free
+                    </a>
+                </div>
+
+                <!-- Close Button -->
+                <button id="closeAboutPopup" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+                
+                <!-- Title -->
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit About</h2>
+
+                <form id="aboutForm" class="space-y-6">
+                    <div class="space-y-2">
+                        <label for="editAbout" class="block text-sm font-medium text-gray-700">About*</label>
+                        
+                        <!-- About Textarea -->
+                        <textarea id="editAbout" rows="6" required maxlength="2000"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                            placeholder="Tell others about yourself..."></textarea>
+                        
+                        <!-- Help Text & Character Counter in One Line -->
+                        <div class="flex justify-end text-xs text-gray-500">
+                            <!-- <p>You can mention your experience, interests, and what you're looking for professionally.</p> -->
+                            <p id="charCount">0 / 2000 characters</p>
+                        </div>
+                        <p class="text-xs text-gray-500">You can mention your experience, interests, and what you're looking for professionally.</p>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex justify-end gap-3 mt-6 pt-4 border-t">
+                        <button type="button" id="cancelAboutEdit"
+                            class="px-4 py-2 border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+                            Cancel
+                        </button>
+                        <button type="submit"
+                            class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
+                            Save
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+
     </section>
 
     <header class="flex flex-row bg-white px-14">
@@ -178,11 +240,11 @@
                     <i class="fa-solid fa-bell text-lg"></i>
                     <h4 class="text-[12px]">Notifications</h4>
                 </a>
-                <button title="Me" id="profile" class="home flex flex-col border-b-2 px-[20px] text-black items-center"> 
-                    <i class="fa-solid fa-user text-lg"></i>
+                <button title="Me" id="profile" class="cursor-pointer flex flex-col border-b-2 px-[20px] text-black items-center"> 
+                    <img id="header_profile" src="../../images/profile.png" alt="" class="h-6 w-6 p-0 m-0 rounded-full">
                     <h4 class="text-[12px]">Me</h4>
                 </button>
-                <button title="business" id="business" class="home flex flex-col border-l-1 border-neutral-300 text-gray-700 px-[20px] hover:text-black items-center"> 
+                <button title="business" id="business" class="cursor-pointer flex flex-col border-l-1 border-neutral-300 text-gray-700 px-[20px] hover:text-black items-center"> 
                     <i class="fa-solid fa-building text-lg"></i>
                     <h4 class="text-[12px]">For Business</h4>
                 </button>
@@ -368,7 +430,7 @@
                 <!-- about -->
                 <div class="bg-white rounded-xl p-6 mt-4 relative">
                     <h1 class="text-[1.4rem] font-bold">About</h1>
-                    <button title="edit" class="absolute px-1 py-1 rounded-full h-8 w-8 cursor-pointer top-4 right-4 text-lg hover:bg-[#81878d5b] text-center"><i class="fa-solid fa-pencil"></i></button>
+                    <button id="editAboutBtn" title="edit" class="absolute px-1 py-1 rounded-full h-8 w-8 cursor-pointer top-4 right-4 text-lg hover:bg-[#81878d5b] text-center"><i class="fa-solid fa-pencil"></i></button>
                     <p id="about" class="py-3 pb-0 text-sm text-neutral-600">
                         Aspiring to explore opportunities and connecting with like-minded professionals on FounderForge.
                         Interested in innovation, business development, and building meaningful connections in the entrepreneurial ecosystem.
@@ -466,9 +528,11 @@
                             <p class="text-sm text-gray-600">Members who use Premium get hired twice as fast</p>
                         </div>
                     </div>
-                    <button class="mt-4 w-full text-center py-2 border border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full font-medium transition-colors">
-                        Try Premium for free
-                    </button>
+                    <a href="./premium.html">
+                        <button class="cursor-pointer mt-4 w-full text-center py-2 border border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full font-medium transition-colors">
+                            Try Premium for free
+                        </button>
+                    </a>
                 </div>
 
                 <!-- sticky note - keeps scrolling with the page -->

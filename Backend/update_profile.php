@@ -12,7 +12,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
-// ✅ Check if form fields exist, otherwise set them to empty strings
+// Check if form fields exist, otherwise set them to empty strings
 $username = isset($_POST['editUsername']) ? $_POST['editUsername'] : "";
 $college = isset($_POST['editCollege']) ? $_POST['editCollege'] : "";
 $headline = isset($_POST['editHeadline']) ? $_POST['editHeadline'] : "";

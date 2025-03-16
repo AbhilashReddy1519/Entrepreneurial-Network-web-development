@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("ssrgvevevr");
+
     const profile = document.getElementById('profile');
     const business = document.getElementById('business');
     const profile_preview = document.getElementById('profile_preview');
@@ -72,6 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('profile_picture').src = data.profile_picture && data.profile_picture.trim() !== "" 
                     ? data.profile_picture 
                     : "../../images/profile.png"; 
+                document.getElementById('header_profile').src = data.profile_picture && data.profile_picture.trim() !== "" 
+                ? data.profile_picture 
+                : "../../images/profile.png"; 
             }
         } catch (error) {
             console.error("JSON Parse Error:", error, "Raw Response:", text);
