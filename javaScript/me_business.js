@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("ssrgvevevr");
-
     const profile = document.getElementById('profile');
     const business = document.getElementById('business');
     const profile_preview = document.getElementById('profile_preview');
