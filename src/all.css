@@ -22,7 +22,7 @@ h1, h2, h3 {
     outline: none;
 }
 
-header, .popup {
+.user_inputs, header, .popup {
     position: fixed;
     top: 0;
     left: 0;

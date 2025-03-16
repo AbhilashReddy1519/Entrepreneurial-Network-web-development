@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Entrepreneurial Network - A platform to connect entrepreneurs and startups">
     <meta name="keywords" content="entrepreneurship, networking, startups, collaboration, business">
+    <meta name="description" content="FounderForge is a networking platform for entrepreneurs, startups, and innovators. Connect, collaborate, find opportunities, and grow your business.">
     <meta name="author" content="Abhilash Reddy Linkedin">
     <!-- Set the favicon (the small icon in the browser tab) -->
     <link rel="icon" type="image/png" href="../../images/favicon.png">
@@ -16,7 +17,63 @@
     <script src="../../javaScript/me_business.js"></script>
     <script src="../../javaScript/me.js"></script>
 </head>
-<body class="bg-white h-screen">
+<body class="bg-white">
+
+    <!-- section for getting user inputs -->
+    <section class="flex justify-center items-center">
+        <!-- Banner change popup -->
+        <div id="bannerPopup" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center">
+            <div class="bg-white rounded-lg p-6 w-[600px] relative">
+                <button title="cancelBannerChange" id="closeBannerPopup" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+                <h2 class="text-xl font-bold mb-4">Change banner image</h2>
+                <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+                    <img id="bannerPreview" src="../../images/banner.png" alt="Current banner" class="w-full h-32 object-cover mb-4 rounded">
+                    <input type="file" id="bannerInput" accept="image/*" class="hidden">
+                    <label for="bannerInput" class="bg-blue-600 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-blue-700 transition-colors">
+                        Choose image
+                    </label>
+                    <p class="text-sm text-gray-500 mt-2">Recommended size: 1584x396 pixels</p>
+                </div>
+                <div class="flex justify-end gap-3 mt-6">
+                    <button id="cancelBannerChange" class="px-4 py-2 border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+                        Cancel
+                    </button>
+                    <button id="saveBannerChange" class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
+                        Save changes
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Profile picture change popup -->
+        <div id="profilePopup" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center">
+            <div class="bg-white rounded-lg p-6 w-[500px] relative">
+                <button id="closeProfilePopup" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+                <h2 class="text-xl font-bold mb-4">Change profile picture</h2>
+                <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+                    <img id="profilePreview" src="../../images/profile.png" alt="Current profile" class="w-32 h-32 rounded-full object-cover mx-auto mb-4">
+                    <input type="file" id="profileInput" accept="image/*" class="hidden">
+                    <label for="profileInput" class="bg-blue-600 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-blue-700 transition-colors">
+                        Choose image
+                    </label>
+                    <p class="text-sm text-gray-500 mt-2">Square image recommended (400x400px)</p>
+                </div>
+                <div class="flex justify-end gap-3 mt-6">
+                    <button id="cancelProfileChange" class="px-4 py-2 border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+                        Cancel
+                    </button>
+                    <button id="saveProfileChange" class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
+                        Save changes
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
     <header class="flex flex-row bg-white px-14">
         <div class="flex justify-start flex-row items-center pl-10">
             <a href="./main.html"><img src="../../images/logo.png" alt="Logo of FounderForge" class="h-12"></a>
@@ -197,20 +254,22 @@
                 <!-- profile -->
                 <div class="w-full relatie flex flex-col bg-white rounded-xl pb-4">
                     <div class="relative">
-                        <img src="../../images/banner.png" alt="" class="w-full h-52">
-                        <button title="edit" class="absolute px-1 py-1 rounded-full h-8 w-8 text-blue-600 cursor-pointer bg-white top-4 right-3"><i class="fa-solid fa-pencil"></i></button>
+                        <img src="../../images/banner.png" id="banner_img" alt="banner_img" class="w-full h-52">
+                        <button title="edit" id="banner" class="absolute px-1 py-1 rounded-full h-8 w-8 text-blue-600 cursor-pointer bg-white top-4 right-3"><i class="fa-solid fa-pencil"></i></button>
                     </div>
                     <div class="relative mx-6">
-                        <button title="profile">
-                            <img src="../../images/profile.png" alt="profile" class="absolute -top-28 h-40 w-40 border-[5px] border-white rounded-full left-0 bg-gray-100">
+                        <button title="profile" class="cursor-pointer">
+                            <img src="../../images/profile.png" id="profile_img" alt="profile" class="absolute -top-28 h-40 w-40 border-[5px] border-white rounded-full left-0 bg-gray-100">
                         </button>
-                        <button title="edit" class="absolute px-1 py-1 rounded-full h-10 w-10 cursor-pointer bg-white top-5 right-4 text-xl hover:bg-gray-200 text-center"><i class="fa-solid fa-pencil"></i></button>
+                        <button title="edit" id="edit_profile" class="absolute px-1 py-1 rounded-full h-10 w-10 cursor-pointer bg-white top-5 right-4 text-xl hover:bg-gray-200 text-center">
+                            <i class="fa-solid fa-pencil"></i>
+                        </button>
                         <div class="flex flex-row justify-between items-center w-full mt-9">
-                            <h1 class="text-[1.8rem] font-bold">User Name</h1>
-                            <a href="#" class="hover:text-blue-600 hover:underline hover:decoration-blue-500"><p>College/University Name</p></a>
+                            <h1 class="text-[1.8rem] font-bold" id="Username" >User Name</h1>
+                            <a href="#" id="college" class="hover:text-blue-600 hover:underline hover:decoration-blue-500"><p>College/University Name</p></a>
                         </div>
-                        <p class="text-[1.18rem] text-[#191919] my-0.5">Hi guys! I am new to FounderForge</p>
-                        <p class="text-sm text-[#666666] my-0.5">City, Location</p>
+                        <p id="Headline" class="text-[1.18rem] text-[#191919] my-0.5">Hi guys! I am new to FounderForge</p>
+                        <p id="location" class="text-sm text-[#666666] my-0.5">City, Location</p>
                         <p class="text-sm py-2 text-blue-600 hover:underline hover:decoration-blue-500 inline">0 Followers</p>
                         <div class="relative flex flex-row gap-4 text-lg pt-2">
                             <button class="text-center px-2 border mb-4 text-lg text-white bg-blue-600 hover:bg-blue-800 cursor-pointer rounded-2xl box-border">
@@ -237,7 +296,7 @@
                 <div class="bg-white rounded-xl p-6 mt-4 relative">
                     <h1 class="text-[1.4rem] font-bold">About</h1>
                     <button title="edit" class="absolute px-1 py-1 rounded-full h-8 w-8 cursor-pointer top-4 right-4 text-lg hover:bg-[#81878d5b] text-center"><i class="fa-solid fa-pencil"></i></button>
-                    <p class="py-3 pb-0 text-sm text-neutral-600">
+                    <p id="about" class="py-3 pb-0 text-sm text-neutral-600">
                         Aspiring to explore opportunities and connecting with like-minded professionals on FounderForge.
                         Interested in innovation, business development, and building meaningful connections in the entrepreneurial ecosystem.
                     </p>
@@ -322,7 +381,7 @@
                     <hr class="text-neutral-300">
                     <div class="flex flex-col px-3 py-2">
                         <h1 class="text-lg font-bold text-[#484848]">Public profile & URL</h1>
-                        <h3 class="text-sm text-gray-700 py-1">www.founderforge.com/in/-user_name</h3>
+                        <h3 id="userLink" class="text-sm text-gray-700 py-1">www.founderforge.com/in/-user_name</h3>
                     </div>
                 </div>
                 <!-- note for premium -->
