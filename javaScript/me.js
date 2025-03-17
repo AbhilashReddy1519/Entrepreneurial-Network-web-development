@@ -18,6 +18,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Horizontal scrolling
+    const scrollContainer = document.querySelector('.overflow-x-auto');
+    const scrollLeftBtn = document.getElementById('scrollLeft');
+    const scrollRightBtn = document.getElementById('scrollRight');
+
+    if (scrollLeftBtn && scrollRightBtn) {
+        scrollLeftBtn.addEventListener('click', () => {
+            scrollContainer.scrollBy({
+                left: -350,
+                behavior: 'smooth'
+            });
+        });
+
+        scrollRightBtn.addEventListener('click', () => {
+            scrollContainer.scrollBy({
+                left: 350,
+                behavior: 'smooth'
+            });
+        });
+
+        // Hide/show scroll buttons based on scroll position
+        scrollContainer.addEventListener('scroll', () => {
+            scrollLeftBtn.style.display = scrollContainer.scrollLeft > 0 ? 'block' : 'none';
+            scrollRightBtn.style.display = 
+                scrollContainer.scrollLeft < (scrollContainer.scrollWidth - scrollContainer.clientWidth) 
+                ? 'block' 
+                : 'none';
+        });
+
+        // Initial check
+        scrollLeftBtn.style.display = 'none';
+    }
+
     let bannerBtn = document.getElementById('banner');
     let bannerPopup = document.getElementById('bannerPopup');
     let closeBannerPopup = document.getElementById('closeBannerPopup');

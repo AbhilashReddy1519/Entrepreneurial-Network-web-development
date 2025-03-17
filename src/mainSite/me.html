@@ -19,6 +19,12 @@
     <script src="../../javaScript/profile_update.js"></script>
     <script src="../../javaScript/update_about.js"></script>
     <script src="../../javaScript/open_to_work.js"></script>
+    <script src="../../javaScript/education.js"></script>
+    <style>
+        ::-webkit-scrollbar {
+            display: none; /* Hide scrollbar in Chrome, Safari */
+        }
+    </style>
 </head>
 <body class="bg-white">
 
@@ -307,6 +313,220 @@
             </div>
         </div>
 
+         <!-- Add Education Popup -->
+        <div id="addEducationPopup" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center">
+            <div class="bg-white rounded-lg p-8 w-[600px] max-h-[80vh] overflow-y-auto relative shadow-xl">
+                <!-- Premium Banner -->
+                <div class="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-white rounded-lg p-4 mb-6 shadow-md">
+                    <div class="flex items-center gap-4">
+                        <img src="../../images/premium.png" alt="Premium" class="h-12 w-12 drop-shadow-md">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Highlight Your Education ✨</h3>
+                            <p class="text-sm">Premium members get 3x more profile views from recruiters!</p>
+                        </div>
+                    </div>
+                    <a href="./premium.html" 
+                        class="inline-block mt-3 px-4 py-2 bg-white text-amber-600 rounded-full hover:bg-gray-50 transition-colors font-medium shadow-sm hover:shadow-md">
+                        Try Premium for Free
+                    </a>
+                </div>
+
+                <button id="closeEducation" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Add Education</h2>
+                
+                <form id="educationForm" class="space-y-6">
+                    <div class="space-y-2">
+                        <label for="institution" class="block text-sm font-medium text-gray-700">Institution*</label>
+                        <div class="relative">
+                            <input type="text" id="institution" required 
+                                class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Ex: Stanford University">
+                            <i class="fa-solid fa-building-columns absolute left-3 top-3 text-gray-400"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <label for="degree" class="block text-sm font-medium text-gray-700">Degree*</label>
+                        <div class="relative">
+                            <input type="text" id="degree" required 
+                                class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Ex: Bachelor of Science">
+                            <i class="fa-solid fa-graduation-cap absolute left-3 top-3 text-gray-400"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <label for="fieldOfStudy" class="block text-sm font-medium text-gray-700">Field of Study*</label>
+                        <div class="relative">
+                            <input type="text" id="fieldOfStudy" required 
+                                class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Ex: Computer Science">
+                            <i class="fa-solid fa-book absolute left-3 top-3 text-gray-400"></i>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="grade" class="block text-sm font-medium text-gray-700">Grade*</label>
+                        <div class="relative">
+                            <input type="text" id="grade" required 
+                                class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Ex: 3.8 GPA">
+                            <i class="fa-solid fa-star absolute left-3 top-3 text-gray-400"></i>
+                        </div>
+                        <p class="text-xs text-gray-500">Enter your GPA, percentage, or grade classification</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-2">
+                            <label for="startYear" class="block text-sm font-medium text-gray-700">Start Year*</label>
+                            <select id="startYear" required 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option value="">Select Year</option>
+                                <!-- JavaScript will populate years -->
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label for="endYear" class="block text-sm font-medium text-gray-700">End Year*</label>
+                            <select id="endYear" required 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option value="">Select Year</option>
+                                <!-- JavaScript will populate years -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center gap-3 mt-6 pt-4 border-t">
+                        <div class="text-sm text-gray-500">
+                            <i class="fa-solid fa-info-circle"></i>
+                            All fields marked with * are required
+                        </div>
+                        <div class="flex gap-3">
+                            <button type="button" id="cancelEducation" 
+                                class="px-4 py-2 border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+                                Cancel
+                            </button>
+                            <button type="submit"
+                                class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-check"></i>
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Edit Education Popup -->
+        <div id="editEducationPopup" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center">
+            <div class="bg-white rounded-lg p-8 w-[600px] max-h-[80vh] overflow-y-auto relative shadow-xl">
+                <!-- Premium Banner -->
+                <div class="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-white rounded-lg p-4 mb-6 shadow-md">
+                    <div class="flex items-center gap-4">
+                        <img src="../../images/premium.png" alt="Premium" class="h-12 w-12 drop-shadow-md">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Stand Out with Premium ✨</h3>
+                            <p class="text-sm">Premium members get featured at top of recruiter searches!</p>
+                        </div>
+                    </div>
+                    <a href="./premium.html" 
+                        class="inline-block mt-3 px-4 py-2 bg-white text-amber-600 rounded-full hover:bg-gray-50 transition-colors font-medium shadow-sm hover:shadow-md">
+                        Try Premium for Free
+                    </a>
+                </div>
+
+                <button id="closeEditEducation" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Edit Education</h2>
+                
+                <form id="editEducationForm" class="space-y-6">
+                    <input type="hidden" id="editEducationId">
+                    
+                    <div class="space-y-2">
+                        <label for="editInstitution" class="block text-sm font-medium text-gray-700">Institution*</label>
+                        <div class="relative">
+                            <input type="text" id="editInstitution" required 
+                                class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Ex: Stanford University">
+                            <i class="fa-solid fa-building-columns absolute left-3 top-3 text-gray-400"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <label for="editDegree" class="block text-sm font-medium text-gray-700">Degree*</label>
+                        <div class="relative">
+                            <input type="text" id="editDegree" required 
+                                class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Ex: Bachelor of Science">
+                            <i class="fa-solid fa-graduation-cap absolute left-3 top-3 text-gray-400"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <label for="editFieldOfStudy" class="block text-sm font-medium text-gray-700">Field of Study*</label>
+                        <div class="relative">
+                            <input type="text" id="editFieldOfStudy" required 
+                                class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Ex: Computer Science">
+                            <i class="fa-solid fa-book absolute left-3 top-3 text-gray-400"></i>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="editGrade" class="block text-sm font-medium text-gray-700">Grade*</label>
+                        <div class="relative">
+                            <input type="text" id="editGrade" required 
+                                class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Ex: 3.8 GPA">
+                            <i class="fa-solid fa-star absolute left-3 top-3 text-gray-400"></i>
+                        </div>
+                        <p class="text-xs text-gray-500">Enter your GPA, percentage, or grade classification</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-2">
+                            <label for="editStartYear" class="block text-sm font-medium text-gray-700">Start Year*</label>
+                            <select id="editStartYear" required 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option value="">Select Year</option>
+                                <!-- JavaScript will populate years -->
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label for="editEndYear" class="block text-sm font-medium text-gray-700">End Year*</label>
+                            <select id="editEndYear" required 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option value="">Select Year</option>
+                                <!-- JavaScript will populate years -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center gap-3 mt-6 pt-4 border-t">
+                        <button type="button" id="deleteEducationBtn" 
+                            class="px-4 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-trash"></i>
+                            Delete
+                        </button>
+                        <div class="flex gap-3">
+                            <button type="button" id="cancelEditEducation" 
+                                class="px-4 py-2 border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+                                Cancel
+                            </button>
+                            <button type="submit"
+                                class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-check"></i>
+                                Save changes
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
 
 
     </section>
@@ -539,49 +759,74 @@
                     </p>
                 </div>
                 <!-- Activity -->
-                <div class="bg-white rounded-xl p-6 mt-4 relative">
-                    <div class="flex items-center justify-between mb-4">
+                <div class="bg-white rounded-xl w-full p-6 mt-4 relative">
+                    <div class="flex flex-col mb-4">
                         <h1 class="text-[1.4rem] font-bold">Activity</h1>
-                        <p class="text-base text-blue-600 hover:underline hover:decoration-blue-500 inline cursor-pointer">0 Followers</p>
+                        <p class="text-[#0a66c2] text-sm hover:underline hover:decoration-[#0a66c2] inline cursor-pointer">0 Followers</p>
                     </div>
-                    
+                    <button class="absolute top-8 right-6 px-6 py-1 text-blue-600 hover:bg-blue-50 rounded-full outline hover:outline-2 hover:outline-blue-600 transition-colors border border-blue-600">
+                        Create a post
+                    </button>
                     <div class="flex flex-col gap-4">
                         <div class="flex items-center gap-4">
-                            <button id="postsBtn" class="text-center px-2 py-1 border text-base text-white bg-green-600 cursor-pointer rounded-2xl transition-colors">
+                            <button id="postsBtn" class="text-center px-4 py-1 border text-base text-white bg-green-600 hover:bg-green-700 cursor-pointer rounded-2xl transition-colors">
                                 Posts
                             </button>
-                            <button id="articlesBtn" class="text-center px-2 py-1 border text-base text-gray-600  cursor-pointer rounded-2xl transition-colors">
+                            <button id="articlesBtn" class="text-center px-4 py-1 border text-base text-gray-600 hover:bg-gray-100 cursor-pointer rounded-2xl transition-colors">
                                 Articles
                             </button>
                         </div>
-                        
-                        <!-- No posts message -->
-                        <div class="text-center py-8 text-gray-500">
-                            <p class="text-base">No posts yet</p>
-                            <p class="text-sm mt-2">Share your thoughts, achievements, or ask for advice</p>
-                            <button class="mt-4 px-4 py-2 text-blue-600 hover:bg-blue-50 hover:underline rounded-full transition-colors">
-                                Create a post
+
+                        <!-- Scrollable posts container -->
+                        <div class="relative">
+                            <div class="overflow-x-auto h-[450px] scrollbar-none">
+                                <div class="flex gap-4 pb-4 pt-2 h-full">
+                                    <!-- Create Post Card -->
+                                    <div  class="flex-none w-[54%] h-full bg-[#fff5e9] rounded-lg p-6 flex items-center justify-center">
+                                        <div class="text-center">
+                                            <p class="text-gray-600 font-medium mb-2">Share your thoughts</p>
+                                            <p class="text-sm text-gray-500 mb-4">Start a post about your experiences</p>
+                                            <button class="px-6 py-2 text-blue-600 hover:bg-blue-50 rounded-full transition-colors border border-blue-600">
+                                                Create a post
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Optional: Add navigation arrows -->
+                            <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50" id="scrollLeft">
+                                <i class="fas fa-chevron-left text-gray-600"></i>
+                            </button>
+                            <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50" id="scrollRight">
+                                <i class="fas fa-chevron-right text-gray-600"></i>
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- Education section -->
+
+
+                <!-- Education Section -->
                 <div class="bg-white rounded-xl p-6 mt-4 relative">
                     <div class="flex justify-between items-center mb-4">
                         <h1 class="text-[1.4rem] font-bold">Education</h1>
-                        <button title="add" class="px-2 py-2 rounded-full h-10 w-10 cursor-pointer hover:bg-[#81878d5b] text-center">
+                        <button title="Add Education" id="addEducationBtn" class="px-2 py-2 rounded-full h-10 w-10 cursor-pointer hover:bg-gray-200 text-center">
                             <i class="fa-solid fa-plus text-lg"></i>
                         </button>
                     </div>
-                    <!-- Default state for new users -->
-                    <div class="text-center py-6 text-gray-500">
+
+                    <!-- Default Message for New Users -->
+                    <div id="noEducationMessage" class="text-center py-6 text-gray-500">
                         <img src="../../images/education.png" alt="Education" class="h-10 w-10 mx-auto mb-4">
                         <p class="text-base mb-2">Show your qualifications</p>
                         <p class="text-sm mb-4">Add your schools, degrees, and field of study</p>
-                        <button class="text-blue-600 hover:text-blue-700 hover:underline text-base">
+                        <button id="addEducationDefault" class="text-blue-600 hover:text-blue-700 hover:underline text-base">
                             Add education
                         </button>
                     </div>
+
+                    <!-- Dynamic Education List -->
+                    <div id="educationList" class="space-y-4 hidden"></div>
                 </div>
 
                 <!-- Skills section -->
