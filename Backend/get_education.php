@@ -11,12 +11,18 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
+// SQL Query
 $sql = "SELECT id, institution, degree, field_of_study, grade, start_year, end_year 
         FROM education 
         WHERE user_id = ? 
-        ORDER BY end_year DESC"; // Newest first
+        ORDER BY end_year DESC";
 
-$stmt = $conn->prepare($sql);
+// Debug: Check if SQL query is valid
+if (!$stmt = $conn->prepare($sql)) {
+    die(json_encode(["error" => "SQL prepare failed: " . $conn->error]));
+}
+
+// Bind parameter
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();

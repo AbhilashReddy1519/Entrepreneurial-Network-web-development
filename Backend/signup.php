@@ -2,6 +2,11 @@
 session_start();
 require_once '../Backend/config.php'; // Database connection
 
+// Check database connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -9,11 +14,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if the user already exists
     $check_stmt = $conn->prepare("SELECT id FROM users WHERE email = ?");
+    if (!$check_stmt) {
+        die("Error preparing check query: " . $conn->error);
+    }
+    
     $check_stmt->bind_param("s", $email);
     $check_stmt->execute();
     $check_stmt->store_result();
 
     if ($check_stmt->num_rows > 0) {
+        $check_stmt->close();
         echo "<script>
                 alert('User already exists! Redirecting to login page.');
                 window.location.href = '../src/mainsite/login.html';

@@ -114,16 +114,25 @@ document.addEventListener("DOMContentLoaded", () => {
             method: "POST",
             body: formData
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(data => {
             if (data.success) {
                 alert("Education added successfully!");
-                location.reload(); // Refresh page to reflect changes
+                closePopup();
+                // loadEducation();
             } else {
-                alert("Error: " + data.error);
+                alert("Error: " + (data.error || "Unknown error occurred"));
             }
         })
-        .catch(error => console.error("Fetch Error:", error));
+        .catch(error => {
+            console.error("Fetch Error:", error);
+            alert("Failed to save education: " + error.message);
+        });
     });
     
 

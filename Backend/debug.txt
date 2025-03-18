@@ -4,6 +4,6 @@ Array
     [degree] => Bachelor of Science😁
     [fieldOfStudy] => Computer Science Engineering
     [grade] => 8.45 GPA
-    [startYear] => 2020
-    [endYear] => 2024
+    [startYear] => 2023
+    [endYear] => 2027
 )
