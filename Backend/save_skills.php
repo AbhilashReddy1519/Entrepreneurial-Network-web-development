@@ -18,7 +18,7 @@ if (count($skills) > 20) {
 }
 
 // Clear previous skills
-$conn->query("DELETE FROM skills WHERE user_id = $user_id");
+// $conn->query("DELETE FROM skills WHERE user_id = $user_id");
 
 $stmt = $conn->prepare("INSERT INTO skills (user_id, skill_name) VALUES (?, ?)");
 foreach ($skills as $skill) {
