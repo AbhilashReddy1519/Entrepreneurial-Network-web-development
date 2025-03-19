@@ -63,7 +63,8 @@
         </nav>
     </header>
 
-    <main class="h-screen bg-[#f4f2ee]">
+    <main class="bg-[#f4f2ee]">
+        <!-- profile_preview -->
         <div id="profile_preview" class="hidden z-50 fixed top-16 right-[17rem] border border-neutral-300/70 bg-[#f4f4f4] w-[290px] rounded-sm rounded-r-none rounded-b-sm">
             <div class="px-3 bg-white rounded-t-sm">
                 <div class="flex flex-row py-2 px-1 gap-2">
@@ -106,6 +107,7 @@
             </div>
         </div>
 
+        <!-- business_preview -->
         <div id="business_preview" class="hidden py-12 px-8 z-50 h-10/12 overflow-y-auto fixed top-16 right-[11rem] w-[700px] bg-white border border-neutral-300/70 rounded-sm rounded-r-none rounded-b-sm">
             <div class="flex flex-row">
                 <div class="flex flex-col w-[45%] pl-4 border-r border-r-neutral-400">
@@ -189,6 +191,490 @@
                 </div>
             </div>
         </div>
+
+        <section class="px-24 py-6 grid grid-cols-[70%_auto] gap-6">
+            <!-- Left Column - Job Search and Listings -->
+            <div class="space-y-6">
+                <!-- Search and Filters -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex gap-4 mb-4">
+                        <div class="relative flex-grow">
+                            <input type="text" placeholder="Search jobs" class="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                            <i class="fa-solid fa-search absolute left-3 top-3 text-gray-400"></i>
+                        </div>
+                        <button class="px-4 py-2 border rounded-lg hover:bg-gray-50">
+                            <i class="fa-solid fa-filter mr-2"></i>
+                            Filters
+                        </button>
+                    </div>
+                    <div class="flex gap-3">
+                        <button class="px-3 py-1 text-sm border rounded-full hover:bg-gray-50">
+                            Remote <i class="fa-solid fa-xmark ml-1"></i>
+                        </button>
+                        <button class="px-3 py-1 text-sm border rounded-full hover:bg-gray-50">
+                            Full-time <i class="fa-solid fa-xmark ml-1"></i>
+                        </button>
+                        <button class="px-3 py-1 text-sm border rounded-full hover:bg-gray-50">
+                            Entry level <i class="fa-solid fa-xmark ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Recent Job Searches -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h2 class="text-lg font-semibold mb-4">Recent Job Searches</h2>
+                    <div class="space-y-4">
+                        <a href="#" class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg group">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-clock-rotate-left text-gray-400"></i>
+                                <div>
+                                    <h3 class="font-medium group-hover:text-blue-600">Software Engineer</h3>
+                                    <p class="text-sm text-gray-500">25 new</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-arrow-right text-gray-400 group-hover:text-blue-600"></i>
+                        </a>
+                        <a href="#" class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg group">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-clock-rotate-left text-gray-400"></i>
+                                <div>
+                                    <h3 class="font-medium group-hover:text-blue-600">Product Manager</h3>
+                                    <p class="text-sm text-gray-500">12 new</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-arrow-right text-gray-400 group-hover:text-blue-600"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Job Recommendations -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h2 class="text-lg font-semibold mb-4">Recommended for you</h2>
+                    <div class="space-y-6">
+                        <!-- Job Posts -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/company1.png" alt="Company logo" class="h-12 w-12 rounded">
+                            <div>
+                                <h3 class="font-medium text-lg hover:text-blue-600">Full Stack Developer</h3>
+                                <p class="text-gray-600">TCS Digital</p>
+                                <p class="text-sm text-gray-500 mt-1">
+                                    <i class="fa-solid fa-location-dot mr-1"></i> Bangalore, India
+                                    <span class="mx-2">•</span>
+                                    <i class="fa-regular fa-clock mr-1"></i> Posted 1h ago
+                                    <span class="mx-2">•</span>
+                                    <span class="text-green-600">₹18-25 LPA</span>
+                                </p>
+                            </div>
+                        </div>
+                
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/company2.png" alt="Company logo" class="h-12 w-12 rounded">
+                            <div>
+                                <h3 class="font-medium text-lg hover:text-blue-600">Product Manager</h3>
+                                <p class="text-gray-600">Flipkart</p>
+                                <p class="text-sm text-gray-500 mt-1">
+                                    <i class="fa-solid fa-location-dot mr-1"></i> Hybrid - Bangalore
+                                    <span class="mx-2">•</span>
+                                    <i class="fa-regular fa-clock mr-1"></i> Posted 2h ago
+                                </p>
+                            </div>
+                        </div>
+                
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/company3.png" alt="Company logo" class="h-12 w-12 rounded">
+                            <div>
+                                <h3 class="font-medium text-lg hover:text-blue-600">AI/ML Engineer</h3>
+                                <p class="text-gray-600">Infosys Innovation Hub</p>
+                                <p class="text-sm text-gray-500 mt-1">
+                                    <i class="fa-solid fa-location-dot mr-1"></i> Hyderabad, India
+                                    <span class="mx-2">•</span>
+                                    <i class="fa-regular fa-clock mr-1"></i> Posted 3h ago
+                                </p>
+                            </div>
+                        </div>
+                
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/company4.png" alt="Company logo" class="h-12 w-12 rounded">
+                            <div>
+                                <h3 class="font-medium text-lg hover:text-blue-600">Senior UI/UX Designer</h3>
+                                <p class="text-gray-600">Swiggy</p>
+                                <p class="text-sm text-gray-500 mt-1">
+                                    <i class="fa-solid fa-location-dot mr-1"></i> Remote
+                                    <span class="mx-2">•</span>
+                                    <i class="fa-regular fa-clock mr-1"></i> Posted 5h ago
+                                </p>
+                            </div>
+                        </div>
+                
+                        <!-- Continue with more jobs... -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/company5.png" alt="Company logo" class="h-12 w-12 rounded">
+                            <div>
+                                <h3 class="font-medium text-lg hover:text-blue-600">DevOps Engineer</h3>
+                                <p class="text-gray-600">Razorpay</p>
+                                <p class="text-sm text-gray-500 mt-1">
+                                    <i class="fa-solid fa-location-dot mr-1"></i> Bangalore
+                                    <span class="mx-2">•</span>
+                                    <i class="fa-regular fa-clock mr-1"></i> Posted 6h ago
+                                </p>
+                            </div>
+                        </div>
+                
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/company4.png" alt="Company logo" class="h-12 w-12 rounded">
+                            <div>
+                                <h3 class="font-medium text-lg hover:text-blue-600">Data Scientist</h3>
+                                <p class="text-gray-600">Wipro</p>
+                                <p class="text-sm text-gray-500 mt-1">
+                                    <i class="fa-solid fa-location-dot mr-1"></i> Pune, India
+                                    <span class="mx-2">•</span>
+                                    <i class="fa-regular fa-clock mr-1"></i> Posted 7h ago
+                                </p>
+                            </div>
+                        </div>
+                
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/company5.png" alt="Company logo" class="h-12 w-12 rounded">
+                            <div>
+                                <h3 class="font-medium text-lg hover:text-blue-600">Frontend Developer</h3>
+                                <p class="text-gray-600">Tech Mahindra</p>
+                                <p class="text-sm text-gray-500 mt-1">
+                                    <i class="fa-solid fa-location-dot mr-1"></i> Chennai, India
+                                    <span class="mx-2">•</span>
+                                    <i class="fa-regular fa-clock mr-1"></i> Posted 8h ago
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- More Job Listings -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/company6.png" alt="Company logo" class="h-12 w-12 rounded">
+                            <div>
+                                <h3 class="font-medium text-lg hover:text-blue-600">Cyber Security Analyst</h3>
+                                <p class="text-gray-600">Zomato</p>
+                                <p class="text-sm text-gray-500 mt-1">
+                                    <i class="fa-solid fa-location-dot mr-1"></i> Delhi, India
+                                    <span class="mx-2">•</span>
+                                    <i class="fa-regular fa-clock mr-1"></i> Posted 10h ago
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 1. Backend Developer - Paytm (Noida, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/paytm.png" alt="Paytm logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">Backend Developer</h3>
+                            <p class="text-gray-600">Paytm</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Noida, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 2. Cybersecurity Analyst - IBM (Pune, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/ibm.png" alt="IBM logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">Cybersecurity Analyst</h3>
+                            <p class="text-gray-600">IBM</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Pune, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 3. Cloud Engineer - Microsoft (Hyderabad, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/microsoft.png" alt="Microsoft logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">Cloud Engineer</h3>
+                            <p class="text-gray-600">Microsoft</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Hyderabad, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 4. Business Analyst - Deloitte (Bangalore, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/deloitte.png" alt="Deloitte logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">Business Analyst</h3>
+                            <p class="text-gray-600">Deloitte</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Bangalore, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 5. Software Engineer - Google (Hyderabad, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/google.png" alt="Google logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">Software Engineer</h3>
+                            <p class="text-gray-600">Google</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Hyderabad, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 6. DevOps Engineer - Amazon Web Services (Mumbai, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/amazon-web-services.png" alt="Amazon Web Services logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">DevOps Engineer</h3>
+                            <p class="text-gray-600">Amazon Web Services</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Mumbai, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 7. Machine Learning Engineer - Zomato (Gurgaon, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/zomato.png" alt="Zomato logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">Machine Learning Engineer</h3>
+                            <p class="text-gray-600">Zomato</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Gurgaon, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 8. Database Administrator - Oracle (Bangalore, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/oracle.png" alt="Oracle logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">Database Administrator</h3>
+                            <p class="text-gray-600">Oracle</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Bangalore, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 9. Embedded Systems Engineer - Qualcomm (Hyderabad, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/qualcomm.png" alt="Qualcomm logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">Embedded Systems Engineer</h3>
+                            <p class="text-gray-600">Qualcomm</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Hyderabad, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 10. AR/VR Developer - Meta (Remote) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/meta.png" alt="Meta logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">AR/VR Developer</h3>
+                            <p class="text-gray-600">Meta</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Remote
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 11. Mobile App Developer - Swiggy (Bangalore, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/swiggy.png" alt="Swiggy logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">Mobile App Developer</h3>
+                            <p class="text-gray-600">Swiggy</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Bangalore, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 12. Game Developer - Ubisoft (Pune, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/ubisoft.png" alt="Ubisoft logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">Game Developer</h3>
+                            <p class="text-gray-600">Ubisoft</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Pune, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 13. Blockchain Developer - Polygon (Remote) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/polygon.png" alt="Polygon logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">Blockchain Developer</h3>
+                            <p class="text-gray-600">Polygon</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Remote
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 14. IT Support Specialist - Accenture (Chennai, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/accenture.png" alt="Accenture logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">IT Support Specialist</h3>
+                            <p class="text-gray-600">Accenture</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Chennai, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 15. Software Test Engineer - Tata Elxsi (Kolkata, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/tata-elxsi.png" alt="Tata Elxsi logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">Software Test Engineer</h3>
+                            <p class="text-gray-600">Tata Elxsi</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Kolkata, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 16. AI Research Scientist - NVIDIA (Bangalore, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/nvidia.png" alt="NVIDIA logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">AI Research Scientist</h3>
+                            <p class="text-gray-600">NVIDIA</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Bangalore, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 17. Web Developer - Zoho (Chennai, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/zoho.png" alt="Zoho logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">Web Developer</h3>
+                            <p class="text-gray-600">Zoho</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Chennai, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 18. Network Engineer - Cisco (Gurgaon, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/cisco.png" alt="Cisco logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">Network Engineer</h3>
+                            <p class="text-gray-600">Cisco</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Gurgaon, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 19. System Administrator - Infosys (Mysore, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/infosys.png" alt="Infosys logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">System Administrator</h3>
+                            <p class="text-gray-600">Infosys</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Mysore, India
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <!-- 20. Tech Lead - Ola (Bangalore, India) -->
+                        <div class="flex gap-4 p-4 hover:bg-gray-50 rounded-lg cursor-pointer border-b">
+                            <img src="../../images/ola.png" alt="Ola logo" class="h-12 w-12 rounded">
+                            <div>
+                            <h3 class="font-medium text-lg hover:text-blue-600">Tech Lead</h3>
+                            <p class="text-gray-600">Ola</p>
+                            <p class="text-sm text-gray-500 mt-1">
+                                <i class="fa-solid fa-location-dot mr-1"></i> Bangalore, India
+                            </p>
+                            </div>
+                        </div>
+  
+
+                        <div class="text-center pt-4">
+                            <button class="text-blue-600 hover:text-blue-800 font-medium">
+                                Show more jobs <i class="fa-solid fa-chevron-down ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Job Search Tips -->
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h2 class="text-lg font-semibold mb-4">Job Seeker Guidance</h2>
+                    <div class="space-y-4">
+                        <a href="#" class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg group">
+                            <i class="fa-solid fa-bullseye text-blue-600 text-xl"></i>
+                            <div>
+                                <h3 class="font-medium group-hover:text-blue-600">Show recruiters you're open</h3>
+                                <p class="text-sm text-gray-500">Get more job opportunities</p>
+                            </div>
+                        </a>
+                        <a href="./premium.html" class="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg group">
+                            <img src="../../images/premium.png" alt="Premium" class="h-6 w-6">
+                            <div>
+                                <h3 class="font-medium group-hover:text-blue-600">Get ahead with Premium</h3>
+                                <p class="text-sm text-gray-500">Try free for 1 month</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="sticky top-16">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-lg font-semibold mb-4">Your Job Alerts</h2>
+                        <div class="space-y-4">
+                            <div class="p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h3 class="font-medium text-gray-800">Software Developer</h3>
+                                        <p class="text-sm text-gray-600 mt-1">15 new matches</p>
+                                    </div>
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fa-solid fa-bell"></i>
+                                    </button>
+                                </div>
+                                <div class="mt-3 flex gap-2">
+                                    <span class="text-xs bg-gray-100 px-2 py-1 rounded-full">Bangalore</span>
+                                    <span class="text-xs bg-gray-100 px-2 py-1 rounded-full">Remote</span>
+                                </div>
+                            </div>
+                
+                            <div class="p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h3 class="font-medium text-gray-800">Product Management</h3>
+                                        <p class="text-sm text-gray-600 mt-1">8 new matches</p>
+                                    </div>
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fa-solid fa-bell"></i>
+                                    </button>
+                                </div>
+                                <div class="mt-3 flex gap-2">
+                                    <span class="text-xs bg-gray-100 px-2 py-1 rounded-full">Mumbai</span>
+                                    <span class="text-xs bg-gray-100 px-2 py-1 rounded-full">Hybrid</span>
+                                </div>
+                            </div>
+                
+                            <a href="#" class="block text-center text-blue-600 hover:text-blue-800 text-sm font-medium pt-2">
+                                Manage job alerts <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="z-0 bg-[#212121] pt-4 mt-0 text-gray-300/95 px-16" data-event-label="Footer" role="contentinfo">

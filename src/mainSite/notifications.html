@@ -63,7 +63,8 @@
         </nav>
     </header>
 
-    <main class="h-screen bg-[#f4f2ee]">
+    <main class="bg-[#f4f2ee]">
+        <!-- profile_preview -->
         <div id="profile_preview" class="hidden z-50 fixed top-16 right-[17rem] border border-neutral-300/70 bg-[#f4f4f4] w-[290px] rounded-sm rounded-r-none rounded-b-sm">
             <div class="px-3 bg-white rounded-t-sm">
                 <div class="flex flex-row py-2 px-1 gap-2">
@@ -106,6 +107,7 @@
             </div>
         </div>
 
+        <!-- business_preview -->
         <div id="business_preview" class="hidden py-12 px-8 z-50 h-10/12 overflow-y-auto fixed top-16 right-[11rem] w-[700px] bg-white border border-neutral-300/70 rounded-sm rounded-r-none rounded-b-sm">
             <div class="flex flex-row">
                 <div class="flex flex-col w-[45%] pl-4 border-r border-r-neutral-400">
@@ -189,9 +191,259 @@
                 </div>
             </div>
         </div>
+
+        <section class="px-24 py-6">
+            <!-- Notifications Container -->
+            <div class="bg-white rounded-lg shadow-sm">
+                <!-- Filters -->
+                <div class="p-4 border-b flex items-center justify-between">
+                    <h1 class="text-xl font-semibold">Notifications</h1>
+                    <div class="flex gap-3">
+                        <button class="px-3 py-1 text-sm rounded-full hover:bg-gray-100 font-medium">
+                            All
+                        </button>
+                        <button class="px-3 py-1 text-sm rounded-full hover:bg-gray-100">
+                            My Posts
+                        </button>
+                        <button class="px-3 py-1 text-sm rounded-full hover:bg-gray-100">
+                            Mentions
+                        </button>
+                    </div>
+                </div>
+        
+                <!-- Notifications List -->
+                <div class="divide-y">
+                    <!-- Unread Notification -->
+                    <div class="p-4 hover:bg-gray-50 flex gap-4 bg-blue-50/50">
+                        <img src="../../images/profile.png" alt="User" class="h-12 w-12 rounded-full">
+                        <div class="flex-1">
+                            <p class="text-sm">
+                                <span class="font-semibold">John Doe</span> and <span class="font-semibold">3 others</span> liked your post about startup funding strategies
+                            </p>
+                            <span class="text-xs text-gray-500">2 hours ago</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <button class="text-gray-400 hover:text-gray-600">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                            <div class="h-2 w-2 rounded-full bg-blue-500"></div>
+                        </div>
+                    </div>
+        
+                    <!-- Connection Request -->
+                    <div class="p-4 hover:bg-gray-50 flex gap-4">
+                        <img src="../../images/profile.png" alt="User" class="h-12 w-12 rounded-full">
+                        <div class="flex-1">
+                            <p class="text-sm">
+                                <span class="font-semibold">Sarah Wilson</span> wants to connect with you
+                            </p>
+                            <div class="mt-2 flex gap-2">
+                                <button class="px-4 py-1 bg-blue-500 text-white rounded-full hover:bg-blue-600 text-sm">
+                                    Accept
+                                </button>
+                                <button class="px-4 py-1 border rounded-full hover:bg-gray-50 text-sm">
+                                    Ignore
+                                </button>
+                            </div>
+                            <span class="text-xs text-gray-500 block mt-1">1 day ago</span>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                    </div>
+        
+                    <!-- Post Comment -->
+                    <div class="p-4 hover:bg-gray-50 flex gap-4">
+                        <img src="../../images/profile.png" alt="User" class="h-12 w-12 rounded-full">
+                        <div class="flex-1">
+                            <p class="text-sm">
+                                <span class="font-semibold">Mike Johnson</span> commented on your post: "Great insights! Would love to discuss this further..."
+                            </p>
+                            <span class="text-xs text-gray-500">2 days ago</span>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                    </div>
+        
+                    <!-- Event Reminder -->
+                    <div class="p-4 hover:bg-gray-50 flex gap-4">
+                        <div class="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-calendar text-blue-500 text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm">
+                                Upcoming event: <span class="font-semibold">Startup Networking Mixer</span> starts in 2 days
+                            </p>
+                            <div class="mt-2">
+                                <button class="px-4 py-1 border rounded-full hover:bg-gray-50 text-sm">
+                                    View Event
+                                </button>
+                            </div>
+                            <span class="text-xs text-gray-500 block mt-1">3 days ago</span>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                    </div>
+
+                    <!-- More Notifications -->
+                    <div class="p-4 hover:bg-gray-50 flex gap-4">
+                        <img src="../../images/profile.png" alt="User" class="h-12 w-12 rounded-full">
+                        <div class="flex-1">
+                            <p class="text-sm">
+                                <span class="font-semibold">Arjun Patel</span> and <span class="font-semibold">5 others</span> from your network are attending "Startup India Summit 2025"
+                            </p>
+                            <div class="mt-2">
+                                <button class="px-4 py-1 border rounded-full hover:bg-gray-50 text-sm">
+                                    Interested
+                                </button>
+                            </div>
+                            <span class="text-xs text-gray-500">3 days ago</span>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                    </div>
+
+                    <div class="p-4 hover:bg-gray-50 flex gap-4 bg-blue-50/50">
+                        <img src="../../images/profile.png" alt="User" class="h-12 w-12 rounded-full">
+                        <div class="flex-1">
+                            <p class="text-sm">
+                                <span class="font-semibold">Priya Sharma</span> shared a post about AI in Entrepreneurship
+                            </p>
+                            <span class="text-xs text-gray-500">4 days ago</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <button class="text-gray-400 hover:text-gray-600">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                            <div class="h-2 w-2 rounded-full bg-blue-500"></div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 hover:bg-gray-50 flex gap-4">
+                        <img src="../../images/profile.png" alt="User" class="h-12 w-12 rounded-full">
+                        <div class="flex-1">
+                            <p class="text-sm">
+                                <span class="font-semibold">Rahul Verma</span> endorsed you for "Business Strategy"
+                            </p>
+                            <span class="text-xs text-gray-500">5 days ago</span>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                    </div>
+
+                    <!-- Add more notifications with Indian names -->
+                    <div class="p-4 hover:bg-gray-50 flex gap-4">
+                        <div class="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-briefcase text-green-500 text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm">
+                                <span class="font-semibold">Neha Gupta</span> posted a new job: "Senior Product Manager at TechStartup India"
+                            </p>
+                            <div class="mt-2">
+                                <button class="px-4 py-1 border rounded-full hover:bg-gray-50 text-sm">
+                                    View Job
+                                </button>
+                            </div>
+                            <span class="text-xs text-gray-500">1 week ago</span>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                    </div>
+
+                    <!-- Continue with more notifications -->
+                    <div class="p-4 hover:bg-gray-50 flex gap-4 bg-blue-50/50">
+                        <img src="../../images/profile.png" alt="User" class="h-12 w-12 rounded-full">
+                        <div class="flex-1">
+                            <p class="text-sm">
+                                <span class="font-semibold">Ananya Reddy</span> mentioned you in a post about "Future of Indian Startups"
+                            </p>
+                            <span class="text-xs text-gray-500">1 week ago</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <button class="text-gray-400 hover:text-gray-600">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                            <div class="h-2 w-2 rounded-full bg-blue-500"></div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 hover:bg-gray-50 flex gap-4">
+                        <div class="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-newspaper text-purple-500 text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm">
+                                <span class="font-semibold">Vikram Singh</span> shared an article: "10 Emerging Tech Trends in India 2025"
+                            </p>
+                            <div class="mt-2">
+                                <button class="px-4 py-1 border rounded-full hover:bg-gray-50 text-sm">
+                                    Read Article
+                                </button>
+                            </div>
+                            <span class="text-xs text-gray-500">1 week ago</span>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                    </div>
+
+                    <div class="p-4 hover:bg-gray-50 flex gap-4">
+                        <img src="../../images/profile.png" alt="User" class="h-12 w-12 rounded-full">
+                        <div class="flex-1">
+                            <p class="text-sm">
+                                <span class="font-semibold">Meera Patel</span> and <span class="font-semibold">8 others</span> endorsed you for "Entrepreneurship"
+                            </p>
+                            <span class="text-xs text-gray-500">1 week ago</span>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                    </div>
+
+                    <div class="p-4 hover:bg-gray-50 flex gap-4 bg-blue-50/50">
+                        <div class="h-12 w-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-users text-orange-500 text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm">
+                                <span class="font-semibold">Rajesh Iyer</span> invited you to join "Tech Entrepreneurs Mumbai" group
+                            </p>
+                            <div class="mt-2 flex gap-2">
+                                <button class="px-4 py-1 bg-blue-500 text-white rounded-full hover:bg-blue-600 text-sm">
+                                    Join Group
+                                </button>
+                                <button class="px-4 py-1 border rounded-full hover:bg-gray-50 text-sm">
+                                    Not Now
+                                </button>
+                            </div>
+                            <span class="text-xs text-gray-500">1 week ago</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <button class="text-gray-400 hover:text-gray-600">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                            <div class="h-2 w-2 rounded-full bg-blue-500"></div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Load More -->
+                <div class="p-4 text-center">
+                    <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                        View More Notifications
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="z-0 bg-[#212121] pt-4 mt-0 text-gray-300/95 px-16" data-event-label="Footer" role="contentinfo">
+    <!-- <footer class="z-0 bg-[#212121] pt-4 mt-0 text-gray-300/95 px-16" data-event-label="Footer" role="contentinfo">
         <div class="px-6 sm:px-4 xl:px-0 md:max-w-screen mx-auto my-0 flex flex-col space-y-6 pb-4">
             <div class="mt-2 flex  flex-row items-center justify-center border-b border-gray-400 pb-6 sm:justify-start">
                 <div class="hidden font-semibold sm:block text-white">
@@ -259,6 +511,6 @@
                 <a href="#" aria-label="Help" class="ds-font-small cursor-pointer text-gray4 hover:text-white hover:no-underline">Help</a>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </body>
 </html>
