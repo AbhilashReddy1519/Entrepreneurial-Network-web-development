@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../onlyheaderfooter.css">
     <link rel="stylesheet" href="../all.css">
     <script src="../../javaScript/me_business.js"></script>
+    <script src="../../javaScript/network.js"></script>
 </head>
 <body class="bg-white h-screen">
     <header class="flex flex-row bg-white px-14">
@@ -63,7 +64,7 @@
         </nav>
     </header>
 
-    <main class="h-screen bg-[#f4f2ee]">
+    <main class="bg-[#f4f2ee]">
         <div id="profile_preview" class="hidden z-50 fixed top-16 right-[17rem] border border-neutral-300/70 bg-[#f4f4f4] w-[290px] rounded-sm rounded-r-none rounded-b-sm">
             <div class="px-3 bg-white rounded-t-sm">
                 <div class="flex flex-row py-2 px-1 gap-2">
@@ -186,6 +187,385 @@
                         </a>
                     </div>
                     <a href="#" class="mt-8 text-xl font-[600] hover:underline hover:decoration-blue-500">Create a Company Page <i class="fa-solid fa-plus"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-24 py-6 grid grid-cols-[25%_75%] gap-6">
+            <!-- Left Sidebar - Network Stats -->
+            <div class="space-y-4">
+                <!-- Network Management Card -->
+                <div class="bg-white rounded-xl shadow-sm">
+                    <div class="p-6">
+                        <h2 class="font-bold text-lg mb-4">Manage my network</h2>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg group">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fa-solid fa-user-group text-gray-600 text-xl"></i>
+                                        <span class="text-gray-600 group-hover:text-gray-900">Connections</span>
+                                    </div>
+                                    <span class="text-blue-600 font-medium">1,234</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg group">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fa-solid fa-address-book text-gray-600 text-xl"></i>
+                                        <span class="text-gray-600 group-hover:text-gray-900">Contacts</span>
+                                    </div>
+                                    <span class="text-blue-600 font-medium">853</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg group">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fa-solid fa-user-check text-gray-600 text-xl"></i>
+                                        <span class="text-gray-600 group-hover:text-gray-900">Following & Followers</span>
+                                    </div>
+                                    <span class="text-blue-600 font-medium">426</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg group">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fa-solid fa-users text-gray-600 text-xl"></i>
+                                        <span class="text-gray-600 group-hover:text-gray-900">Groups</span>
+                                    </div>
+                                    <span class="text-blue-600 font-medium">15</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg group">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fa-solid fa-calendar-days text-gray-600 text-xl"></i>
+                                        <span class="text-gray-600 group-hover:text-gray-900">Events</span>
+                                    </div>
+                                    <span class="text-blue-600 font-medium">8</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg group">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fa-solid fa-newspaper text-gray-600 text-xl"></i>
+                                        <span class="text-gray-600 group-hover:text-gray-900">Newsletters</span>
+                                    </div>
+                                    <span class="text-blue-600 font-medium">12</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Growth Tools -->
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h2 class="font-bold text-lg mb-4">Grow your network faster</h2>
+                    <div class="space-y-4">
+                        <a href="#" class="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-address-card text-blue-600 text-xl mt-1"></i>
+                                <div>
+                                    <h3 class="font-medium">Import Contacts</h3>
+                                    <p class="text-sm text-gray-600">Find connections from your email or contact list</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-qrcode text-blue-600 text-xl mt-1"></i>
+                                <div>
+                                    <h3 class="font-medium">QR Connect</h3>
+                                    <p class="text-sm text-gray-600">Scan to connect instantly with nearby entrepreneurs</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Right Section - Connection Requests & Recommendations -->
+            <div class="space-y-6">
+                <!-- New Featured Connections Section -->
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="font-bold text-lg">Featured Connections</h2>
+                        <div class="flex gap-2">
+                            <button class="p-2 rounded-full hover:bg-gray-100" id="prevBtn">
+                                <i class="fa-solid fa-chevron-left text-gray-600"></i>
+                            </button>
+                            <button class="p-2 rounded-full hover:bg-gray-100" id="nextBtn">
+                                <i class="fa-solid fa-chevron-right text-gray-600"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden">
+                        <div class="flex gap-4 transition-transform duration-300" id="cardContainer" style="transform: translateX(0px);">
+                            <!-- Featured Profile Cards -->
+                            <div class="flex-shrink-0 w-[250px] relative group">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                                <img src="../../images/founders/elon.png" alt="Elon Musk" class="w-full h-48 object-cover rounded-lg">
+                                <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <h3 class="font-bold">Elon Musk</h3>
+                                    <p class="text-sm">CEO of Tesla & SpaceX</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[250px] relative group">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                                <img src="../../images/founders/sundar.png" alt="Sundar Pichai" class="w-full h-48 object-cover rounded-lg">
+                                <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <h3 class="font-bold">Sundar Pichai</h3>
+                                    <p class="text-sm">CEO of Alphabet Inc.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[250px] relative group">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                                <img src="../../images/founders/satya.png" alt="Satya Nadella" class="w-full h-48 object-cover rounded-lg">
+                                <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <h3 class="font-bold">Satya Nadella</h3>
+                                    <p class="text-sm">CEO of Microsoft</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[250px] relative group">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                                <img src="../../images/founders/sara.png" alt="Sara Blakely" class="w-full h-48 object-cover rounded-lg">
+                                <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <h3 class="font-bold">Sara Blakely</h3>
+                                    <p class="text-sm">Founder of Spanx</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[250px] relative group">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                                <img src="../../images/founders/whitney.png" alt="Whitney Wolfe Herd" class="w-full h-48 object-cover rounded-lg">
+                                <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <h3 class="font-bold">Whitney Wolfe Herd</h3>
+                                    <p class="text-sm">Founder & CEO of Bumble</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[250px] relative group">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                                <img src="../../images/founders/brian.png" alt="Brian Chesky" class="w-full h-48 object-cover rounded-lg">
+                                <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <h3 class="font-bold">Brian Chesky</h3>
+                                    <p class="text-sm">Co-founder & CEO of Airbnb</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[250px] relative group">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                                <img src="../../images/founders/melanie.png" alt="Melanie Perkins" class="w-full h-48 object-cover rounded-lg">
+                                <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <h3 class="font-bold">Melanie Perkins</h3>
+                                    <p class="text-sm">Co-founder & CEO of Canva</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[250px] relative group">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                                <img src="../../images/founders/tobi.png" alt="Tobias Lütke" class="w-full h-48 object-cover rounded-lg">
+                                <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <h3 class="font-bold">Tobias Lütke</h3>
+                                    <p class="text-sm">Founder & CEO of Shopify</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[250px] relative group">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                                <img src="../../images/founders/anne.png" alt="Anne Wojcicki" class="w-full h-48 object-cover rounded-lg">
+                                <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <h3 class="font-bold">Anne Wojcicki</h3>
+                                    <p class="text-sm">Co-founder & CEO of 23andMe</p>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 w-[250px] relative group">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
+                                <img src="../../images/founders/daniel.png" alt="Daniel Ek" class="w-full h-48 object-cover rounded-lg">
+                                <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <h3 class="font-bold">Daniel Ek</h3>
+                                    <p class="text-sm">Co-founder & CEO of Spotify</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pending Invitations - Enhanced -->
+                <div class="bg-white rounded-xl shadow-sm">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="font-bold text-lg">Pending Invitations</h2>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">8 new</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Enhanced Invitation Cards -->
+                            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
+                                <div class="flex gap-4">
+                                    <div class="relative">
+                                        <img src="../../images/founders/founder5.jpg" alt="Profile" class="h-16 w-16 rounded-full">
+                                        <div class="absolute -bottom-1 -right-1 h-5 w-5 bg-green-500 rounded-full border-2 border-white"></div>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-medium group-hover:text-blue-600 transition-colors">Sarah Chen</h3>
+                                        <p class="text-sm text-gray-600">Co-founder at Future Tech</p>
+                                        <p class="text-xs text-gray-500 mt-1">
+                                            <i class="fa-solid fa-users text-gray-400 mr-1"></i>
+                                            14 mutual connections
+                                        </p>
+                                        <div class="flex gap-2 mt-3">
+                                            <button class="px-4 py-1 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
+                                                <i class="fa-solid fa-check mr-1"></i> Accept
+                                            </button>
+                                            <button class="px-4 py-1 border border-gray-400 rounded-full hover:bg-gray-50 transition-colors">
+                                                <i class="fa-solid fa-times mr-1"></i> Ignore
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
+                                <div class="flex gap-4">
+                                    <div class="relative">
+                                        <img src="../../images/founders/mark.png" alt="Profile" class="h-16 w-16 rounded-full">
+                                        <div class="absolute -bottom-1 -right-1 h-5 w-5 bg-green-500 rounded-full border-2 border-white"></div>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-medium group-hover:text-blue-600 transition-colors">Mark Cuban</h3>
+                                        <p class="text-sm text-gray-600">Owner of Dallas Mavericks</p>
+                                        <p class="text-xs text-gray-500 mt-1">
+                                            <i class="fa-solid fa-users text-gray-400 mr-1"></i>
+                                            28 mutual connections
+                                        </p>
+                                        <div class="flex gap-2 mt-3">
+                                            <button class="px-4 py-1 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
+                                                <i class="fa-solid fa-check mr-1"></i> Accept
+                                            </button>
+                                            <button class="px-4 py-1 border border-gray-400 rounded-full hover:bg-gray-50 transition-colors">
+                                                <i class="fa-solid fa-times mr-1"></i> Ignore
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
+                                <div class="flex gap-4">
+                                    <div class="relative">
+                                        <img src="../../images/founders/jessica.png" alt="Profile" class="h-16 w-16 rounded-full">
+                                        <div class="absolute -bottom-1 -right-1 h-5 w-5 bg-gray-400 rounded-full border-2 border-white"></div>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-medium group-hover:text-blue-600 transition-colors">Jessica Alba</h3>
+                                        <p class="text-sm text-gray-600">Founder of The Honest Company</p>
+                                        <p class="text-xs text-gray-500 mt-1">
+                                            <i class="fa-solid fa-users text-gray-400 mr-1"></i>
+                                            19 mutual connections
+                                        </p>
+                                        <div class="flex gap-2 mt-3">
+                                            <button class="px-4 py-1 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
+                                                <i class="fa-solid fa-check mr-1"></i> Accept
+                                            </button>
+                                            <button class="px-4 py-1 border border-gray-400 rounded-full hover:bg-gray-50 transition-colors">
+                                                <i class="fa-solid fa-times mr-1"></i> Ignore
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
+                                <div class="flex gap-4">
+                                    <div class="relative">
+                                        <img src="../../images/founders/gary.png" alt="Profile" class="h-16 w-16 rounded-full">
+                                        <div class="absolute -bottom-1 -right-1 h-5 w-5 bg-green-500 rounded-full border-2 border-white"></div>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-medium group-hover:text-blue-600 transition-colors">Gary Vaynerchuk</h3>
+                                        <p class="text-sm text-gray-600">CEO of VaynerMedia</p>
+                                        <p class="text-xs text-gray-500 mt-1">
+                                            <i class="fa-solid fa-users text-gray-400 mr-1"></i>
+                                            45 mutual connections
+                                        </p>
+                                        <div class="flex gap-2 mt-3">
+                                            <button class="px-4 py-1 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
+                                                <i class="fa-solid fa-check mr-1"></i> Accept
+                                            </button>
+                                            <button class="px-4 py-1 border border-gray-400 rounded-full hover:bg-gray-50 transition-colors">
+                                                <i class="fa-solid fa-times mr-1"></i> Ignore
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
+                                <div class="flex gap-4">
+                                    <div class="relative">
+                                        <img src="../../images/founders/reid.png" alt="Profile" class="h-16 w-16 rounded-full">
+                                        <div class="absolute -bottom-1 -right-1 h-5 w-5 bg-gray-400 rounded-full border-2 border-white"></div>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-medium group-hover:text-blue-600 transition-colors">Reid Hoffman</h3>
+                                        <p class="text-sm text-gray-600">Co-founder of LinkedIn</p>
+                                        <p class="text-xs text-gray-500 mt-1">
+                                            <i class="fa-solid fa-users text-gray-400 mr-1"></i>
+                                            67 mutual connections
+                                        </p>
+                                        <div class="flex gap-2 mt-3">
+                                            <button class="px-4 py-1 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
+                                                <i class="fa-solid fa-check mr-1"></i> Accept
+                                            </button>
+                                            <button class="px-4 py-1 border border-gray-400 rounded-full hover:bg-gray-50 transition-colors">
+                                                <i class="fa-solid fa-times mr-1"></i> Ignore
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industry Connections -->
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h2 class="font-bold text-lg mb-6">Connect by Industry</h2>
+                    <div class="grid grid-cols-3 gap-4">
+                        <a href="#" class="group p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all">
+                            <div class="flex flex-col items-center text-center">
+                                <i class="fa-solid fa-laptop-code text-3xl text-blue-600 mb-3"></i>
+                                <h3 class="font-medium group-hover:text-blue-600">Technology</h3>
+                                <p class="text-sm text-gray-600 mt-1">2,345 professionals</p>
+                            </div>
+                        </a>
+                        <!-- Add more industry cards... -->
+                    </div>
+                </div>
+
+                <!-- Event Recommendations -->
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h2 class="font-bold text-lg mb-6">Upcoming Networking Events</h2>
+                    <div class="space-y-4">
+                        <div class="flex gap-4 p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all">
+                            <div class="flex-shrink-0 w-24 h-24 bg-blue-100 rounded-lg flex flex-col items-center justify-center">
+                                <span class="text-2xl font-bold text-blue-600">15</span>
+                                <span class="text-sm text-blue-600">APR</span>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-lg">Startup Founders Meetup</h3>
+                                <p class="text-sm text-gray-600 mb-2">Virtual Event • 2:00 PM - 4:00 PM</p>
+                                <div class="flex items-center gap-4">
+                                    <span class="text-sm text-gray-500">
+                                        <i class="fa-solid fa-users mr-1"></i> 234 attending
+                                    </span>
+                                    <button class="px-4 py-1 text-sm border border-blue-600 text-blue-600 rounded-full hover:bg-blue-50">
+                                        Add to calendar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more event cards... -->
+                    </div>
                 </div>
             </div>
         </div>
