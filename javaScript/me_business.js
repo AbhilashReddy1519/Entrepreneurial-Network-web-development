@@ -65,13 +65,34 @@ document.addEventListener('DOMContentLoaded', () => {
             if (data.error) {
                 console.error("Server Error:", data.error);
             } else {
-                document.getElementById('username').textContent = data.username;
-                document.getElementById('headline').textContent = data.headline && data.headline.trim() !== "" 
-                    ? data.headline 
-                    : "Hi guys! I am new to FounderForge";
-                document.getElementById('profile_picture').src = data.profile_picture && data.profile_picture.trim() !== "" 
-                    ? data.profile_picture 
-                    : "../../images/profile.png"; 
+                // document.querySelectorAll('#username').textContent = data.username;
+                // Update all username elements
+
+                document.querySelectorAll('#username').forEach(element => {
+                    element.textContent = data.username;
+                });
+                // document.getElementById('headline').textContent = data.headline && data.headline.trim() !== "" 
+                //     ? data.headline 
+                //     : "Hi guys! I am new to FounderForge";
+
+                // Update all headline elements
+                document.querySelectorAll('#headline').forEach(element => {
+                    element.textContent = data.headline && data.headline.trim() !== "" 
+                        ? data.headline 
+                        : "Hi guys! I am new to FounderForge";
+                });
+
+                // document.getElementById('profile_picture').src = data.profile_picture && data.profile_picture.trim() !== "" 
+                //     ? data.profile_picture 
+                //     : "../../images/profile.png"; 
+
+                // Update all profile picture elements
+                document.querySelectorAll('#profile_picture').forEach(element => {
+                    element.src = data.profile_picture && data.profile_picture.trim() !== "" 
+                        ? data.profile_picture 
+                        : "../../images/profile.png";
+                });
+
                 document.getElementById('header_profile').src = data.profile_picture && data.profile_picture.trim() !== "" 
                 ? data.profile_picture 
                 : "../../images/profile.png"; 

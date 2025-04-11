@@ -63,7 +63,7 @@
         </nav>
     </header>
 
-    <main class="h-screen bg-[#f4f2ee]">
+    <main class="bg-[#f4f2ee]">
         <div id="profile_preview" class="hidden z-50 fixed top-16 right-[17rem] border border-neutral-300/70 bg-[#f4f4f4] w-[290px] rounded-sm rounded-r-none rounded-b-sm">
             <div class="px-3 bg-white rounded-t-sm">
                 <div class="flex flex-row py-2 px-1 gap-2">
@@ -189,9 +189,467 @@
                 </div>
             </div>
         </div>
+
+        <div class="px-24 py-0 grid grid-cols-[20%_50%_30%] gap-6">
+            <!-- Left Sidebar -->
+            <div class="space-y-4 rounded-2xl">
+                <!-- Profile Card -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-all">
+                    <div class="h-24 rounded-t-xl bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 relative overflow-hidden">
+                        <!-- Decorative Pattern -->
+                        <div class="absolute inset-0 opacity-10">
+                            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="url(#grid)" />
+                                <defs>
+                                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/>
+                                    </pattern>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6 -mt-12">
+                        <div class="relative inline-block">
+                            <img src="../../images/profile.png" alt="Profile" id="profile_picture" 
+                                 class="h-24 w-24 rounded-xl border-4 border-white shadow-lg mx-auto hover:scale-105 transition-transform">
+                            <div class="absolute bottom-1 right-1 bg-green-500 w-4 h-4 rounded-full border-2 border-white"></div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="./me.html" id="username" class="block text-xl font-bold hover:underline text-gray-900">User Name</a>
+                            <p class="text-sm text-gray-600 mt-1" id="headline">Your Headline Here</p>
+                        </div>
+                        <hr class="my-4 border-gray-200">
+                        <div class="space-y-3">
+                            <!-- Profile Stats -->
+                            <div class="bg-gray-50 rounded-lg p-3 hover:bg-gray-100 transition-colors">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-medium text-gray-600">Profile Views</span>
+                                    <span class="text-sm font-semibold text-blue-600">128</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                    <div class="bg-blue-600 h-1.5 rounded-full" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <!-- Post Stats -->
+                            <div class="bg-gray-50 rounded-lg p-3 hover:bg-gray-100 transition-colors">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-medium text-gray-600">Post Impressions</span>
+                                    <span class="text-sm font-semibold text-blue-600">1,024</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                    <div class="bg-blue-600 h-1.5 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Quick Actions -->
+                        <div class="mt-4 space-y-2">
+                            <a href="#" class="block text-center py-2 px-4 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition-colors">
+                                <i class="fa-solid fa-bookmark mr-2"></i>My Items
+                            </a>
+                            <a href="#" class="block text-center py-2 px-4 bg-gray-50 text-gray-600 rounded-lg hover:bg-gray-100 transition-colors">
+                                <i class="fa-solid fa-user-group mr-2"></i>My Network
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Groups -->
+                <div class="bg-white rounded-lg p-4">
+                    <h2 class="font-semibold mb-3">Recent Groups</h2>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="flex items-center gap-3 hover:bg-gray-50 p-1 rounded">
+                                <img src="../../companies/ubisoft.png" alt="Group" class="h-8 w-8 rounded">
+                                <span class="text-sm">Startup Founders Hub</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center gap-3 hover:bg-gray-50 p-1 rounded">
+                                <img src="../../companies/polygon.png" alt="Group" class="h-8 w-8 rounded">
+                                <span class="text-sm">Tech Entrepreneurs</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+
+            <!-- Main Feed -->
+            <div class="space-y-1">
+                <!-- Create Post -->
+                <div class="bg-white rounded-lg p-4">
+                    <div class="flex gap-3">
+                        <img src="../../images/profile.png" alt="Profile" id="profile_picture" class="h-12 w-12 rounded-full">
+                        <button class="flex-1 text-left px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-500">
+                            Start a post
+                        </button>
+                    </div>
+                    <div class="flex justify-between mt-4 pt-2 border-t">
+                        <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                            <i class="fa-regular fa-image text-blue-500"></i>
+                            <span>Photo</span>
+                        </button>
+                        <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                            <i class="fa-solid fa-video text-green-500"></i>
+                            <span>Video</span>
+                        </button>
+                        <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                            <i class="fa-regular fa-calendar text-orange-500"></i>
+                            <span>Event</span>
+                        </button>
+                        <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                            <i class="fa-solid fa-newspaper text-pink-500"></i>
+                            <span>Write Article</span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Posts Feed -->
+                <div class="space-y-4">
+                    <!-- Post 1 -->
+                    <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="p-4">
+                            <div class="flex justify-between">
+                                <div class="flex gap-3">
+                                    <img src="../../images/founders/founder1.jpg" alt="Profile" class="h-12 w-12 rounded-full">
+                                    <div>
+                                        <h3 class="font-semibold hover:underline cursor-pointer">Rahul Sharma</h3>
+                                        <p class="text-sm text-gray-600">Founder & CEO at TechStartup</p>
+                                        <span class="text-xs text-gray-500">2h • <i class="fa-solid fa-earth-asia"></i></span>
+                                    </div>
+                                </div>
+                                <button class="text-gray-500 hover:bg-gray-100 p-2 rounded-full">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </button>
+                            </div>
+                            <p class="mt-3">Excited to announce our latest product launch! 🚀 After months of hard work, we're finally ready to show the world what we've been building.</p>
+                            <img src="../../images/posts/product-launch.jpg" alt="Product Launch" class="mt-3 rounded-lg w-full">
+                            <div class="flex justify-between items-center mt-3 pt-2 text-sm text-gray-500">
+                                <div class="flex gap-1 items-center">
+                                    <span class="flex gap-1">
+                                        <i class="fa-solid fa-thumbs-up text-blue-500"></i>
+                                        <i class="fa-solid fa-heart text-red-500"></i>
+                                    </span>
+                                    <span>1.2K</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <span>256 comments</span>
+                                    <span>48 shares</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between px-4 py-2 border-t">
+                            <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                                <i class="fa-regular fa-thumbs-up"></i>
+                                <span>Like</span>
+                            </button>
+                            <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                                <i class="fa-regular fa-comment"></i>
+                                <span>Comment</span>
+                            </button>
+                            <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                                <i class="fa-solid fa-share"></i>
+                                <span>Share</span>
+                            </button>
+                            <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                                <i class="fa-regular fa-paper-plane"></i>
+                                <span>Send</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Post 2 -->
+                    <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="p-4">
+                            <div class="flex justify-between">
+                                <div class="flex gap-3">
+                                    <img src="../../images/founders/founder2.jpg" alt="Profile" class="h-12 w-12 rounded-full">
+                                    <div>
+                                        <h3 class="font-semibold hover:underline cursor-pointer">Priya Patel</h3>
+                                        <p class="text-sm text-gray-600">AI Research Lead at DeepTech</p>
+                                        <span class="text-xs text-gray-500">4h • <i class="fa-solid fa-earth-asia"></i></span>
+                                    </div>
+                                </div>
+                                <button class="text-gray-500 hover:bg-gray-100 p-2 rounded-full">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </button>
+                            </div>
+                            <p class="mt-3">Just published our research paper on AI-driven sustainability solutions. Proud of what our team has accomplished! 🌱🤖 #AI #Sustainability</p>
+                            <div class="mt-3 bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-medium">Nature.com - Research Article</h4>
+                                <p class="text-sm text-gray-600">AI Solutions for Environmental Sustainability: A New Approach</p>
+                            </div>
+                            <div class="flex justify-between items-center mt-3 pt-2 text-sm text-gray-500">
+                                <div class="flex gap-1 items-center">
+                                    <span class="flex gap-1">
+                                        <i class="fa-solid fa-thumbs-up text-blue-500"></i>
+                                        <i class="fa-solid fa-lightbulb text-yellow-500"></i>
+                                    </span>
+                                    <span>842</span>
+                                </div>
+                                <div class="flex gap-3">
+                                    <span>156 comments</span>
+                                    <span>73 shares</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between px-4 py-2 border-t">
+                            <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                                <i class="fa-regular fa-thumbs-up"></i>
+                                <span>Like</span>
+                            </button>
+                            <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                                <i class="fa-regular fa-comment"></i>
+                                <span>Comment</span>
+                            </button>
+                            <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                                <i class="fa-solid fa-share"></i>
+                                <span>Share</span>
+                            </button>
+                            <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                                <i class="fa-regular fa-paper-plane"></i>
+                                <span>Send</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Post 3 - Funding Announcement -->
+                        <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <div class="p-4">
+                                <div class="flex justify-between">
+                                    <div class="flex gap-3">
+                                        <img src="../../images/founders/founder3.jpg" alt="Profile" class="h-12 w-12 rounded-full">
+                                        <div>
+                                            <h3 class="font-semibold hover:underline cursor-pointer">Aditya Mehta</h3>
+                                            <p class="text-sm text-gray-600">Founder at FinTech Solutions</p>
+                                            <span class="text-xs text-gray-500">5h • <i class="fa-solid fa-earth-asia"></i></span>
+                                        </div>
+                                    </div>
+                                    <button class="text-gray-500 hover:bg-gray-100 p-2 rounded-full">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </button>
+                                </div>
+                                <p class="mt-3">Thrilled to announce that we've raised $10M in Series A funding! 🎉 This investment will help us scale our fintech solutions and bring innovative financial services to more customers.</p>
+                                <div class="mt-3 bg-blue-50 p-4 rounded-lg border border-blue-100">
+                                    <div class="flex items-center gap-4">
+                                        <i class="fa-solid fa-chart-line text-3xl text-blue-500"></i>
+                                        <div>
+                                            <h4 class="font-medium">Series A Funding Round</h4>
+                                            <p class="text-sm text-gray-600">Led by Venture Capital Partners</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center mt-3 pt-2 text-sm text-gray-500">
+                                    <div class="flex gap-1 items-center">
+                                        <span class="flex gap-1">
+                                            <i class="fa-solid fa-thumbs-up text-blue-500"></i>
+                                            <i class="fa-solid fa-rocket text-yellow-500"></i>
+                                        </span>
+                                        <span>3.4K</span>
+                                    </div>
+                                    <div class="flex gap-3">
+                                        <span>428 comments</span>
+                                        <span>156 shares</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between px-4 py-2 border-t">
+                                <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                                    <i class="fa-regular fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                                    <i class="fa-regular fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                                    <i class="fa-solid fa-share"></i>
+                                    <span>Share</span>
+                                </button>
+                                <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                    <span>Send</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Post 4 - Job Opening -->
+                        <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <div class="p-4">
+                                <div class="flex justify-between">
+                                    <div class="flex gap-3">
+                                        <img src="../../images/founders/founder4.jpg" alt="Profile" class="h-12 w-12 rounded-full">
+                                        <div>
+                                            <h3 class="font-semibold hover:underline cursor-pointer">Neha Gupta</h3>
+                                            <p class="text-sm text-gray-600">HR Director at TechInnovate</p>
+                                            <span class="text-xs text-gray-500">6h • <i class="fa-solid fa-earth-asia"></i></span>
+                                        </div>
+                                    </div>
+                                    <button class="text-gray-500 hover:bg-gray-100 p-2 rounded-full">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </button>
+                                </div>
+                                <p class="mt-3">🔥 We're hiring! Looking for talented Full Stack Developers to join our growing team.</p>
+                                <div class="mt-3 bg-green-50 p-4 rounded-lg border border-green-100">
+                                    <h4 class="font-medium">Full Stack Developer</h4>
+                                    <p class="text-sm text-gray-600 mt-1">3-5 years experience • Remote • Competitive package</p>
+                                    <button class="mt-3 text-blue-600 hover:bg-blue-50 px-4 py-1 rounded-full border border-blue-600">
+                                        Apply Now
+                                    </button>
+                                </div>
+                                <div class="flex justify-between items-center mt-3 pt-2 text-sm text-gray-500">
+                                    <div class="flex gap-1 items-center">
+                                        <span class="flex gap-1">
+                                            <i class="fa-solid fa-thumbs-up text-blue-500"></i>
+                                        </span>
+                                        <span>245</span>
+                                    </div>
+                                    <div class="flex gap-3">
+                                        <span>82 comments</span>
+                                        <span>124 shares</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between px-4 py-2 border-t">
+                                <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                                    <i class="fa-regular fa-thumbs-up"></i>
+                                    <span>Like</span>
+                                </button>
+                                <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                                    <i class="fa-regular fa-comment"></i>
+                                    <span>Comment</span>
+                                </button>
+                                <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                                    <i class="fa-solid fa-share"></i>
+                                    <span>Share</span>
+                                </button>
+                                <button class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2 rounded">
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                    <span>Send</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="space-y-4">
+                <!-- News Section -->
+                <div class="bg-white rounded-lg p-4">
+                    <h2 class="font-semibold mb-3">Trending News</h2>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="group">
+                                <h3 class="text-sm font-medium group-hover:text-blue-600">Indian Startup Ecosystem Shows Strong Growth</h3>
+                                <p class="text-xs text-gray-500 mt-1">1d ago • 5,243 readers</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="group">
+                                <h3 class="text-sm font-medium group-hover:text-blue-600">New Government Initiatives for Entrepreneurs</h3>
+                                <p class="text-xs text-gray-500 mt-1">2d ago • 3,112 readers</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Suggested Connections -->
+                <div class="bg-white rounded-lg p-4">
+                    <h2 class="font-semibold mb-3">People You May Know</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <img src="../../images/profile.png" alt="Profile" class="h-12 w-12 rounded-full">
+                            <div class="flex-1">
+                                <h3 class="font-medium hover:underline cursor-pointer">Priya Patel</h3>
+                                <p class="text-sm text-gray-600">Product Manager at Tech Co</p>
+                                <button class="mt-2 px-4 py-1 border border-gray-500 rounded-full hover:bg-gray-100 text-gray-600">
+                                    <i class="fa-solid fa-user-plus"></i> Connect
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sticky top-20">
+                    <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+                        <!-- Background Pattern -->
+                        <div class="absolute top-0 right-0 w-32 h-32 opacity-10">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="text-blue-500 fill-current">
+                                <path d="M42.7,-62.9C50.9,-53.7,50.1,-35.9,51.7,-21.1C53.4,-6.2,57.4,5.8,55.9,17.8C54.4,29.8,47.3,41.8,36.9,50.1C26.4,58.4,12.7,63,-1.2,64.6C-15.1,66.2,-30.2,64.8,-42.7,57.4C-55.2,50,-65,36.5,-69.3,21.2C-73.6,5.9,-72.3,-11.3,-65.8,-25.9C-59.3,-40.5,-47.6,-52.6,-34.4,-60.4C-21.2,-68.2,-6.5,-71.7,6.6,-81.1C19.7,-90.5,34.5,-72.1,42.7,-62.9Z" transform="translate(100 100)" />
+                            </svg>
+                        </div>
+                        
+                        <!-- Header Section with Premium Badge -->
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="relative">
+                                <img src="../../images/premium.png" alt="Premium" class="h-10 w-10 rounded-full border-2 border-yellow-400 p-1 bg-gradient-to-br from-yellow-100 to-yellow-50">
+                                <div class="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center">
+                                    <i class="fa-solid fa-star text-[10px] text-white"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="font-bold text-xl text-gray-900">Unlock Premium Features</h2>
+                                <p class="text-sm text-gray-600">Upgrade to grow faster</p>
+                            </div>
+                        </div>
+
+                        <!-- Feature Image -->
+                        <div class="relative h-32 mb-6 rounded-lg overflow-hidden">
+                            <img src="../../images/premium_banner.png" alt="Premium Features" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                                <p class="text-white text-sm font-medium">Join 500,000+ premium members</p>
+                            </div>
+                        </div>
+
+                        <!-- Features List -->
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-center gap-3 p-2 rounded-lg hover:bg-blue-50 transition-colors">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <i class="fa-solid fa-chart-line text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-gray-900">Advanced Analytics</h3>
+                                    <p class="text-xs text-gray-600">Track your profile growth & engagement</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 p-2 rounded-lg hover:bg-blue-50 transition-colors">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <i class="fa-solid fa-message text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-gray-900">Direct Messaging</h3>
+                                    <p class="text-xs text-gray-600">Connect with anyone, anywhere</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 p-2 rounded-lg hover:bg-blue-50 transition-colors">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <i class="fa-solid fa-bullseye text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-gray-900">Business Insights</h3>
+                                    <p class="text-xs text-gray-600">Make data-driven decisions</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Call to Action -->
+                        <div class="space-y-3">
+                            <a href="./premium.html" class="block text-center py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full hover:from-blue-700 hover:to-blue-800 transition-all transform hover:scale-[1.02] shadow-md">
+                                Try Premium Free for 1 Month
+                            </a>
+                            <p class="text-center text-xs text-gray-500">Cancel anytime • Money-back guarantee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer class="z-0 bg-[#212121] pt-4 mt-0 text-gray-300/95 px-16" data-event-label="Footer" role="contentinfo">
+    <!-- <footer class="z-0 bg-[#212121] pt-4 mt-0 text-gray-300/95 px-16" data-event-label="Footer" role="contentinfo">
         <div class="px-6 sm:px-4 xl:px-0 md:max-w-screen mx-auto my-0 flex flex-col space-y-6 pb-4">
             <div class="mt-2 flex  flex-row items-center justify-center border-b border-gray-400 pb-6 sm:justify-start">
                 <div class="hidden font-semibold sm:block text-white">
@@ -259,6 +717,6 @@
                 <a href="#" aria-label="Help" class="ds-font-small cursor-pointer text-gray4 hover:text-white hover:no-underline">Help</a>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </body>
 </html>
