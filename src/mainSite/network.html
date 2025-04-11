@@ -64,7 +64,7 @@
         </nav>
     </header>
 
-    <main class="bg-[#f4f2ee]">
+    <main class="bg-[#f4f2ee] pb-10">
         <div id="profile_preview" class="hidden z-50 fixed top-16 right-[17rem] border border-neutral-300/70 bg-[#f4f4f4] w-[290px] rounded-sm rounded-r-none rounded-b-sm">
             <div class="px-3 bg-white rounded-t-sm">
                 <div class="flex flex-row py-2 px-1 gap-2">
@@ -191,7 +191,7 @@
             </div>
         </div>
 
-        <div class="px-24 py-6 grid grid-cols-[25%_75%] gap-6">
+        <div class="px-24 py-0 grid grid-cols-[25%_75%] gap-6">
             <!-- Left Sidebar - Network Stats -->
             <div class="space-y-4">
                 <!-- Network Management Card -->
@@ -281,6 +281,39 @@
                         </a>
                     </div>
                 </div>
+
+                <div class="sticky top-20 bg-white rounded-xl shadow-sm p-6 border-l-4 border-yellow-400">
+                    <h2 class="font-bold text-lg mb-4">Quick Actions</h2>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 p-2 hover:bg-yellow-50 rounded-lg cursor-pointer group">
+                            <i class="fa-solid fa-bell text-yellow-600"></i>
+                            <span class="text-gray-600 group-hover:text-gray-900">8 pending invitations</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2 hover:bg-yellow-50 rounded-lg cursor-pointer group">
+                            <i class="fa-solid fa-calendar-check text-yellow-600"></i>
+                            <span class="text-gray-600 group-hover:text-gray-900">6 upcoming events</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2 hover:bg-yellow-50 rounded-lg cursor-pointer group">
+                            <i class="fa-solid fa-user-plus text-yellow-600"></i>
+                            <span class="text-gray-600 group-hover:text-gray-900">15 people viewed your profile</span>
+                        </div>
+                        <hr class="my-3 border-yellow-200">
+                        <div class="flex items-center gap-3 p-2 hover:bg-yellow-50 rounded-lg cursor-pointer group">
+                            <i class="fa-solid fa-bullhorn text-yellow-600"></i>
+                            <span class="text-gray-600 group-hover:text-gray-900">Share your story</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2 hover:bg-yellow-50 rounded-lg cursor-pointer group">
+                            <i class="fa-solid fa-star text-yellow-600"></i>
+                            <span class="text-gray-600 group-hover:text-gray-900">Upgrade to Premium</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-yellow-200">
+                        <button class="w-full px-4 py-2 text-sm text-yellow-700 bg-yellow-50 hover:bg-yellow-100 rounded-full transition-colors">
+                            <i class="fa-solid fa-thumbtack mr-2"></i>
+                            Pin to top
+                        </button>
+                    </div>
+                </div>
             </div>
         
             <!-- Right Section - Connection Requests & Recommendations -->
@@ -301,7 +334,7 @@
                     <div class="relative overflow-hidden">
                         <div class="flex gap-4 transition-transform duration-300" id="cardContainer" style="transform: translateX(0px);">
                             <!-- Featured Profile Cards -->
-                            <div class="flex-shrink-0 w-[250px] relative group">
+                            <div class="flex-shrink-0 w-[250px] relative group cursor-pointer">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
                                 <img src="../../images/founders/elon.png" alt="Elon Musk" class="w-full h-48 object-cover rounded-lg">
                                 <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -310,7 +343,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex-shrink-0 w-[250px] relative group">
+                            <div class="flex-shrink-0 w-[250px] relative group cursor-pointer">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
                                 <img src="../../images/founders/sundar.png" alt="Sundar Pichai" class="w-full h-48 object-cover rounded-lg">
                                 <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -319,7 +352,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex-shrink-0 w-[250px] relative group">
+                            <div class="flex-shrink-0 w-[250px] relative group cursor-pointer">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
                                 <img src="../../images/founders/satya.png" alt="Satya Nadella" class="w-full h-48 object-cover rounded-lg">
                                 <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -328,7 +361,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex-shrink-0 w-[250px] relative group">
+                            <div class="flex-shrink-0 w-[250px] relative group cursor-pointer">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
                                 <img src="../../images/founders/sara.png" alt="Sara Blakely" class="w-full h-48 object-cover rounded-lg">
                                 <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -337,7 +370,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex-shrink-0 w-[250px] relative group">
+                            <div class="flex-shrink-0 w-[250px] relative group cursor-pointer">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
                                 <img src="../../images/founders/whitney.png" alt="Whitney Wolfe Herd" class="w-full h-48 object-cover rounded-lg">
                                 <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -346,7 +379,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex-shrink-0 w-[250px] relative group">
+                            <div class="flex-shrink-0 w-[250px] relative group cursor-pointer">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
                                 <img src="../../images/founders/brian.png" alt="Brian Chesky" class="w-full h-48 object-cover rounded-lg">
                                 <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -355,7 +388,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex-shrink-0 w-[250px] relative group">
+                            <div class="flex-shrink-0 w-[250px] relative group cursor-pointer">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
                                 <img src="../../images/founders/melanie.png" alt="Melanie Perkins" class="w-full h-48 object-cover rounded-lg">
                                 <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -364,7 +397,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex-shrink-0 w-[250px] relative group">
+                            <div class="flex-shrink-0 w-[250px] relative group cursor-pointer">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
                                 <img src="../../images/founders/tobi.png" alt="Tobias Lütke" class="w-full h-48 object-cover rounded-lg">
                                 <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -373,7 +406,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex-shrink-0 w-[250px] relative group">
+                            <div class="flex-shrink-0 w-[250px] relative group cursor-pointer">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
                                 <img src="../../images/founders/anne.png" alt="Anne Wojcicki" class="w-full h-48 object-cover rounded-lg">
                                 <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -382,7 +415,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex-shrink-0 w-[250px] relative group">
+                            <div class="flex-shrink-0 w-[250px] relative group cursor-pointer">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
                                 <img src="../../images/founders/daniel.png" alt="Daniel Ek" class="w-full h-48 object-cover rounded-lg">
                                 <div class="absolute bottom-0 left-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -395,18 +428,26 @@
                 </div>
 
                 <!-- Pending Invitations - Enhanced -->
-                <div class="bg-white rounded-xl shadow-sm">
-                    <div class="p-6">
-                        <div class="flex justify-between items-center mb-6">
-                            <h2 class="font-bold text-lg">Pending Invitations</h2>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">8 new</span>
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="font-bold text-lg">Pending Invitations</h2>
+                        <div class="flex gap-2">
+                            <button class="p-2 rounded-full hover:bg-gray-200" id="pendingPrevBtn">
+                                <i class="fa-solid fa-chevron-left text-gray-600"></i>
+                            </button>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 h-5 rounded-full mt-2.5">8 new</span>
+                            <button class="p-2 rounded-full hover:bg-gray-200" id="pendingNextBtn">
+                                <i class="fa-solid fa-chevron-right text-gray-600"></i>
+                            </button>
                         </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <!-- Enhanced Invitation Cards -->
-                            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
+                    </div>
+                    <div class="relative overflow-hidden">
+                        <div class="flex gap-4 transition-transform duration-300" id="pendingContainer" style="transform: translateX(0px);">
+                            <!-- Invitation Cards -->
+                            <div class="flex-shrink-0 w-[400px] p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
                                 <div class="flex gap-4">
                                     <div class="relative">
-                                        <img src="../../images/founders/founder5.jpg" alt="Profile" class="h-16 w-16 rounded-full">
+                                        <img src="../../images/founders/sarah.png" alt="Profile" class="h-16 w-16 mt-5 rounded-full">
                                         <div class="absolute -bottom-1 -right-1 h-5 w-5 bg-green-500 rounded-full border-2 border-white"></div>
                                     </div>
                                     <div>
@@ -427,10 +468,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
+                            <div class="flex-shrink-0 w-[400px] p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
                                 <div class="flex gap-4">
                                     <div class="relative">
-                                        <img src="../../images/founders/mark.png" alt="Profile" class="h-16 w-16 rounded-full">
+                                        <img src="../../images/founders/mark.png" alt="Profile" class="h-16 w-16 mt-5 rounded-full">
                                         <div class="absolute -bottom-1 -right-1 h-5 w-5 bg-green-500 rounded-full border-2 border-white"></div>
                                     </div>
                                     <div>
@@ -451,10 +492,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
+
+                            <div class="flex-shrink-0 w-[400px] p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
                                 <div class="flex gap-4">
                                     <div class="relative">
-                                        <img src="../../images/founders/jessica.png" alt="Profile" class="h-16 w-16 rounded-full">
+                                        <img src="../../images/founders/jessica.png" alt="Profile" class="h-16 w-16 mt-5 rounded-full">
                                         <div class="absolute -bottom-1 -right-1 h-5 w-5 bg-gray-400 rounded-full border-2 border-white"></div>
                                     </div>
                                     <div>
@@ -475,10 +517,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
+
+                            <div class="flex-shrink-0 w-[400px] p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
                                 <div class="flex gap-4">
                                     <div class="relative">
-                                        <img src="../../images/founders/gary.png" alt="Profile" class="h-16 w-16 rounded-full">
+                                        <img src="../../images/founders/gary.png" alt="Profile" class="h-16 w-16 mt-5 rounded-full">
                                         <div class="absolute -bottom-1 -right-1 h-5 w-5 bg-green-500 rounded-full border-2 border-white"></div>
                                     </div>
                                     <div>
@@ -499,10 +542,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
+
+                            <div class="flex-shrink-0 w-[400px] p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
                                 <div class="flex gap-4">
                                     <div class="relative">
-                                        <img src="../../images/founders/reid.png" alt="Profile" class="h-16 w-16 rounded-full">
+                                        <img src="../../images/founders/reid.png" alt="Profile" class="h-16 w-16 mt-5 rounded-full">
                                         <div class="absolute -bottom-1 -right-1 h-5 w-5 bg-gray-400 rounded-full border-2 border-white"></div>
                                     </div>
                                     <div>
@@ -538,33 +582,261 @@
                                 <p class="text-sm text-gray-600 mt-1">2,345 professionals</p>
                             </div>
                         </a>
-                        <!-- Add more industry cards... -->
+                        <a href="#" class="group p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all">
+                            <div class="flex flex-col items-center text-center">
+                                <i class="fa-solid fa-chart-line text-3xl text-blue-600 mb-3"></i>
+                                <h3 class="font-medium group-hover:text-blue-600">Finance</h3>
+                                <p class="text-sm text-gray-600 mt-1">1,876 professionals</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="group p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all">
+                            <div class="flex flex-col items-center text-center">
+                                <i class="fa-solid fa-flask text-3xl text-blue-600 mb-3"></i>
+                                <h3 class="font-medium group-hover:text-blue-600">Biotech</h3>
+                                <p class="text-sm text-gray-600 mt-1">945 professionals</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="group p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all">
+                            <div class="flex flex-col items-center text-center">
+                                <i class="fa-solid fa-leaf text-3xl text-blue-600 mb-3"></i>
+                                <h3 class="font-medium group-hover:text-blue-600">Clean Energy</h3>
+                                <p class="text-sm text-gray-600 mt-1">1,234 professionals</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="group p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all">
+                            <div class="flex flex-col items-center text-center">
+                                <i class="fa-solid fa-shop text-3xl text-blue-600 mb-3"></i>
+                                <h3 class="font-medium group-hover:text-blue-600">E-commerce</h3>
+                                <p class="text-sm text-gray-600 mt-1">2,789 professionals</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="group p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all">
+                            <div class="flex flex-col items-center text-center">
+                                <i class="fa-solid fa-robot text-3xl text-blue-600 mb-3"></i>
+                                <h3 class="font-medium group-hover:text-blue-600">AI & ML</h3>
+                                <p class="text-sm text-gray-600 mt-1">1,567 professionals</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="group p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all">
+                            <div class="flex flex-col items-center text-center">
+                                <i class="fa-solid fa-building text-3xl text-blue-600 mb-3"></i>
+                                <h3 class="font-medium group-hover:text-blue-600">Real Estate</h3>
+                                <p class="text-sm text-gray-600 mt-1">1,123 professionals</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="group p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all">
+                            <div class="flex flex-col items-center text-center">
+                                <i class="fa-solid fa-burger text-3xl text-blue-600 mb-3"></i>
+                                <h3 class="font-medium group-hover:text-blue-600">Food & Beverage</h3>
+                                <p class="text-sm text-gray-600 mt-1">890 professionals</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="group p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all">
+                            <div class="flex flex-col items-center text-center">
+                                <i class="fa-solid fa-gamepad text-3xl text-blue-600 mb-3"></i>
+                                <h3 class="font-medium group-hover:text-blue-600">Gaming</h3>
+                                <p class="text-sm text-gray-600 mt-1">678 professionals</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Event Recommendations -->
                 <div class="bg-white rounded-xl shadow-sm p-6">
                     <h2 class="font-bold text-lg mb-6">Upcoming Networking Events</h2>
-                    <div class="space-y-4">
-                        <div class="flex gap-4 p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all">
-                            <div class="flex-shrink-0 w-24 h-24 bg-blue-100 rounded-lg flex flex-col items-center justify-center">
-                                <span class="text-2xl font-bold text-blue-600">15</span>
-                                <span class="text-sm text-blue-600">APR</span>
-                            </div>
-                            <div>
-                                <h3 class="font-medium text-lg">Startup Founders Meetup</h3>
-                                <p class="text-sm text-gray-600 mb-2">Virtual Event • 2:00 PM - 4:00 PM</p>
-                                <div class="flex items-center gap-4">
-                                    <span class="text-sm text-gray-500">
-                                        <i class="fa-solid fa-users mr-1"></i> 234 attending
-                                    </span>
-                                    <button class="px-4 py-1 text-sm border border-blue-600 text-blue-600 rounded-full hover:bg-blue-50">
-                                        Add to calendar
-                                    </button>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="flex-shrink-0 w-16 h-16 bg-blue-100 rounded-lg flex flex-col items-center justify-center">
+                                    <span class="text-xl font-bold text-blue-600">15</span>
+                                    <span class="text-xs text-blue-600">APR</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-lg group-hover:text-blue-600 transition-colors">Startup Founders Meetup</h3>
+                                    <p class="text-sm text-gray-600">Virtual Event</p>
                                 </div>
                             </div>
+                            <div class="flex flex-col space-y-2">
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-clock mr-2 text-blue-600"></i>
+                                    2:00 PM - 4:00 PM
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-users mr-2 text-blue-600"></i>
+                                    234 attending
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-location-dot mr-2 text-blue-600"></i>
+                                    Zoom Meeting
+                                </div>
+                                <button class="mt-2 w-full px-4 py-2 text-sm border border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 flex items-center justify-center">
+                                    <i class="fa-solid fa-calendar-plus mr-2"></i>
+                                    Add to calendar
+                                </button>
+                            </div>
                         </div>
-                        <!-- Add more event cards... -->
+
+                        <!-- Repeat this structure for other event cards -->
+                        <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="flex-shrink-0 w-16 h-16 bg-blue-100 rounded-lg flex flex-col items-center justify-center">
+                                    <span class="text-xl font-bold text-blue-600">18</span>
+                                    <span class="text-xs text-blue-600">APR</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-lg group-hover:text-blue-600 transition-colors">Tech Investors Summit</h3>
+                                    <p class="text-sm text-gray-600">Hybrid Event</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-2">
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-clock mr-2 text-blue-600"></i>
+                                    10:00 AM - 5:00 PM
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-users mr-2 text-blue-600"></i>
+                                    456 attending
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-location-dot mr-2 text-blue-600"></i>
+                                    San Francisco & Online
+                                </div>
+                                <button class="mt-2 w-full px-4 py-2 text-sm border border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 flex items-center justify-center">
+                                    <i class="fa-solid fa-calendar-plus mr-2"></i>
+                                    Add to calendar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="flex-shrink-0 w-16 h-16 bg-blue-100 rounded-lg flex flex-col items-center justify-center">
+                                    <span class="text-xl font-bold text-blue-600">22</span>
+                                    <span class="text-xs text-blue-600">APR</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-lg group-hover:text-blue-600 transition-colors">Women in Tech Leadership</h3>
+                                    <p class="text-sm text-gray-600">Virtual Event</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-2">
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-clock mr-2 text-blue-600"></i>
+                                    1:00 PM - 3:00 PM
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-users mr-2 text-blue-600"></i>
+                                    312 attending
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-location-dot mr-2 text-blue-600"></i>
+                                    Zoom Meeting
+                                </div>
+                                <button class="mt-2 w-full px-4 py-2 text-sm border border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 flex items-center justify-center">
+                                    <i class="fa-solid fa-calendar-plus mr-2"></i>
+                                    Add to calendar
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="flex-shrink-0 w-16 h-16 bg-blue-100 rounded-lg flex flex-col items-center justify-center">
+                                    <span class="text-xl font-bold text-blue-600">25</span>
+                                    <span class="text-xs text-blue-600">APR</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-lg group-hover:text-blue-600 transition-colors">AI Startups Networking</h3>
+                                    <p class="text-sm text-gray-600">In-Person Event</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-2">
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-clock mr-2 text-blue-600"></i>
+                                    6:00 PM - 8:00 PM
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-users mr-2 text-blue-600"></i>
+                                    189 attending
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-location-dot mr-2 text-blue-600"></i>
+                                    San Francisco, CA
+                                </div>
+                                <button class="mt-2 w-full px-4 py-2 text-sm border border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 flex items-center justify-center">
+                                    <i class="fa-solid fa-calendar-plus mr-2"></i>
+                                    Add to calendar
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="flex-shrink-0 w-16 h-16 bg-blue-100 rounded-lg flex flex-col items-center justify-center">
+                                    <span class="text-xl font-bold text-blue-600">28</span>
+                                    <span class="text-xs text-blue-600">APR</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-lg group-hover:text-blue-600 transition-colors">Venture Capital Workshop</h3>
+                                    <p class="text-sm text-gray-600">Hybrid Event</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-2">
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-clock mr-2 text-blue-600"></i>
+                                    9:00 AM - 12:00 PM
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-users mr-2 text-blue-600"></i>
+                                    278 attending
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-location-dot mr-2 text-blue-600"></i>
+                                    New York & Online
+                                </div>
+                                <button class="mt-2 w-full px-4 py-2 text-sm border border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 flex items-center justify-center">
+                                    <i class="fa-solid fa-calendar-plus mr-2"></i>
+                                    Add to calendar
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-all group">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="flex-shrink-0 w-16 h-16 bg-blue-100 rounded-lg flex flex-col items-center justify-center">
+                                    <span class="text-xl font-bold text-blue-600">30</span>
+                                    <span class="text-xs text-blue-600">APR</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium text-lg group-hover:text-blue-600 transition-colors">Blockchain Innovators Meet</h3>
+                                    <p class="text-sm text-gray-600">Virtual Event</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-2">
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-clock mr-2 text-blue-600"></i>
+                                    3:00 PM - 5:00 PM
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-users mr-2 text-blue-600"></i>
+                                    156 attending
+                                </div>
+                                <div class="flex items-center text-sm text-gray-600">
+                                    <i class="fa-solid fa-location-dot mr-2 text-blue-600"></i>
+                                    Online Webinar
+                                </div>
+                                <button class="mt-2 w-full px-4 py-2 text-sm border border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 flex items-center justify-center">
+                                    <i class="fa-solid fa-calendar-plus mr-2"></i>
+                                    Add to calendar
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
