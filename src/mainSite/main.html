@@ -10,10 +10,27 @@
     <link rel="icon" type="image/png" href="../../images/favicon.png">
     <title>FounderForge</title>
     <script src="https://kit.fontawesome.com/49b62f9a06.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../output.css"> 
     <link rel="stylesheet" href="../onlyheaderfooter.css">
     <link rel="stylesheet" href="../all.css">
     <script src="../../javaScript/me_business.js"></script>
+    <script src="../../javaScript/main.js"></script>
+    <style>
+        .object-cover {
+            object-fit: cover;
+        }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .blur-sm {
+            filter: blur(4px);
+            transition: filter 0.2s ease-in-out;
+        }
+    </style>
 </head>
 <body class="bg-white h-screen">
     <header class="flex flex-row bg-white px-14">
@@ -63,7 +80,7 @@
         </nav>
     </header>
 
-    <main class="bg-[#f4f2ee]">
+    <main class="bg-[#f4f2ee] pb-10">
         <div id="profile_preview" class="hidden z-50 fixed top-16 right-[17rem] border border-neutral-300/70 bg-[#f4f4f4] w-[290px] rounded-sm rounded-r-none rounded-b-sm">
             <div class="px-3 bg-white rounded-t-sm">
                 <div class="flex flex-row py-2 px-1 gap-2">
@@ -253,25 +270,62 @@
                     </div>
                 </div>
 
-                <!-- Recent Groups -->
-                <div class="bg-white rounded-lg p-4">
-                    <h2 class="font-semibold mb-3">Recent Groups</h2>
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="#" class="flex items-center gap-3 hover:bg-gray-50 p-1 rounded">
-                                <img src="../../companies/ubisoft.png" alt="Group" class="h-8 w-8 rounded">
-                                <span class="text-sm">Startup Founders Hub</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="flex items-center gap-3 hover:bg-gray-50 p-1 rounded">
-                                <img src="../../companies/polygon.png" alt="Group" class="h-8 w-8 rounded">
-                                <span class="text-sm">Tech Entrepreneurs</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <!-- Network Stats section -->
+                <div class="sticky top-16 bg-white rounded-xl p-6 border-l-4 border-yellow-400 shadow-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="font-bold text-lg">Quick Actions</h2>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <i class="fa-solid fa-thumbtack"></i>
+                        </button>
+                    </div>
                 
+                    <!-- Notification Items -->
+                    <div class="space-y-4">
+                        <!-- Connections -->
+                        <div class="flex items-center gap-3 p-2 hover:bg-yellow-50 rounded-lg cursor-pointer group">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-user-plus text-blue-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-medium group-hover:text-blue-600">Pending Connections</h3>
+                                <p class="text-sm text-gray-600">8 people waiting</p>
+                            </div>
+                        </div>
+                
+                        <!-- Events -->
+                        <div class="flex items-center gap-3 p-2 hover:bg-yellow-50 rounded-lg cursor-pointer group">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-calendar-check text-green-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-medium group-hover:text-green-600">Upcoming Events</h3>
+                                <p class="text-sm text-gray-600">3 events this week</p>
+                            </div>
+                        </div>
+                
+                        <!-- Profile Views -->
+                        <div class="flex items-center gap-3 p-2 hover:bg-yellow-50 rounded-lg cursor-pointer group">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-eye text-purple-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-medium group-hover:text-purple-600">Profile Views</h3>
+                                <p class="text-sm text-gray-600">25 new views today</p>
+                            </div>
+                        </div>
+                
+                        <!-- Messages -->
+                        <div class="flex items-center gap-3 p-2 hover:bg-yellow-50 rounded-lg cursor-pointer group">
+                            <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-envelope text-red-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-medium group-hover:text-red-600">Unread Messages</h3>
+                                <p class="text-sm text-gray-600">5 new messages</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
             </div>
 
             <!-- Main Feed -->
@@ -574,7 +628,7 @@
                     </ul>
                 </div>
 
-                <div class="sticky top-20">
+                <div class="sticky top-16">
                     <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
                         <!-- Background Pattern -->
                         <div class="absolute top-0 right-0 w-32 h-32 opacity-10">
