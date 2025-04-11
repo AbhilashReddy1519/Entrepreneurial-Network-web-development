@@ -407,6 +407,9 @@
   .bottom-1 {
     bottom: calc(var(--spacing) * 1);
   }
+  .bottom-full {
+    bottom: 100%;
+  }
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
@@ -424,6 +427,9 @@
   }
   .z-0 {
     z-index: 0;
+  }
+  .z-10 {
+    z-index: 10;
   }
   .z-50 {
     z-index: 50;
@@ -887,6 +893,18 @@
   .h-\[450px\] {
     height: 450px;
   }
+  .h-\[calc\(100vh-18px\)\] {
+    height: calc(100vh - 18px);
+  }
+  .h-\[calc\(100vh-100px\)\] {
+    height: calc(100vh - 100px);
+  }
+  .h-\[calc\(100vh-130px\)\] {
+    height: calc(100vh - 130px);
+  }
+  .h-\[calc\(100vh-140px\)\] {
+    height: calc(100vh - 140px);
+  }
   .h-\[calc\(100vh-180px\)\] {
     height: calc(100vh - 180px);
   }
@@ -905,6 +923,9 @@
   .max-h-\[80vh\] {
     max-height: 80vh;
   }
+  .max-h-\[120px\] {
+    max-height: 120px;
+  }
   .max-h-\[400px\] {
     max-height: 400px;
   }
@@ -916,6 +937,9 @@
   }
   .max-h-screen {
     max-height: 100vh;
+  }
+  .min-h-\[40px\] {
+    min-height: 40px;
   }
   .min-h-\[50px\] {
     min-height: 50px;
@@ -986,6 +1010,9 @@
   .w-\[54\%\] {
     width: 54%;
   }
+  .w-\[70\%\] {
+    width: 70%;
+  }
   .w-\[80\%\] {
     width: 80%;
   }
@@ -1043,8 +1070,17 @@
   .max-w-2xl {
     max-width: var(--container-2xl);
   }
+  .max-w-\[60\%\] {
+    max-width: 60%;
+  }
   .max-w-\[70\%\] {
     max-width: 70%;
+  }
+  .max-w-\[100\%\] {
+    max-width: 100%;
+  }
+  .max-w-md {
+    max-width: var(--container-md);
   }
   .max-w-none {
     max-width: none;
@@ -1162,6 +1198,18 @@
   }
   .translate-none {
     translate: none;
+  }
+  .scale-95 {
+    --tw-scale-x: 95%;
+    --tw-scale-y: 95%;
+    --tw-scale-z: 95%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .scale-100 {
+    --tw-scale-x: 100%;
+    --tw-scale-y: 100%;
+    --tw-scale-z: 100%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
   }
   .scale-3d {
     scale: var(--tw-scale-x) var(--tw-scale-y) var(--tw-scale-z);
@@ -1311,8 +1359,26 @@
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+  .grid-cols-\[2\%_50\%_25\%\] {
+    grid-template-columns: 2% 50% 25%;
+  }
   .grid-cols-\[20\%_50\%_30\%\] {
     grid-template-columns: 20% 50% 30%;
+  }
+  .grid-cols-\[22\%_50\%_2\%\] {
+    grid-template-columns: 22% 50% 2%;
+  }
+  .grid-cols-\[22\%_50\%_25\%\] {
+    grid-template-columns: 22% 50% 25%;
+  }
+  .grid-cols-\[22\%_50\%_28\%\] {
+    grid-template-columns: 22% 50% 28%;
+  }
+  .grid-cols-\[25\%_50\%_25\%\] {
+    grid-template-columns: 25% 50% 25%;
+  }
+  .grid-cols-\[25\%_50\%_30\%\] {
+    grid-template-columns: 25% 50% 30%;
   }
   .grid-cols-\[25\%_75\%\] {
     grid-template-columns: 25% 75%;
@@ -1662,6 +1728,9 @@
   .overflow-y-auto {
     overflow-y: auto;
   }
+  .overflow-y-hidden {
+    overflow-y: hidden;
+  }
   .scroll-auto {
     scroll-behavior: auto;
   }
@@ -1742,6 +1811,9 @@
   .rounded-tl {
     border-top-left-radius: 0.25rem;
   }
+  .rounded-tl-sm {
+    border-top-left-radius: var(--radius-sm);
+  }
   .rounded-r {
     border-top-right-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
@@ -1756,6 +1828,9 @@
   }
   .rounded-tr {
     border-top-right-radius: 0.25rem;
+  }
+  .rounded-tr-sm {
+    border-top-right-radius: var(--radius-sm);
   }
   .rounded-b {
     border-bottom-right-radius: 0.25rem;
@@ -2501,6 +2576,9 @@
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
   }
+  .pr-10 {
+    padding-right: calc(var(--spacing) * 10);
+  }
   .pr-12 {
     padding-right: calc(var(--spacing) * 12);
   }
@@ -2786,6 +2864,9 @@
   .text-\[\#0a66c2\] {
     color: #0a66c2;
   }
+  .text-\[\#1DA1F2\] {
+    color: #1DA1F2;
+  }
   .text-\[\#2dacbd\] {
     color: #2dacbd;
   }
@@ -2795,8 +2876,14 @@
   .text-\[\#8f5849\] {
     color: #8f5849;
   }
+  .text-\[\#0077b5\] {
+    color: #0077b5;
+  }
   .text-\[\#0101ce\] {
     color: #0101ce;
+  }
+  .text-\[\#4267B2\] {
+    color: #4267B2;
   }
   .text-\[\#006177\] {
     color: #006177;
@@ -3089,6 +3176,9 @@
   }
   .opacity-10 {
     opacity: 10%;
+  }
+  .opacity-100 {
+    opacity: 100%;
   }
   .mix-blend-plus-darker {
     mix-blend-mode: plus-darker;
@@ -3450,6 +3540,16 @@
         --tw-scale-x: 110%;
         --tw-scale-y: 110%;
         --tw-scale-z: 110%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .group-hover\:scale-125 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-scale-x: 125%;
+        --tw-scale-y: 125%;
+        --tw-scale-z: 125%;
         scale: var(--tw-scale-x) var(--tw-scale-y);
       }
     }

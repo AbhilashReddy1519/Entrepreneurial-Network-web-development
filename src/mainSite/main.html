@@ -30,6 +30,44 @@
             filter: blur(4px);
             transition: filter 0.2s ease-in-out;
         }
+
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reaction-btn {
+            transform: scale(1);
+            transition: transform 0.2s ease;
+        }
+
+        .reaction-btn:hover {
+            transform: scale(1.2);
+        }
+
+        button.is-active {
+            font-weight: 600;
+        }
+
+        button.is-active[data-reaction="like"] { color: #2563eb; }
+        button.is-active[data-reaction="love"] { color: #ef4444; }
+        button.is-active[data-reaction="celebrate"] { color: #eab308; }
+        button.is-active[data-reaction="support"] { color: #22c55e; }
+
+        .absolute.bottom-full {
+            transform-origin: bottom left;
+            transition: all 0.2s ease;
+        }
     </style>
 </head>
 <body class="bg-white h-screen">
@@ -207,7 +245,7 @@
             </div>
         </div>
 
-        <div class="px-24 py-0 grid grid-cols-[20%_50%_30%] gap-6">
+        <div class="px-16 py-0 grid grid-cols-[22%_50%_28%] gap-6">
             <!-- Left Sidebar -->
             <div class="space-y-4 rounded-2xl">
                 <!-- Profile Card -->
@@ -331,9 +369,9 @@
             <!-- Main Feed -->
             <div class="space-y-1">
                 <!-- Create Post -->
-                <div class="bg-white rounded-lg p-4">
+                <div class="bg-white rounded-lg p-4 mb-4">
                     <div class="flex gap-3">
-                        <img src="../../images/profile.png" alt="Profile" id="profile_picture" class="h-12 w-12 rounded-full">
+                        <img src="${userData?.profilePicture}" alt="Profile" id="profile_picture" class="h-12 w-12 rounded-full">
                         <button class="flex-1 text-left px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-100 text-gray-500">
                             Start a post
                         </button>
